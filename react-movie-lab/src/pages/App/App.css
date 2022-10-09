@@ -17,6 +17,6 @@ canvas {
   
   /* max image size image fills screen  */
   max-height: 100vh;
-  max-width: 100wv;
+  max-width: 100vw;
 
 }
