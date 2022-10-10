@@ -1,5 +1,5 @@
 import './App.css';
-import {useContext, useState, useEffect, useRef } from "react"
+import {useState, useEffect, useRef } from "react"
 
 
 function App() {
@@ -13,7 +13,9 @@ function App() {
   //   <body>
   //   </body>
   // </html>
-  var body = document.body;
+
+  // if I need this later on
+  // var body = document.body;
   // <body>
   //   <main>
   //     <div>
@@ -21,27 +23,40 @@ function App() {
   //   </main>
   // </body>
 
-  console.log("---body.scrollheight----")
-  console.log(body.scrollHeight)
-  console.log("---body.offsetheight----")
-  console.log(body.offsetHeight)
-  console.log("---html.clientHeight----")
-  console.log(html.clientHeight)
-  console.log("---html.scrollHeight----")
-  console.log(html.scrollHeight)
-  console.log("---html.offsetHeight----")
-  console.log(html.offsetHeight)
-
   // getting the maximum height -- fix later if i want to add a sticky bottom scroll area
-  var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
-  console.log("---------")
-  console.log(height)
+  // var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+  // update - for max scrolling height used scrollheight - clientheight
+ 
+  const maxScrollHeight = html.scrollHeight - html.clientHeight;
+
+  // to console.log page dimensions
+  useEffect(() => {
+  // console.log("---body.scrollheight----")
+  // console.log(body.scrollHeight)
+  // console.log("---body.offsetheight----")
+  // console.log(body.offsetHeight)
+  // console.log("---html.clientHeight----")
+  // console.log(html.clientHeight)
+  // console.log("---html.scrollHeight----")
+  // console.log(html.scrollHeight)
+  // console.log("---html.offsetHeight----")
+  // console.log(html.offsetHeight)
+  // console.log("----max height of page-----")
+  // console.log(height)
+  }, [])
+
+
+
+
+
+
+
 
   const [scrollPosition, setScrollPosition] = useState(0);
-  const maxScrollHeight = height;
+ 
 
   // Scroll Fraction with give value between 0 and 1 to use for image
-  let scrollFraction = scrollPosition / maxScrollHeight
+  // let scrollFraction = scrollPosition / maxScrollHeight
   // console.log(scrollPosition)
   // console.log(scrollFraction)
 
@@ -56,6 +71,8 @@ function App() {
 
   // 145 still images
   const frameCount = 145;
+
+
 
 
 
@@ -80,18 +97,28 @@ function App() {
 
 
   // image changer
+  // https://overreacted.io/a-complete-guide-to-useeffect/
+  // https://stackoverflow.com/questions/55840294/how-to-fix-missing-dependency-warning-when-using-useeffect-react-hook
+  // React Hook useEffect has a missing dependency: 'maxScrollHeight'. Either include it or remove the dependency array
+  // React Hook useEffect has a missing dependency: 'maxScrollHeight'. Either include it or remove the dependency array
+  // React Hook useEffect has a missing dependency: 'maxScrollHeight'. Either include it or remove the dependency array
   useEffect(() => {
-      console.log("--------")
-      let scrollFraction = scrollPosition / maxScrollHeight
-      const frameIndex = Math.min(frameCount - 1, Math.floor(scrollFraction * frameCount))
-      console.log("scrollPosition")
-      console.log(scrollPosition)
-      console.log("frame Index")
-      console.log(frameIndex)
+    let scrollFraction = (scrollPosition / maxScrollHeight);
+    const frameIndex = (Math.floor(scrollFraction * frameCount))
 
-      const airPodImage = new Image();
-      airPodImage.src = currentFrame(frameIndex + 1);
-      airPodImage.onload = () => setImage(airPodImage); 
+    console.log("--------")
+    console.log("scrollPosition")
+    console.log(scrollPosition)
+    console.log("---maxscrollHeight----")
+    console.log(maxScrollHeight)
+    console.log("---scrollFraction----")
+    console.log(scrollFraction)
+    console.log("frame Index")
+    console.log(frameIndex)
+
+    const airPodImage = new Image();
+    airPodImage.src = currentFrame(frameIndex + 1);
+    airPodImage.onload = () => setImage(airPodImage); 
   }, [scrollPosition])
 
 
