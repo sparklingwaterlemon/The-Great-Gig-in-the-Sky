@@ -4,19 +4,7 @@ import {useContext, useState, useEffect, useRef } from "react"
 
 function App() {
 
-
-
-
-  // Handle Scroll Event
-  // Handle Scroll Event
-  // Handle Scroll Event
-  // Handle Scroll Event
-  // Handle Scroll Event
-  // Handle Scroll Event
-
   
-  const [scrollYposition, setScrollYposition] = useState(0);
-  const maxScrollHeight = 1379;
 
   
   // SCROLL EFFECT EVENT V.1 ---- CAN BE BETTER
@@ -24,7 +12,11 @@ function App() {
     // SCROLL EFFECT EVENT V.1 ---- CAN BE BETTER
      // SCROLL EFFECT EVENT V.1 ---- CAN BE BETTER
       // SCROLL EFFECT EVENT V.1 ---- CAN BE BETTER
-      
+
+  // const [scrollYposition, setScrollYposition] = useState(0);
+  // const maxScrollHeight = 1379;
+        
+
   // useEffect(() => {
   //   const updatePosition = () =>{
   //     setScrollYposition(window.scrollY)
@@ -44,13 +36,22 @@ function App() {
 
 
 
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const maxScrollHeight = 1505;
 
-  // Handle Scroll Event
-  // Handle Scroll Event
-  // Handle Scroll Event
-  // Handle Scroll Event
-  // Handle Scroll Event
-  // Handle Scroll Event
+  const handleScroll = () => {
+      const position = window.scrollY;
+      setScrollPosition(position);
+  };
+
+  useEffect(() => {
+      // passive vs active listener???
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+  }, [scrollPosition]);
+  // CHANGE ARRAY TO [IMAGE]??
+
+
 
   
 
