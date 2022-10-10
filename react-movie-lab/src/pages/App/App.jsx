@@ -68,7 +68,7 @@ function App() {
 
   const [image, setImage] = useState(null)
   const canvasRef = useRef(null)
-  const canvas = canvasRef.current
+
 
   // return import "./public/image"??
   const currentFrame = function(index){
@@ -82,12 +82,12 @@ function App() {
   useEffect(() => {
     const airPodImage = new Image();
     airPodImage.src = currentFrame(1);
-    airPodImage.onload = () => setImage(airPodImage);
-    console.log(airPodImage)   
+    airPodImage.onload = () => setImage(airPodImage); 
   }, [])
 
   useEffect(() => {
     if(image){
+      const canvas = canvasRef.current
       const context = canvas.getContext('2d')
       context.drawImage(image, 0, 0, canvas.width, canvas.height)
     }
