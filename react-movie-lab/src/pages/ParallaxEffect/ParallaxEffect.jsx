@@ -1,4 +1,5 @@
 import {useState, useEffect, useRef } from "react";
+import IMAGES from "../airpods-test";
 
 
 function ParallaxEffect() {
@@ -43,10 +44,10 @@ function ParallaxEffect() {
 
   // link value changes --->
   const currentFrame = function(index){
-    return `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`
+    return IMAGES[index]
   }; // change to local src/public directory? // return import "./public/image"??
 
-  const frameCount = 145; // total frameCount of airpod image
+  const frameCount = 15; // total frameCount of airpod image
 
 
   const handleScroll = () => {
@@ -68,18 +69,19 @@ function ParallaxEffect() {
   // (useState) - Setting new Image
   useEffect(() => {
     let scrollFraction = (scrollPosition / maxScrollHeight); // uses scrollFraction to figure out what part of image you should be on
-    const frameIndex = (Math.floor(scrollFraction * frameCount))
+    const frameIndex = Math.min(frameCount -1, Math.floor(scrollFraction * frameCount))
+    console.log(frameIndex)
 
     // to debug incorrect frame index
-    console.log("--------")
-    console.log("scrollPosition")
-    console.log(scrollPosition)
-    console.log("---maxscrollHeight----")
-    console.log(maxScrollHeight)
-    console.log("---scrollFraction----")
-    console.log(scrollFraction)
-    console.log("frame Index")
-    console.log(frameIndex)
+    // console.log("--------")
+    // console.log("scrollPosition")
+    // console.log(scrollPosition)
+    // console.log("---maxscrollHeight----")
+    // console.log(maxScrollHeight)
+    // console.log("---scrollFraction----")
+    // console.log(scrollFraction)
+    // console.log("frame Index")
+    // console.log(frameIndex)
 
     const airPodImage = new Image();
     airPodImage.src = currentFrame(frameIndex + 1);

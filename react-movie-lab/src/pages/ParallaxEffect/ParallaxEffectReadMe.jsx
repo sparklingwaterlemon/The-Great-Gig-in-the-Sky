@@ -68,7 +68,7 @@ function ParallaxEffect() {
   // (useState) - Setting new Image
   useEffect(() => {
     let scrollFraction = (scrollPosition / maxScrollHeight); // uses scrollFraction to figure out what part of image you should be on
-    const frameIndex = (Math.floor(scrollFraction * frameCount))
+    const frameIndex = Math.min(frameCount - 1, Math.floor(scrollFraction * frameCount))
 
     // to debug incorrect frame index
     // console.log("--------")
