@@ -69,10 +69,10 @@ function ParallaxEffect() {
   // (useState) - Setting new Image
   useEffect(() => {
     let scrollFraction = (scrollPosition / maxScrollHeight); // uses scrollFraction to figure out what part of image you should be on
-    const frameIndex = Math.min(frameCount -1, Math.floor(scrollFraction * frameCount))
-    console.log(frameIndex)
+    const frameIndex = Math.min(frameCount - 1, Math.floor(scrollFraction * frameCount))
+    
 
-    // to debug incorrect frame index
+    // // to debug incorrect frame index
     // console.log("--------")
     // console.log("scrollPosition")
     // console.log(scrollPosition)
@@ -80,11 +80,16 @@ function ParallaxEffect() {
     // console.log(maxScrollHeight)
     // console.log("---scrollFraction----")
     // console.log(scrollFraction)
+    // console.log("---scrollFraction * framecount----")
+    // console.log(scrollFraction * frameCount)
+    // console.log("frameCount - 1")
+    // console.log(frameCount - 1)
     // console.log("frame Index")
     // console.log(frameIndex)
 
     const airPodImage = new Image();
     airPodImage.src = currentFrame(frameIndex + 1);
+    // console.log(airPodImage.src)
     airPodImage.onload = () => setImage(airPodImage); // setImage useState declared above
   }, [scrollPosition])
 
