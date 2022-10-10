@@ -14,56 +14,47 @@ function App() {
   // Handle Scroll Event
   // Handle Scroll Event
 
-  // const [offsetY, setOffsetY]= useState(0);
-  const [offSetY, setOffSetY] = useState(0);
+  
+  const [scrollYposition, setScrollYposition] = useState(0);
+  const maxScrollHeight = 1379;
 
-  function handleScroll(){
-    setOffSetY(window.scrollY)
-    
-    console.log("test")
-    console.log(window.scrollY)
-  }
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll)
-  })
-
-
-  // const handleScroll = () => setOffsetY(window.pageYOffset);
-
-  // useEffect(()=>{
-  //   window.addEventListener("scroll", handleScroll)
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // },[]);
-
-  // Handle Scroll Event
-  // Handle Scroll Event
-  // Handle Scroll Event
-  // Handle Scroll Event
-  // Handle Scroll Event
-  // Handle Scroll Event
-
-  // const [scrollingElement, setScrollingElement] = useState(0);
-  // const ScrollContext = createContext({
-  //     scrollingElement: null,
-  // });
-
-  // const { scrollingElement } = useContext(ScrollContext);
-  // const handleScroll = (e) => {
-  //   setScrollingElement(e.target)
-  //   console.log(e.target)
-  //   console.log("-----test")
-  // }
-
-  // useEffect(() => {
-  //   if (scrollingElement) {
-  //     scrollingElement.addEventListener('scroll', handleScroll);
+  
+  // SCROLL EFFECT EVENT V.1 ---- CAN BE BETTER
+   // SCROLL EFFECT EVENT V.1 ---- CAN BE BETTER
+    // SCROLL EFFECT EVENT V.1 ---- CAN BE BETTER
+     // SCROLL EFFECT EVENT V.1 ---- CAN BE BETTER
+      // SCROLL EFFECT EVENT V.1 ---- CAN BE BETTER
       
-  //     setScrollingElement(scrollingElement);
-  //   }
-  //  })
+  // useEffect(() => {
+  //   const updatePosition = () =>{
+  //     setScrollYposition(window.scrollY)
+  //   };
+  //   window.addEventListener("scroll", updatePosition);
+
+  //   // removeEventListener added to prevent memory leak
+  //   return () => {window.removeEventListener("scroll", updatePosition)
+  //   console.log(scrollYposition)};
+  // }, [scrollYposition])
+  // CHANGE TO [ IMAGE] ???? LATER 
+
+        // SCROLL EFFECT EVENT V.1 ---- CAN BE BETTER
+      // SCROLL EFFECT EVENT V.1 ---- CAN BE BETTER
+    // SCROLL EFFECT EVENT V.1 ---- CAN BE BETTER
+  // SCROLL EFFECT EVENT V.1 ---- CAN BE BETTER
+
+
+
+
   // Handle Scroll Event
   // Handle Scroll Event
   // Handle Scroll Event
+  // Handle Scroll Event
+  // Handle Scroll Event
+  // Handle Scroll Event
+
+  
+
+  
 
 
   const [image, setImage] = useState(null)
