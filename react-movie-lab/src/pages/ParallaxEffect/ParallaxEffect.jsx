@@ -1,5 +1,6 @@
 import {useState, useEffect, useRef } from "react";
 import IMAGES from "../airpods-test";
+import MOONIMAGES from "../all-Moon";
 
 
 function ParallaxEffect() {
@@ -44,10 +45,10 @@ function ParallaxEffect() {
 
   // link value changes --->
   const currentFrame = function(index){
-    return IMAGES[index]
+    return MOONIMAGES[index]
   }; // change to local src/public directory? // return import "./public/image"??
 
-  const frameCount = 15; // total frameCount of airpod image
+  const frameCount = 366; // total frameCount of airpod image
 
 
   const handleScroll = () => {
@@ -72,20 +73,20 @@ function ParallaxEffect() {
     const frameIndex = Math.min(frameCount - 1, Math.floor(scrollFraction * frameCount))
     
 
-    // // to debug incorrect frame index
-    // console.log("--------")
-    // console.log("scrollPosition")
-    // console.log(scrollPosition)
-    // console.log("---maxscrollHeight----")
-    // console.log(maxScrollHeight)
-    // console.log("---scrollFraction----")
-    // console.log(scrollFraction)
-    // console.log("---scrollFraction * framecount----")
-    // console.log(scrollFraction * frameCount)
-    // console.log("frameCount - 1")
-    // console.log(frameCount - 1)
-    // console.log("frame Index")
-    // console.log(frameIndex)
+    // to debug incorrect frame index
+    console.log("--------")
+    console.log("scrollPosition")
+    console.log(scrollPosition)
+    console.log("---maxscrollHeight----")
+    console.log(maxScrollHeight)
+    console.log("---scrollFraction----")
+    console.log(scrollFraction)
+    console.log("---scrollFraction * framecount----")
+    console.log(scrollFraction * frameCount)
+    console.log("frameCount - 1")
+    console.log(frameCount - 1)
+    console.log("frame Index")
+    console.log(frameIndex)
 
     const airPodImage = new Image();
     airPodImage.src = currentFrame(frameIndex + 1);
@@ -113,8 +114,8 @@ function ParallaxEffect() {
     <div>
       <canvas 
         ref={canvasRef}
-        width="1158"
-        height="770"
+        width="450"
+        height="450"
         className="scrolling-test"
       />
     </div>

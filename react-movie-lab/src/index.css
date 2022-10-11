@@ -9,11 +9,11 @@ body {
   /* -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
   
-  background-color: gray;
+  background-color: black;
 
 
   /* page height - scroll length */
-  height: 300vh;
+  height: 1000vh;
 
 }
 
