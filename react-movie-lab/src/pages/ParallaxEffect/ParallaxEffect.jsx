@@ -73,20 +73,20 @@ function ParallaxEffect() {
     const frameIndex = Math.min(frameCount - 1, Math.floor(scrollFraction * frameCount))
     
 
-    // to debug incorrect frame index
-    console.log("--------")
-    console.log("scrollPosition")
-    console.log(scrollPosition)
-    console.log("---maxscrollHeight----")
-    console.log(maxScrollHeight)
-    console.log("---scrollFraction----")
-    console.log(scrollFraction)
-    console.log("---scrollFraction * framecount----")
-    console.log(scrollFraction * frameCount)
-    console.log("frameCount - 1")
-    console.log(frameCount - 1)
-    console.log("frame Index")
-    console.log(frameIndex)
+    // // to debug incorrect frame index
+    // console.log("--------")
+    // console.log("scrollPosition")
+    // console.log(scrollPosition)
+    // console.log("---maxscrollHeight----")
+    // console.log(maxScrollHeight)
+    // console.log("---scrollFraction----")
+    // console.log(scrollFraction)
+    // console.log("---scrollFraction * framecount----")
+    // console.log(scrollFraction * frameCount)
+    // console.log("frameCount - 1")
+    // console.log(frameCount - 1)
+    // console.log("frame Index")
+    // console.log(frameIndex)
 
     const airPodImage = new Image();
     airPodImage.src = currentFrame(frameIndex + 1);
