@@ -1,8 +1,8 @@
 import {useState, useEffect, useRef } from "react";
-import MOONIMAGES from "../MoonImagesAdjusted";
+import MOONIMAGES from "../../assets/MOONIMAGES/0000.index";
 
 
-function ParallaxEffect() {
+function MoonLandingPage() {
 
   // // Scroll Height / Scroll Length
 
@@ -36,7 +36,7 @@ function ParallaxEffect() {
   // Variables
   // for Scroll Height
   var html = document.documentElement; // <html> <head></head> <body></body> </html>
-  const maxScrollHeight = html.scrollHeight - html.clientHeight;
+  var maxScrollHeight = html.scrollHeight - html.clientHeight;
 
   const [scrollPosition, setScrollPosition] = useState(0); // for Scroll Position
   const [image, setImage] = useState(null); // for Image
@@ -88,10 +88,10 @@ function ParallaxEffect() {
     // console.log("frame Index")
     // console.log(frameIndex)
 
-    const airPodImage = new Image();
-    airPodImage.src = currentFrame(frameIndex + 1);
+    const moonImage = new Image();
+    moonImage.src = currentFrame(frameIndex + 1);
     // console.log(airPodImage.src)
-    airPodImage.onload = () => setImage(airPodImage); // setImage useState declared above
+    moonImage.onload = () => setImage(moonImage); // setImage useState declared above
   }, [scrollPosition])
 
   
@@ -123,4 +123,4 @@ function ParallaxEffect() {
   );
 }
 
-export default ParallaxEffect;
+export default MoonLandingPage;

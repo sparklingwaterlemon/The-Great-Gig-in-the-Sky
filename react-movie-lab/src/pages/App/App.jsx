@@ -1,5 +1,6 @@
 import './App.css';
-import ParallaxEffect from '../ParallaxEffect/ParallaxEffect';
+// import MoonLandingPage from '../MoonLandingPage/MoonLandingPage';
+import SearchBar from '../../components/SearchBar/SearchBar';
 
 // testing components
 // load image test
@@ -10,8 +11,8 @@ import ParallaxEffect from '../ParallaxEffect/ParallaxEffect';
 function App() {
   return (
     <main className="App">
-      <ParallaxEffect />
-      {/* <LoadImageTest /> */}
+      <SearchBar />
+      {/* <MoonLandingPage /> // done for now */}
     </main>
   );
 }
