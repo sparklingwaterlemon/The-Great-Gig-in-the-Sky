@@ -1,6 +1,5 @@
 import {useState, useEffect, useRef } from "react";
-import IMAGES from "../airpods-test";
-import MOONIMAGES from "../all-Moon";
+import MOONIMAGES from "../MoonImagesAdjusted";
 
 
 function ParallaxEffect() {
@@ -43,9 +42,10 @@ function ParallaxEffect() {
   const [image, setImage] = useState(null); // for Image
   const canvasRef = useRef(null);
 
+ 
   // link value changes --->
   const currentFrame = function(index){
-    return MOONIMAGES[index]
+    return(MOONIMAGES[index].imgRef)
   }; // change to local src/public directory? // return import "./public/image"??
 
   const frameCount = 366; // total frameCount of airpod image
