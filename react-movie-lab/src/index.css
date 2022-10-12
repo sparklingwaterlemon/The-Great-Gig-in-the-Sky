@@ -4,6 +4,11 @@ html {
 
 body {
   font-family: "Roboto", Arial !important;
+<<<<<<< HEAD
+=======
+  background-color: gray;
+  color: orange;
+>>>>>>> f33754ea4e70091cacb9de5e692e9608b9aef0ab
 
   /* page height - scroll length */
   height: 1000vh;
@@ -11,7 +16,11 @@ body {
 
   /* -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
+<<<<<<< HEAD
   
 }
 
 
+=======
+}
+>>>>>>> f33754ea4e70091cacb9de5e692e9608b9aef0ab
