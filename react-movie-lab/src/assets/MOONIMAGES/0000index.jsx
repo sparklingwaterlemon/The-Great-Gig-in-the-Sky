@@ -5,7 +5,7 @@
 // March 31 = 0331
 
 const MOONIMAGES = [
-    {"imgRef": require("./0000.jpg"), "position": null },
+    {"imgRef": require("./0100.jpg"), "position": null },
     {"imgRef": require("./0101.jpg"), "position": null },
     {"imgRef": require("./0101.jpg"), "position": null },
     {"imgRef": require("./0102.jpg"), "position": null },
