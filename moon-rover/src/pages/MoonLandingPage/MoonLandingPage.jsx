@@ -115,8 +115,8 @@ function MoonLandingPage() {
     <div>
       <canvas 
         ref={canvasRef}
-        width="300"
-        height="300"
+        width="280"
+        height="280"
         className="scrolling-test"
       />
     </div>

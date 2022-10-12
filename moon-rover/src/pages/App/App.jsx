@@ -6,10 +6,10 @@ import { Routes, Route } from "react-router-dom";
 import { getUser } from '../../utilities/Users-Services/Users-Services';
 
 import MoonLandingPage from '../MoonLandingPage/MoonLandingPage';
-import SearchBar from '../../components/SearchBar/SearchBar';
-import JouranalEntryPage from '../JournalEntryPage/JournalEntryPage';
-import NavBar from '../../components/NavBar/NavBar';
-import AuthPage from '../AuthPage/AuthPage';
+// import SearchBar from '../../components/SearchBar/SearchBar';
+// import JouranalEntryPage from '../JournalEntryPage/JournalEntryPage';
+// import NavBar from '../../components/NavBar/NavBar';
+// import AuthPage from '../AuthPage/AuthPage';
 
 
 
@@ -20,19 +20,9 @@ function App() {
   return (
     <>
       <main className="App">
-        {/* <MoonLandingPage /> */}
+        <MoonLandingPage />
 
-        {user ?
-          <>
-            <NavBar user={user} setUser={setUser} />
-            <Routes>
-              <Route path="/search" element={<SearchBar />} />
-              <Route path="/journal" element={<JouranalEntryPage />} />
-              <Route path="/moon" element={<MoonLandingPage />} />
-            </Routes>
-          </>
-          :
-          <AuthPage setUser={setUser} />}
+
 
       </main>
     </>
@@ -40,3 +30,16 @@ function App() {
 }
 
 export default App;
+
+
+// {user ?
+//   <>
+//     <NavBar user={user} setUser={setUser} />
+//     <Routes>
+//       <Route path="/search" element={<SearchBar />} />
+//       <Route path="/journal" element={<JouranalEntryPage />} />
+//       <Route path="/moon" element={<MoonLandingPage />} />
+//     </Routes>
+//   </>
+//   :
+//   <AuthPage setUser={setUser} />}
