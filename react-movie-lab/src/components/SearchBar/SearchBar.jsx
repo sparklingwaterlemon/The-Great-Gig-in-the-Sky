@@ -1,14 +1,11 @@
-import { useState } from "react";
-import * as weatherAPI from "../../utilities/weather-api-service";
+import { useState, useEffect } from "react";
+import WeatherDetailPage from "../../pages/WeatherDetail/WeatherDetailPage";
+// import * as weatherAPI from "../../utilities/weather-api-service";
 
 
 
 
 function SearchBar(){
-
-    
-    
-
     const [location, setLocation] = useState("");
     const [data, setData] = useState({});
 
@@ -21,33 +18,34 @@ function SearchBar(){
         setLocation(evt.target.value)
         console.log(evt.target.value)
     }
-    
-    // move to controllers/api?
-    async function searchAPI(location){
-        const weather = 
-            await fetch(FORECAST_CALL)
-            .then((response)=> response.data);
-        console.log(weather)
-        setData(weather)
-        // setData(weather)
-        // console.log("----test---")
-        // console.log(data)
 
+
+
+    async function fetchDataFromAPI(location){
+        try{
+            const weather = 
+                await fetch(FORECAST_CALL)
+                .then(res => res.json())
+                .then(data => {
+                    setData(data)
+                })
+        } catch (error){
+            console.log("error", error);
+        }
     }
 
-    // setData(weatherJSONbyLocation)
-    // console.log(data)
+
+    
 
     async function handleFormSubmission(evt){
         evt.preventDefault();
-        console.log("-----");
-        console.log(location); // location set in handleFormInput
+        await fetchDataFromAPI(location);
         
-        await searchAPI(location);
-
-        
+    
         setLocation("") // clear search form
     }
+
+ 
 
 
 
@@ -72,14 +70,7 @@ function SearchBar(){
 
         </form>
 
-        <div className="container">
-            <div className="location">
-                <p> Dallas</p>
-            </div>
-            <div className="temp">
-                <h2>60</h2>
-            </div>
-        </div>
+        
 
 
         </>   
@@ -87,3 +78,5 @@ function SearchBar(){
 }
 
 export default SearchBar
+
+
