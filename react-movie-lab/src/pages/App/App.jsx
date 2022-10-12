@@ -1,15 +1,16 @@
 import './App.css';
 // import MoonLandingPage from '../MoonLandingPage/MoonLandingPage';
 // import SearchBar from '../../components/SearchBar/SearchBar';
-import JouranalEntryPage from '../JournalEntryPage/JournalEntryPage';
-
+// import JouranalEntryPage from '../JournalEntryPage/JournalEntryPage';
+import SignUpForm from '../../components/UserForms/SignUpForm/SignUpForm';
 
 function App() {
   return (
     <main className="App">
       {/* <MoonLandingPage /> */}
       {/* <SearchBar /> */}
-      <JouranalEntryPage />
+      {/* <JouranalEntryPage /> */}
+      <SignUpForm />
     </main>
   );
 }
