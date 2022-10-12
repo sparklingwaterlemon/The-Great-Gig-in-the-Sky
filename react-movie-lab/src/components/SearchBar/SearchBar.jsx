@@ -50,16 +50,14 @@ function SearchBar(){
         //     feelslike_f: 79.8,
         //     temp_f: 77,
         // }
-    
 
-    let forecastwd = weatherData.forecast; 
     // ASTRO DATA ACCESS
     //   ???  Cannot read properties of undefined (reading 'forecastday') ??? //
     //   to accses Astro Data - weatherData.forecast.forecastday
     //      weatherData.forecast.forecastday[0]["astro"]==>{
     //          moon_illumination, moon_phase, moonrise, moonset, sunrise, sunset
     //      }
-    //    forecastUmbrella.forecastday[0]["astro"]["sunrise"]
+    //    weatherData.forecast.forecastday["0"].astro.sunrise
 
     // 
     //   ???  Cannot read properties of undefined (reading 'forecastday') ??? //
@@ -67,9 +65,8 @@ function SearchBar(){
     //      weatherData.forecast.forecastday[0]["day"]==>{
     //          maxtemp_f, mintemp_f, daily_chance_of_rain, daily_chance_of_snow
     //      }
-    //   forecastUmbrella.forecastday[0]["day"]["maxtemp_f"]
+    //   weatherData.forecast.forecastday["0"].day.maxtemp_f
 
-    
 
     
 
@@ -98,7 +95,28 @@ function SearchBar(){
 
         <div>
             <p className="location-info"> {weatherData.location ? `${localwd.name}, ${localwd.region}` : false } </p>
+            
+            <p className="weather-text"> {weatherData.current ? currentwd.condition.text : null } </p>
             <p className="weather-icon"> {weatherData.current ? <img src={currentwd.condition.icon} /> : null } </p>
+
+            
+            <p className="temp_f"> {weatherData.current ? `temp_f -- ${currentwd.temp_f}` : null } </p>
+            <p className="feelslike_f"> {weatherData.current ? `feelslike_f -- ${currentwd.feelslike_f}` : null } </p>
+
+            <p className="maxtemp_f"> {weatherData.forecast ? `maxtemp_f -- ${weatherData.forecast.forecastday["0"].day.maxtemp_f}` : null } </p>
+            <p className="mintemp_f"> {weatherData.forecast ? `mintemp_f -- ${weatherData.forecast.forecastday["0"].day.mintemp_f}` : null } </p>
+            <p className="daily_chance_of_rain"> {weatherData.forecast ? `daily_chance_of_rain -- ${weatherData.forecast.forecastday["0"].day.daily_chance_of_rain}` : null } </p>
+            <p className="daily_chance_of_snow"> {weatherData.forecast ? `daily_chance_of_snow -- ${weatherData.forecast.forecastday["0"].day.daily_chance_of_snow}` : null } </p>
+
+
+            <p className="moonrise"> {weatherData.forecast ? `moonrise -- ${weatherData.forecast.forecastday["0"].astro.moonrise}` : null } </p>
+            <p className="moonset"> {weatherData.forecast ? `moonset -- ${weatherData.forecast.forecastday["0"].astro.moonset}` : null } </p>
+            <p className="moon_phase"> {weatherData.forecast ? `moon_phase -- ${weatherData.forecast.forecastday["0"].astro.moon_phase}` : null } </p>
+            <p className="moon_illumination"> {weatherData.forecast ? `moon_illumination -- ${weatherData.forecast.forecastday["0"].astro.moon_illumination}` : null } </p>
+            <p className="sunrise"> {weatherData.forecast ? `sunrise -- ${weatherData.forecast.forecastday["0"].astro.sunrise}` : null } </p>
+            <p className="sunset"> {weatherData.forecast ? `sunset -- ${weatherData.forecast.forecastday["0"].astro.sunset}` : null } </p>
+            
+
             
 
         </div>
