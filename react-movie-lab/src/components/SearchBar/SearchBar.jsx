@@ -3,14 +3,14 @@ import "./SearchBar.css";
 // import WeatherDetailPage from "../../pages/WeatherDetail/WeatherDetailPage";
 
 
-
-
 function SearchBar(){
     const [location, setLocation] = useState("");
     const [weatherData, setWeatherData] = useState({});
 
-    const API_KEY="b5011853e4994e7ba28201909221010"
-    const FORECAST_CALL=`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${location}&aqi=no&alerts=no`
+
+    const api_string="b5011853e4994e7ba28201909221010"
+    
+    const FORECAST_CALL=`http://api.weatherapi.com/v1/forecast.json?key=${api_string}&q=${location}&aqi=no&alerts=no`
 
 
 
