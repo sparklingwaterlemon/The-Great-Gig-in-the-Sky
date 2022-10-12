@@ -1,7 +1,8 @@
+import axios from "axios";
 import { useState, useEffect } from "react";
 import WeatherDetailPage from "../../pages/WeatherDetail/WeatherDetailPage";
 // import * as weatherAPI from "../../utilities/weather-api-service";
-
+// USE AXIOS
 
 
 
@@ -19,48 +20,13 @@ function SearchBar(){
         console.log(evt.target.value)
     }
 
-
-
-    async function fetchDataFromAPI(){
-        try{
-            const weather = 
-                await fetch(FORECAST_CALL)
-                .then(res => res.json())
-                .then(data => {
-                    setData(data)
-                })
-        } catch (error){
-            console.log("error", error);
-        }
-    }
-
-    
-
-    async function handleFormSubmission(evt){
+    function handleFormSubmission(evt){
         evt.preventDefault();
-        const weatherData = await fetchDataFromAPI(location);
-        setData(weatherData);
-        console.log(weatherData)
 
+        fetch(FORECAST_CALL).then(res => res.json()).then(data => setData(data))
         setLocation("") // clear search form
     }
-
-    async function fetchDataFromAPI(query) {
-        console.log("from weather-api-service, searchWeather", query)
-        return sendRequest(`${FORECAST_CALL}`, 'POST', {query});
-      }
-
-    async function sendRequest(url, method = 'GET', payload = null) {
-        const options = { method };
-            if (payload) {
-                options.headers = { 'Content-Type': 'application/json' };
-                options.body = JSON.stringify(payload);
-            }
-        const res = await fetch(url, options);
-        if (res.ok) return res.json();
-        throw new Error('Bad Request');
-    }
-
+ 
 
 
 
@@ -82,8 +48,8 @@ function SearchBar(){
             <button className="weather-button" >
                 Search
             </button>
-            <h3>{data["location"]["name"]}</h3>
 
+            <h3> {data["location"]["name"]}</h3>
         </form>
 
         
