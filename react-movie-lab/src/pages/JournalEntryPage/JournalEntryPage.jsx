@@ -1,4 +1,4 @@
-import "./JournalEntryPage.css";
+// import "./JournalEntryPage.css";
 
 function JouranalEntryPage (){
     return(

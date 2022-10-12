@@ -2,7 +2,6 @@
 // This syntax can be helpful documenting where the methods come from 
 import * as usersAPI from './Users-API';
 
-
 export async function signUp(userData) {
   // Delete the network request code to the 
   // users-api.js module which will ultimately

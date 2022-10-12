@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./SearchBar.css";
-// import WeatherDetailPage from "../../pages/WeatherDetail/WeatherDetailPage";
-
+// possibly move searchbar functionality to utilties
+// and create weatherastro card for pages
 
 function SearchBar(){
     const [location, setLocation] = useState("");
