@@ -1,0 +1,51 @@
+/* 
+nav {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: white;
+    height: 160px;
+}
+
+
+nav > a:link , a:visited, .username-header {
+    background-color: hsla(201, 100%, 6%, 0.6);
+    color: white;
+    margin: 16px 30px 10px 30px;
+    padding: 20px;
+    display: inline-block;
+    border: 2px solid #00a6ff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform .2s;
+}
+
+nav > a:hover {
+    color: white;
+    font-weight: 500;
+    background-image: linear-gradient(to bottom right, #001aff, rgb(0, 255, 153));
+    border: 2px solid #00a6ff;
+    transform: scale(1.2);
+}
+
+nav > .username-header:hover {
+    color: black;
+    font-weight: 500;
+    background-image: linear-gradient(to bottom right, red, yellow);
+    transform: scale(1.2);
+    cursor: default;
+    border: 2px solid #00a6ff;
+}
+
+
+@media screen and (max-width: 800px){
+    nav {
+        height: 300px
+    }
+    nav > a:link , a:visited, .username-header {
+        width: 250px;
+        display: block;
+        margin: 20px auto;
+        position: relative;
+    }
+} */

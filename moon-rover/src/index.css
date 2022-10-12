@@ -1,0 +1,17 @@
+html {
+  height: 100vh;
+}
+
+body {
+  font-family: "Roboto", Arial !important;
+
+  /* page height - scroll length */
+  height: 1000vh;
+
+
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+  
+}
+
+
