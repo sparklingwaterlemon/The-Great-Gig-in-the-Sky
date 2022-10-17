@@ -11,7 +11,7 @@ export default function AboutPage({user, setUser}){
                •••about  ••••• 
             </div>
             :
-            <AuthPage user={user} setUser={setUser}/>}
+            <AuthPage setUser={setUser}/>}
         </>
     )
 }

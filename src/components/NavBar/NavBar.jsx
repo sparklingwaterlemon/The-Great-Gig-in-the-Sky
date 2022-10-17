@@ -15,7 +15,8 @@ export default function NavBar({user, setUser}) {
         <nav>
             <Link to="/">Home Page</Link>
             &nbsp; | &nbsp;
-            <Link to="/about"> About </Link>
+            <a href="https://www.youtube.com/watch?v=mPGv8L3a_sY" target="_blank"> Pink Floyd </a>          
+            
             {user ? <span> &nbsp; | &nbsp; <Link to={"/forum"}> Send Me A Message! </Link>&nbsp; | &nbsp;</span> : false}
             {user ? <Link to={""} onClick={handleLogOut}>Logout</Link> : false}
         </nav>

@@ -6,7 +6,7 @@ import NavBar from '../../components/NavBar/NavBar';
 
 
 
-export default function AuthPage({ setUser}) {
+export default function AuthPage({setUser}) {
   const [showLogin, setShowLogin] = useState(true);
 
   return (

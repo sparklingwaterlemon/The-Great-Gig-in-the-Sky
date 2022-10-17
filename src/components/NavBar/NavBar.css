@@ -3,9 +3,10 @@ nav{
     margin-left: 30px;
     margin-top: 20px;
     padding: 0px 0px 0px 10px;
-    font-size: 2em;
+    font-size: 4em;
 }
 a:link {
+    display: inline-block;
     color: white;
 }
 
