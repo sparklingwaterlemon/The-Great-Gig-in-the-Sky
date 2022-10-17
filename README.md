@@ -98,7 +98,7 @@ NASA sources images from 2011, illumination and position, balancing.
 ---
 IceBox
 
-- *** CHANGE SO YOU LOG IN IN ABOUT ME- EVERYONE SHOULD BE ABLE TO ACCESS WEATHER WITHOUT LOGGING IN***
+
 - Page Responsiveness - make it work for different screen sizes
 - you may have noticed, what happens if our current day is less than 150? since the lunar phase takes 29.5 days, we can essentially loop it.
 - function loop it over after final new moon phase in decemeber. 
@@ -110,3 +110,7 @@ IceBox
 -- is the distance traveled by the up/down arrow universal?
 
 -- is there a default value or is it determined by some external factor like computer screen size?
+
+---
+update
+10/16 - Completed icebox item. Moved logged in to about page. App is now accessable without auth. 
