@@ -5,7 +5,7 @@ import { Routes, Route } from "react-router-dom";
 
 import MoonLandingPage from '../MoonLandingPage/MoonLandingPage'; // Page
 import daysIntoYear from "../../utilities/DayDateFunction/DayDateFunction"; // Utilities
-import SearchBar from '../../components/SearchBar/SearchBar'; // Component
+
 import AboutPage from "../AboutPage/AboutPage";
 import { getUser } from '../../utilities/Users-Services/Users-Services';
 import AuthPage from '../AuthPage/AuthPage';
