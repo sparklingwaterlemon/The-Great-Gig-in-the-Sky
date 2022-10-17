@@ -8,10 +8,9 @@ import daysIntoYear from "../../utilities/DayDateFunction/DayDateFunction"; // U
 
 import AboutPage from "../AboutPage/AboutPage";
 import { getUser } from '../../utilities/Users-Services/Users-Services';
+
 import AuthPage from '../AuthPage/AuthPage';
 import ForumPage from '../ForumPage/ForumPage';
-
-
 
 
 
@@ -62,8 +61,7 @@ function App() {
 
   return (
     <>
-    { user ? 
-    <>
+  
     <Routes>
       <Route path="/" element={<MoonLandingPage 
             setChangeDDIndex={setChangeDDIndex} 
@@ -72,15 +70,15 @@ function App() {
             weatherData={weatherData} 
             setWeatherData={setWeatherData} 
             curMoonPhase={curMoonPhase}/>} />
-      <Route path="/about" element={<AboutPage/>} />
+      <Route path="/about" element={<AboutPage user={user} setUser={setUser} />} />
       <Route path="/forum" element={<ForumPage userInfo={user}/>} />
-    </Routes>    
+      
+    </Routes>
+  
     </>
-    :
-    <AuthPage setUser={setUser}/>
-    }
-  </>
   );
 }
 
 export default App;
+
+// <Route path="/auth" element={<AuthPage setUser={setUser} />} />

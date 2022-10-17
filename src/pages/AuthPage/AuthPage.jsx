@@ -4,7 +4,9 @@ import LoginForm from "../../components/UserForms/LoginForm/LoginForm";
 import SignUpForm from "../../components/UserForms/SignUpForm/SignUpForm";
 import NavBar from '../../components/NavBar/NavBar';
 
-export default function AuthPage({ setUser }) {
+
+
+export default function AuthPage({ setUser}) {
   const [showLogin, setShowLogin] = useState(true);
 
   return (
@@ -17,12 +19,10 @@ export default function AuthPage({ setUser }) {
       </button>
 
 
-      {showLogin ? <LoginForm setUser={setUser} /> : <SignUpForm setUser={setUser} />}
+      {showLogin ? <LoginForm setUser={setUser} /> : <SignUpForm setUser={setUser}/>}
     </div>
     </>
   );
 }
 
-// test1000
-// tt@tt.com
-// 1234
+

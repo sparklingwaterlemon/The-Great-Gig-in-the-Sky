@@ -1,6 +1,7 @@
 import "./SignUpForm.css";
-import { Component } from "react";
+import { Component, useEffect } from "react";
 import { signUp } from "../../../utilities/Users-Services/Users-Services";
+
 
 export default class SignUpForm extends Component {
   state = {
@@ -17,6 +18,8 @@ export default class SignUpForm extends Component {
       error: ''
     });
   };
+  
+ 
 
   handleSubmit = async (evt) => {
     evt.preventDefault();
