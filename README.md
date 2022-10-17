@@ -3,17 +3,20 @@ https://youtu.be/mPGv8L3a_sY
 
 
 Project Home Page
-![hero](https://user-images.githubusercontent.com/105463926/196267094-d8f5166f-3a23-40ef-a09b-be02892d9a5b.gif)
+https://user-images.githubusercontent.com/105463926/196267167-625efdaf-1480-478b-9059-069186dcd587.mp4
+
+
 
 
 Trello Link - Project Timeline  
 https://trello.com/b/k0eXcd3V/aau-moon-phase
 
 Wireframe v2
-<---insert wireframe 2 image -->
+![wireframe2](https://user-images.githubusercontent.com/105463926/196267192-e087e057-8999-4471-ba62-79ea2bafb18b.png)
 
 Wireframe v1
-<---insert wireframe 2 image -->
+![wireframe1](https://user-images.githubusercontent.com/105463926/196267246-b6a8c468-5141-4ad3-acb1-0b9f681be99b.png)
+
 
 ---
 MongoDB | Express | React | Node.js | API 
@@ -50,15 +53,17 @@ We add a filler image for index [0]. The index of the array with go from [0-365]
 We can use this nifty function to input a date, and return what the day is out of 365 days.
 <br />
 ie. function daysIntoYear(new Date("Feburary 4 2022")) will return 35 (the 35th day of the year)
-<--- insert DAYDATE FUNCTION ---->
+![DayDate Function](https://user-images.githubusercontent.com/105463926/196267302-0af2cce4-a843-4f1e-989d-2702d1859ca9.png)
 
 This way, we can access the corresponding moon image for that day.
 
 ---
 <h3> Key Foundation Function</h3>
 
-<--- insert key function 1 --->
-<--- insert key function 2 --->
+![KeyFunction 1](https://user-images.githubusercontent.com/105463926/196267334-63a1cc57-b7a9-436d-95ba-7bc9aeec7893.png)
+
+![KeyFunction 2](https://user-images.githubusercontent.com/105463926/196267363-579ba76e-05e8-4759-8aeb-0ee5fcbf1d63.png)
+
 Basic overview.
 Let's go over what's going on. 
 
