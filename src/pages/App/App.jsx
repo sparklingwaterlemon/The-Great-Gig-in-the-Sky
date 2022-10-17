@@ -9,7 +9,6 @@ import daysIntoYear from "../../utilities/DayDateFunction/DayDateFunction"; // U
 import AboutPage from "../AboutPage/AboutPage";
 import { getUser } from '../../utilities/Users-Services/Users-Services';
 
-import AuthPage from '../AuthPage/AuthPage';
 import ForumPage from '../ForumPage/ForumPage';
 
 
@@ -80,5 +79,3 @@ function App() {
 }
 
 export default App;
-
-// <Route path="/auth" element={<AuthPage setUser={setUser} />} />
