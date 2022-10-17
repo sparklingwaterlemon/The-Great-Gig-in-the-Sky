@@ -1,0 +1,35 @@
+.animate__animated.animate__fadeInRight{
+    --animate-duration: 1s;
+}
+
+.date-card-container {
+    /* background-color: pink; */
+
+    height: 220px;
+    width: 310px;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0px 15px 0px 0px;
+
+    display: grid;
+    grid-template-columns: 310px;
+    grid-template-rows: 90px 1fr;
+
+    color: #d5d4d4;
+}
+
+#display-date {
+    /* outline: 1px solid blueviolet; */
+    margin: 5px;
+    font-size: 2.5rem;
+    padding: 15px 0px 0px 15px;
+    /* position: relative; */
+    /* vertical-align: bottom;; */
+    /* top: 0%; */
+}
+#display-moon-phase{
+    /* outline: 1px solid blueviolet; */
+    font-size: 1.5em;
+    margin: 5px;
+    padding: 0px 0px 0px 15px;
+}

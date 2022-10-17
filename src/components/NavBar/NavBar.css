@@ -1,0 +1,12 @@
+nav{
+    position: fixed;
+    margin: 40px;
+    font-size: 2em;
+}
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: pink;
+}

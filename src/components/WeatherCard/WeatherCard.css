@@ -1,0 +1,231 @@
+.animate__animated.animate__zoomInRight{
+    --animate-duration: 2.5s;
+}
+
+
+/* Flex Box */
+#weater-card-component {
+    width: 475;
+    height: 220px;
+    color: #d5d4d4;
+    text-align: center;
+    font-size: 1rem;
+
+    display: flex;
+    flex-direction: row;
+}
+
+/* Weather Card Flex Grid */
+.weather-data-area {
+    width: 200px;
+    border-radius: 20px;
+    padding: 2.5px 0px 0px 0px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr [col-start]);
+    grid-template-rows: 35px 25px 35px 25px 1fr;
+}
+/* Astro Card Flex Grid */
+.astro-data-area{
+    /* width: 275px; */
+    width: 310px;
+    
+    border-radius: 20px;
+    padding: 2px 1px 0px 8px;
+    margin: 0px 0px 0px 15px;
+
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 30px 1fr 40px 1fr 1fr 1fr 1fr;
+}
+
+
+
+/* Weather Card components */
+.current-name {
+    font-size: 1.5em;
+    font-weight: 700;
+    overflow: hidden;
+    padding: 2px;
+
+    grid-column: 1 / span 2;
+    grid-row: 1/ span 1;
+}
+.current-datetime {
+    font-size: .9em;
+    font-weight: 400;
+    font-style: italic;
+    padding: 4px;
+
+    grid-column: 1 / span 2;
+    grid-row: 2/ span 1;
+}
+.current-icon {
+    /* outline: 1px solid orange; */
+    position: relative;
+    text-align: center;
+    /* right: 15px; */
+    top: 4px;
+    
+    grid-column: 1 / span 2;
+    grid-row: 3/ span 1;
+}
+.current-condition{
+    /* outline: 1px solid orange; */
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
+    position: relative;
+    margin: 10px 0px 0px 1px;
+    vertical-align: top;
+}
+.maxmin-degree {
+    font-size: 1.2rem;
+    vertical-align: -2px;
+}
+.arrows {
+    font-size: .9rem;
+    font-weight: 700;
+    vertical-align: 0px;
+    padding: 5px;
+}
+.current-max{    
+    font-weight: 400;
+    font-size: 1rem;
+    top: 3px;
+  
+
+    grid-column: 1 / span 1;
+    grid-row: 4/ span 1;
+}
+.current-min{
+    position: relative;
+    top: 3px;
+    
+    grid-column: 2 / span 1;
+    grid-row: 4/ span 1;
+}
+
+.current-temp{
+    font-size: 6rem;
+    font-weight: 300;
+    position: relative;
+    top: -14px;
+    
+    grid-column: 1 / span 2;
+    grid-row: 5/ span 1;
+}
+.degree {
+    font-size: 2rem;
+    font-weight: 300;
+    vertical-align: 40px;
+    position: relative;
+    right: 0px;
+}
+
+
+/* Astro Card components */
+
+.all-headers{
+    text-align: justify;
+    margin: 0px 0px 0px 9px;
+}
+.moonillumination-header{
+    padding: 10px 0px 0px 0px;
+    font-size: .8em;
+    font-weight: 600;
+    grid-column: 1 / span 1;
+    grid-row: 1/ span 1;  
+}
+.moonillumination{
+    padding: 10px 0px 0px 10px;
+    font-size: .8em;
+    font-weight: 600;    
+    text-align: center;   
+    grid-column: 2 / span 1;
+    grid-row: 1/ span 1;  
+}
+.moonphase-header{
+    font-size: 1.3em;  
+    font-weight: 500;  
+    grid-column: 1 / span 1;
+    grid-row: 2/ span 1;   
+}
+.moonphase{    
+    font-size: 1em;
+    padding: 2.5px 0px 0px 0px;
+    font-weight: 500; 
+    grid-column: 2 / span 1;
+    grid-row: 2/ span 1;
+}
+.moonrise-header{    
+    font-size: 1.8em;
+    grid-column: 1 / span 1;
+    grid-row: 3/ span 1; 
+}
+.moonrise{    
+    font-size: 1.8em;
+    color: rgb(255, 249, 227);
+    text-shadow: 
+        0px 0px 3px rgb(255, 249, 227),
+        0px 0px 4px black,
+        0px 0px 10px rgb(255, 249, 227),
+        0px 0px 20px black,
+        0px 0px 25px white;
+    grid-column: 2 / span 1;
+    grid-row: 3/ span 1; 
+}
+.moonset-header{   
+    font-size: 1.5em;
+    position: relative;
+    bottom: 1px;
+    grid-column: 1 / span 1;
+    grid-row: 4/ span 1; 
+}
+.moonset{  
+    font-size: 1.5em;    
+    position: relative;
+    bottom: 1px;
+    grid-column: 2 / span 1;
+    grid-row: 4/ span 1; 
+}
+.sunrise-header{    
+    font-size: 1.3em;
+    grid-column: 1 / span 1;
+    grid-row: 5/ span 1;
+}
+.sunrise {  
+    font-size: 1.3em;
+    grid-column: 2 / span 1;
+    grid-row: 5/ span 1; 
+}
+.sunset-header{    
+    font-size: 1em;
+    grid-column: 1 / span 1;
+    grid-row: 6/ span 1; 
+}
+.sunset {    
+    font-size: 1em;
+    grid-column: 2 / span 1;
+    grid-row: 6/ span 1; 
+}
+.rain {
+    text-align: start;
+    padding: 0px 0px 0px 8.5px;
+    font-size: 1em;
+    font-style: italic;
+    position: relative;
+    bottom: 6px;
+    
+    grid-column: 1 / span 1;
+    grid-row: 7/ span 1; 
+}
+.snow {
+    font-size: 1em;
+    font-style: italic;
+    position: relative;
+    bottom: 6px;
+
+    grid-column: 2 / span 1;
+    grid-row: 7/ span 1; 
+}

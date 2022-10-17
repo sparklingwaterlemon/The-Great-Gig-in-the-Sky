@@ -1,0 +1,20 @@
+.auth-page-container{
+    position: fixed;
+    font-size: 1em;
+    margin-left: 40px;
+    top: 100px;
+}
+.title{
+    font-size: 2em;
+    color: cornflowerblue;
+  
+}
+.big-button{
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: paleturquoise;
+    color:cornflowerblue;
+}

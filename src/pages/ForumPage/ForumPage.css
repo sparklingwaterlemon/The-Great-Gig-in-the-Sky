@@ -1,0 +1,55 @@
+.forum-container{
+    position: fixed;
+    font-size: 1em;
+    color: inherit;
+    margin: 20px;
+}
+.forum-title{
+    font-size: 3em;
+}
+.forum-hello{
+    font-size: 1.5em;
+}
+
+.form-container{
+    margin-top: 20px;
+}
+
+.forum-label{
+    padding: 0px 20px 0px 0px;
+}
+
+.forum-input{
+    width: 1000px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    background-color: rgb(240, 195, 195);
+    border:none;
+    border-radius: 10px;
+    color: palevioletred;
+    padding: 0px 0px 0px 20px;
+}
+
+.forum-submit-btn{
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: palevioletred;
+    color: antiquewhite;
+    border: none;
+}
+
+.forum-back-btn{
+    width: 300px;
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: coral;
+    border: none;
+}
+a:link {
+    color: white;
+}
+a:visited {
+    color: pink;
+}

@@ -1,0 +1,33 @@
+.search-bar-form-container {
+    position: fixed;
+    text-align: center;
+
+
+    /* outline: 1px solid orange; */
+    overflow: hidden;
+
+    bottom: 2%;
+    width: 50%;
+    transform: translate(-50%);
+    left: 50%;
+    
+}
+
+.search-input {
+    margin: 10px;
+    padding: .6rem 1.5rem;
+
+    font-size: 1.1rem;
+
+    border-radius: 25px;
+    border: 1.5px solid rgba(255,255,255, .8);
+
+    background-color: rgba(81, 81, 81, .35);
+    color: #d5d4d4;
+}
+
+input:focus {
+    outline: none;
+    /* border: 2px solid rgb(255, 190, 68); */
+    border: 2px solid dodgerblue;
+}

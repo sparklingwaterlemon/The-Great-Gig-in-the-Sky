@@ -1,0 +1,24 @@
+.form-container{
+    font-size: 1.5em;
+    color: inherit;
+}
+.login-label{
+    padding: 0px 20px 0px 0px;
+}
+.login-input{
+    font-size: 1em;
+    margin-bottom: 20px;
+    background-color: rgba(255,255,255,.4);
+    border:none;
+    border-radius: 10px;
+    color: palevioletred;
+    padding: 0px 0px 0px 20px;
+}
+.login-btn{
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: cornflowerblue;
+    color: paleturquoise;
+    border: none;
+}
