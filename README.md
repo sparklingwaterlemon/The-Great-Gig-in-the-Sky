@@ -90,7 +90,7 @@ IceBox
 - full crud would like to have a main forum/ community discussion board or possibly serve as a journal
 
 ---
-<h6> further research</h6>
+<h6> Further Research</h6>
 -- is the distance traveled by the up/down arrow universal?
 
 -- is there a default value or is it determined by some external factor like computer screen size?
