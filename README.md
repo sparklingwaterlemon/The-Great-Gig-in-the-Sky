@@ -83,6 +83,7 @@ By using the Image() constructor, we can set our new image. At the top of our pa
 - Font - https://fonts.google.com/specimen/Lato?query=Lato
 - Animate.css - https://animate.style
 - NASA moon images - https://svs.gsfc.nasa.gov/cgi-bin/details.cgi?aid=3810
+- WeatherAPI - https://www.weatherapi.com/
 
 Really couldn't have done this without the generous sharing of knowledge by Jurn van Wissen and Weiming Wu and their resources.
 
