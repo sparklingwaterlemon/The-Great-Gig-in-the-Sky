@@ -1,76 +1,90 @@
-
-The Great Gig In The Sky - Pink Floyd
-
+The Great Gig In The Sky - Pink Floyd  
 https://www.youtube.com/watch?v=mPGv8L3a_sY
 
+Project Home Page
+<---insert screenshot/video of main page--->
 
-
-Trello Link - Project Timeline
+Trello Link - Project Timeline  
 https://trello.com/b/k0eXcd3V/aau-moon-phase
 
-Wireframe v2 < br/> 
-https://lucid.app/lucidchart/d4b3b8dd-f777-4f42-bb95-e7cf574a4214/edit?view_items=fzFZslCtkPFP&invitationId=inv_00fc9adc-ae92-4d78-8f06-3e0d5863d4bf
+Wireframe v2
+<---insert wireframe 2 image -->
 
-
-- Giphy of Page
-MERN stack
-use of WeatherAPI / mongoDB / apple site like scroll feature
+Wireframe v1
+<---insert wireframe 2 image -->
 
 ---
-Main feature of this project lies in the scroll feature.
-Works like a flipbook animation.
+MongoDB | Express | React | Node.js | API 
+
+Key Features:
+- Parallax - Scrolling Animation (Apple Product Page) 
+- WeatherAPI - Used to bring in Weather Data and Moon Data
 
 ---
-The idea. <br />
-If our page has a scroll distance of 1000px and we have 25 images, by dividing these numbers, <br />
-we can see that for every 40px, or (40px/1000px) = 4% down the page, we should load a new image.
+<h3> Scroll Animation </h3>
+<h5>The idea </h5>
 
-Let's take the 4% and change it to a decimal, .04 <br />
-Let's call this our scroll_fraction. <br />
+<h6>Concept:</h6>
+If our page has a scroll distance of 1000px and we have 25 images, by dividing these numbers, we can see that for every 40px, or (40px/1000px) = 4% down the page, we should load a new image.
+
+Let's take the 4% and change it to a decimal, .04. 
+Let's call this our scroll_fraction. 
 We can get this value by dividing the total scroll distance of 1000px, with where we are located on the page.
 
-What image should we load when we are at 300px down the page? <br />
-300px (scroll location) / 1000px (total scroll distance) = gives us .30 <br />
-We are 30% down the page, and 30% thru our number of total images. <br />
+What image should we load when we are at 300px down the page? 
+300px (scroll location) / 1000px (total scroll distance) = gives us .30.
+We are 30% down the page, and 30% thru our number of total images.
 
-What is 30% of our total images? <br />
+What is 30% of our total images?
+
 If we take the scroll_fraction, .30, and multiply by the number of our total images, 25, we will get (.30 * 25) = 7.5
 We will be at image # 7.5. 
 
--
-We can put our images into an array. <br />
-For 25 images, the indexes will go from 0 to 24. <br />
-Let's call this our frame_index.<br />
+<h6>Organization of Images:</h6>
+For our moon images, we have the 365 days of the years with corresponding moon images. To reference the correct image to the correct date, we've crated an array.
+We add a filler image for index [0]. The index of the array with go from [0-365].
+<br />
+<br />
+We can use this nifty function to input a date, and return what the day is out of 365 days.
+<br />
+ie. function daysIntoYear(new Date("Feburary 4 2022")) will return 35 (the 35th day of the year)
+<--- insert DAYDATE FUNCTION ---->
 
-Let's us math.floor for our above example. <br />
-At 30% down the page, we will be at frame_index of 7 (<- 7.5 math.floored) (or the 6th image).
-
-Why are we at the 6th image not the 7th? <br />
-At scroll distance of 0 to 40px, we will be at frame_index = 0, our first image. <br />
-We are fine tuning. <br />
-In our example above, the first image does not load till 40px.
-
-At scroll position of 1000px, at total scroll distance of 1000px (the bottom of the page), we will get a scroll_fraction of 1. <br />
-If we multiply that value by total iamges, we will get a frame_index of 25. <br />
-Our array of 25 images only goes to frame_index of 24. <br />
-We can add a Math.min(total_frame_count -1), so 24 will be our biggest frame_index. 
+This way, we can access the corresponding moon image for that day.
 
 ---
+<h3> Key Foundation Function</h3>
+
+<--- insert key function 1 --->
+<--- insert key function 2 --->
+Basic overview.
+Let's go over what's going on. 
+
+Everytime we have a new scroll position, this useEffect will be triggered. So as we scroll, we will recalculate the scroll fraction, where we are relative to the max scroll height. The frameIndex will be a value from 0, to the total frame count (in our case, 150).
+
+By using the Image() constructor, we can set our new image. At the top of our page we will have today's date && moon. As we scroll down, the frameIndex will increase from 0 to 150. We will use the function currentFrame to subtract todays date in days, lets say 267, from 150. We will be able to draw the corresponding images and figure out what date we are on.
 
 
+----
+<h3> Resources </h3>
 
+- Jurn van Wissen - https://css-tricks.com/lets-make-one-of-those-fancy-scrolling-animations-used-on-apple-product-pages/
+- Cat Meme Generator - https://www.youtube.com/watch?v=-AwG8yF06Po
+- Weiming Wu - https://medium.com/geekculture/how-to-jazz-up-your-website-like-apple-with-javascript-eed2bf227fec 
+- React Docs - https://reactjs.org/docs/dom-elements.html 
+- Font - https://fonts.google.com/specimen/Lato?query=Lato
+- Animate.css - https://animate.style
+- NASA moon images - https://svs.gsfc.nasa.gov/cgi-bin/details.cgi?aid=3810
 
+Really couldn't have done this without the generous sharing of knowledge by Jurn van Wissen and Weiming Wu and their resources.
 
+---
+Reason for using 365 images
+NASA sources images from 2011, illumination and position, balancing.
 
-
-
-
-
-
-
-Key Function
-
-![Screen Shot 2022-10-10 at 11 18 59 AM](https://user-images.githubusercontent.com/105463926/194930080-87234766-3621-4c39-a386-4fb04889d7a6.png)
-
-useState
-![Screen Shot 2022-10-10 at 11 24 10 AM](https://user-images.githubusercontent.com/105463926/194930202-d375eb55-495b-46e7-9162-7e88cd7170e8.png)
+---
+IceBox
+- you may have noticed, what happens if our current day is less than 150? since the lunar phase takes 29.5 days, we can essentially loop it.
+- function loop it over after final new moon phase in decemeber. 
+- Split Flap for date change as you scroll - https://codepen.io/1055/pen/jjPLJo?editors=0010
+- full crud would like to have a main forum/ community discussion board or possibly serve as a journal
