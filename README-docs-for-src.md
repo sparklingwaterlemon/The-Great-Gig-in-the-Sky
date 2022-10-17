@@ -30,6 +30,3 @@ Fonts
 <!-- https://enroute.aircanada.com/en/aviation/airport-signs/ -->
 <!-- https://fonts.google.com/specimen/Lato?query=Lato -->
 
-update..
-testing...
-testing2...
