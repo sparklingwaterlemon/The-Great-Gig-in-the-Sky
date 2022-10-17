@@ -88,3 +88,9 @@ IceBox
 - function loop it over after final new moon phase in decemeber. 
 - Split Flap for date change as you scroll - https://codepen.io/1055/pen/jjPLJo?editors=0010
 - full crud would like to have a main forum/ community discussion board or possibly serve as a journal
+
+---
+<h6> further research</h6>
+-- is the distance traveled by the up/down arrow universal?
+
+-- is there a default value or is it determined by some external factor like computer screen size?
