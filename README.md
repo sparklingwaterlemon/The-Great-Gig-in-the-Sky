@@ -1,6 +1,7 @@
-https://trello.com/b/k0eXcd3V/aau-moon-phase
+https://www.youtube.com/watch?v=mPGv8L3a_sY
 
-Trello Link with Project Schedule
+https://trello.com/b/k0eXcd3V/aau-moon-phase
+Trello Link - Project Timeline
 Links to Wireframe/ ERD
 
 ---
