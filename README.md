@@ -97,6 +97,7 @@ NASA sources images from 2011, illumination and position, balancing.
 
 ---
 IceBox
+- Page Responsiveness - make it work for different screen sizes
 - you may have noticed, what happens if our current day is less than 150? since the lunar phase takes 29.5 days, we can essentially loop it.
 - function loop it over after final new moon phase in decemeber. 
 - Split Flap for date change as you scroll - https://codepen.io/1055/pen/jjPLJo?editors=0010
