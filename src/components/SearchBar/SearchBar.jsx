@@ -5,7 +5,8 @@ import "./SearchBar.css";
 export default function SearchBar({weatherData, setWeatherData}){
     const [location, setLocation] = useState("");
 
-    const FORECAST_CALL=`https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${location}&days=1&aqi=no&alerts=no`
+    const FORECAST_CALL=`https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${location}&aqi=no&alerts=no`
+    // const FORECAST_CALL=`https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${location}&aqi=no&alerts=no'
 
     function handleFormInput(evt){
         setLocation(evt.target.value)
