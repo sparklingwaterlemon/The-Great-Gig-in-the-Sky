@@ -113,6 +113,17 @@ IceBox
 
 ---
 update
-10/16 - Completed icebox item. Moved logged in to about page. App is now accessable without auth. 
+10/167 - Completed icebox item. Moved logged in to about page. App is now accessable without auth. 
 
-revert
+---
+log
+10/18 - npm install yarn for render.com...
+2 - npm install..
+3 - removed package-lock.json, and node_modules. ran yarn install, and npm install
+4 - rm rf package-lock,node-modules, added scripts, ran yarn"
+5 - "did not run npm install. npm install."
+6 - installed babel
+7 - removed splitflap x
+8 - rm rf node_modules, cache clean, yarn
+yarn take 9- >
+9 - reverted to 36a91438ea127bef63781250b54792ab00d092ff
