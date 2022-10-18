@@ -119,3 +119,4 @@ log
 ---
 10/18 - npm install yarn for render.com...
 10/18 - npm install..
+10/19 - removed package-lock.json, and node_modules. ran yarn install, and npm install
