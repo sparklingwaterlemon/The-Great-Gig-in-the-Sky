@@ -1,10 +1,11 @@
+Live Version - on Heroku
+
+https://the-great-gig-in-the-sky.herokuapp.com/
+
+
 The Great Gig In The Sky - Pink Floyd
 
 https://youtu.be/mPGv8L3a_sY
-
-Heroku Link
-
-https://the-great-gig-in-the-sky.herokuapp.com/
 
 Project Home Page
 
@@ -117,6 +118,7 @@ update
 
 ---
 log
+
 10/18 - npm install yarn for render.com...
 2 - npm install..
 3 - removed package-lock.json, and node_modules. ran yarn install, and npm install
