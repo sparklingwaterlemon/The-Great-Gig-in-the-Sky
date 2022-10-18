@@ -111,7 +111,8 @@ IceBox
 
 ---
 update
-10/167 - Completed icebox item. Moved logged in to about page. App is now accessable without auth. 
+
+10/17 - Completed icebox item. Moved logged in to about page. App is now accessable without auth. 
 
 ---
 log
