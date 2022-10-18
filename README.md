@@ -127,3 +127,4 @@ log
 8 - rm rf node_modules, cache clean, yarn
 yarn take 9- >
 9 - reverted to 36a91438ea127bef63781250b54792ab00d092ff
+10 - delete, npm i
