@@ -123,4 +123,5 @@ log
 10/18 - rm rf package-lock,node-modules, added scripts, ran yarn"
 10/18 - "did not run npm install. npm install."
 10/18 - installed babel
-yarn take 6- >
+- removed splitflap x
+yarn take 8- >
