@@ -118,10 +118,11 @@ update
 log
 ---
 10/18 - npm install yarn for render.com...
-10/18 - npm install..
-10/18 - removed package-lock.json, and node_modules. ran yarn install, and npm install
-10/18 - rm rf package-lock,node-modules, added scripts, ran yarn"
-10/18 - "did not run npm install. npm install."
-10/18 - installed babel
-- removed splitflap x
-yarn take 8- >
+2 - npm install..
+3 - removed package-lock.json, and node_modules. ran yarn install, and npm install
+4 - rm rf package-lock,node-modules, added scripts, ran yarn"
+5 - "did not run npm install. npm install."
+6 - installed babel
+7 - removed splitflap x
+8 - rm rf node_modules, cache clean, yarn
+yarn take 9- >
