@@ -101,6 +101,7 @@ IceBox
 - function loop it over after final new moon phase in decemeber. 
 - Split Flap for date change as you scroll - https://codepen.io/1055/pen/jjPLJo?editors=0010
 - full crud would like to have a main forum/ community discussion board or possibly serve as a journal
+- page responsiveness on computer display/ about button
 
 ---
 <h6> Further Research</h6>

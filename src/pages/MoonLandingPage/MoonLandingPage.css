@@ -18,19 +18,18 @@ canvas {
       rgb(255, 230, 203));
   border: none;
   border-radius: 50px;
+
   width: 20px;
   padding: 10px;
   position: fixed;
+
   left: 15%;
-  bottom: 2.9%;
+  bottom: 2.7%;
   font-size: 1em;
   font-weight: 600;
 }
 .about-button:hover{
   transform: scale(1.5);
-}
-.about-button:visited{
-  color:white;
 }
 
 
@@ -81,24 +80,17 @@ canvas {
   text-decoration-color:#000000;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 430px) {
   canvas {
     margin-top: 0px;
     max-width: 360px;
     max-height: 360px;
   }
   .about-button{
-    left: 5%;
-    bottom: 4%;
-    transform: rotate(-90deg);
-    font-size: 1em;
-    font-weight: bold;
-    color:red;
-  }
-  .about-link {
-    color:red;
-  }
-  .about-link:visited {
-    color:rgb(0, 251, 255);
+    height: 40px;
+    width: 40px;
+    left: 8.9%;
+    bottom: 2.3%;
+    transform: none;
   }
 }
