@@ -85,6 +85,10 @@ function MoonLandingPage({setChangeDDIndex, displayDate, todayStringDate, weathe
   }, [image])
 
 
+  function resetWeatherData(){
+    setWeatherData({});
+    console.log(weatherData);
+  }
 
   // --------- return --------->
   return(
@@ -112,6 +116,8 @@ function MoonLandingPage({setChangeDDIndex, displayDate, todayStringDate, weathe
         <span className="letter-9">&nbsp;</span>
       </Link>
     </button>
+
+    <button className="reset-button" onClick={resetWeatherData}> Show Moon </button>
     </>
   );
 }

@@ -80,6 +80,12 @@ canvas {
   text-decoration-color:#000000;
 }
 
+.reset-button{
+  position: fixed;
+  visibility: hidden;
+}
+
+
 @media screen and (max-width: 430px) {
   canvas {
     margin-top: 0px;
@@ -92,5 +98,16 @@ canvas {
     left: 8.9%;
     bottom: 2.3%;
     transform: none;
+  }
+  .reset-button{
+    visibility: visible;
+    
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+
+    right: 8.9%;
+    bottom: 4%;
+  
   }
 }
