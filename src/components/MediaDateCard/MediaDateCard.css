@@ -35,3 +35,23 @@
 }
 
 
+@media screen and (max-width: 430px) {
+    .date-card-container {
+        background-color: rgba(202, 139, 56,.5);
+        height: 180px;
+        width: 100%;
+    }
+    #display-date{
+        font-size: 3.2em;
+        margin: 0px;
+    }
+    #display-moon-phase{
+        font-size: 2em;
+        text-shadow: 
+        0px 0px 5px rgb(249, 215, 154),
+        0px 0px 5px black,
+        0px 0px 10px rgb(248, 243, 206),
+        0px 0px 20px white,
+        0px 0px 30px white;
+    }
+}

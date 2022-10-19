@@ -1,7 +1,7 @@
-.info-display-container{
+.info-display-container {
     display: flex;
     flex-direction: row;
-    /* border: 2px solid orange; */
+    border: 2px solid orange;
 
     position: fixed;
     width: 850px;
@@ -16,6 +16,7 @@
 
 .media-display-container {
     position: fixed;
+    border: 6px solid pink;
 
     transform: translate(-50%);
     left: 50%;
@@ -23,20 +24,21 @@
     bottom: 13%;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 430px) {
     .hide-on-mobile {
-        display: none;
+        visibility: hidden;
     }
     .show-on-mobile {
-        display: initial;
+        visibility: visible;
     }
-}
+} 
 
-@media screen and (min-width: 420.03px){
+
+@media screen and (min-width: 430.03px){
     .hide-on-mobile {
-        display: initial;
+        visibility: visible;
     }
     .show-on-mobile {
-        display: none;
+        visibility: hidden;
     }
 }

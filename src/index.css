@@ -22,10 +22,10 @@ body {
   color: #d5d4d4;
   background-color: black;  
 }
-/* 
-@media screen and (max-width: 770px) {
+ 
+@media screen and (max-width: 430px) {
   body {
-    background-color: orange;
+    background-color: antiquewhite;
   }
   
-} */
+}
