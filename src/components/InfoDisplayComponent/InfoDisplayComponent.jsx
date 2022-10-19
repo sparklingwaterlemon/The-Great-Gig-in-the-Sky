@@ -1,6 +1,6 @@
+import "./InfoDisplayComponent.css";
 import DateCard from "../DateCard/DateCard";
 import WeatherCard from "../WeatherCard/WeatherCard";
-import "./InfoDisplayComponent.css";
 
 export default function InfoDisplayComponent({displayDate, weatherData, curMoonPhase}){
 
