@@ -4,7 +4,7 @@ import WeatherCard from "../WeatherCard/WeatherCard";
 import MediaDisplayComponent from "../MediaDisplayComponent/MediaDisplayComponent";
 
 export default function InfoDisplayComponent({displayDate, weatherData, curMoonPhase}){
-
+    console.log(weatherData)
     return(
         <>
             <div className="info-display-container hide-on-mobile" >
@@ -12,7 +12,7 @@ export default function InfoDisplayComponent({displayDate, weatherData, curMoonP
                 <WeatherCard weatherData={weatherData} />
             </div>
             <div className="media-display-container show-on-mobile">
-                <MediaDisplayComponent displayDate={displayDate} curMoonPhase={curMoonPhase}/>
+                {weatherData.current ? <WeatherCard weatherData={weatherData}/> : <MediaDisplayComponent displayDate={displayDate} curMoonPhase={curMoonPhase}/> }
             </div>
         </>
     )
