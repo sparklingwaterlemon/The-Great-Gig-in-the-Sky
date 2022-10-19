@@ -124,8 +124,7 @@ Attempted to switch from Heroku to Render.com
 Notes: Needed to install different scripts and dependencies. Yarn and Babel. Attempting to learn but since I had Heroku on auto-deploy, it crashed my heroku page. Will disable auto-deploy on Heroku, create a separate branch (or maybe clone the project, set up a virtual environment) annd attempt again at a later time.
 <br />
 - 10/18
-Working on screen responsiveness design.
-iPhone14 pro screen dimensions are: 428px x 926px
+Completed a screen responsiveness design.
 
 ---
 
