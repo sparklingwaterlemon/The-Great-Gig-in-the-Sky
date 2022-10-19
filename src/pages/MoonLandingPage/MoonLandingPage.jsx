@@ -100,7 +100,13 @@ function MoonLandingPage({setChangeDDIndex, displayDate, todayStringDate, weathe
     <SearchBar setWeatherData={setWeatherData} />
     <InfoDisplayComponent displayDate={displayDate} weatherData={weatherData} curMoonPhase={curMoonPhase}/>
     <button className="about-button">
-      <Link to="/about"> ABOUT</Link>
+      <Link to="/about" className="about-link"> 
+        <span className="letter-a">A</span>
+        <span className="letter-b">B</span>
+        <span className="letter-o">O</span>
+        <span className="letter-u">U</span>
+        <span className="letter-t">T</span>
+      </Link>
     </button>
     </>
   );

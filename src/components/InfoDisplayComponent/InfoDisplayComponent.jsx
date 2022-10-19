@@ -13,7 +13,7 @@ export default function InfoDisplayComponent({displayDate, weatherData, curMoonP
                 <WeatherCard weatherData={weatherData} />
             </div>
             <div className="media-display-container show-on-mobile">
-                {weatherData.current ? <MediaDateCard displayDate={displayDate} curMoonPhase={curMoonPhase}/> : <MediaWeatherCard weatherData={weatherData}/>}
+                {weatherData.current ? <MediaWeatherCard weatherData={weatherData}/> : <DateCard displayDate={displayDate} curMoonPhase={curMoonPhase}/> }
             </div>
 
         </>

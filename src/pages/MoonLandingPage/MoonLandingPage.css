@@ -19,13 +19,15 @@ canvas {
   position: fixed;
   left: 15%;
   bottom: 4%;
-  
 }
 .about-button:hover{
   transform: scale(1.5);
 }
 .about-button:visited{
   color:white;
+}
+.letter-a{
+  color:black;
 }
 
 
@@ -34,5 +36,19 @@ canvas {
     margin-top: 0px;
     max-width: 360px;
     max-height: 360px;
+  }
+  .about-button{
+    left: 5%;
+    bottom: 4%;
+    transform: rotate(-90deg);
+    font-size: 1em;
+    font-weight: bold;
+    color:red;
+  }
+  .about-link {
+    color:red;
+  }
+  .about-link:visited {
+    color:rgb(0, 251, 255);
   }
 }

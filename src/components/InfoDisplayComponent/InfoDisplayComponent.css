@@ -16,7 +16,7 @@
 
 .media-display-container {
     position: fixed;
-    border: 6px solid pink;
+    /* border: 6px solid pink; */
 
     transform: translate(-50%);
     left: 50%;
