@@ -1,10 +1,8 @@
-The Great Gig In The Sky - Pink Floyd
-
-https://youtu.be/mPGv8L3a_sY
-
-Heroku Link
+Live Version - on Heroku
 
 https://the-great-gig-in-the-sky.herokuapp.com/
+
+
 
 Project Home Page
 
@@ -113,7 +111,8 @@ IceBox
 
 ---
 update
-10/167 - Completed icebox item. Moved logged in to about page. App is now accessable without auth. 
+
+10/17 - Completed icebox item. Moved logged in to about page. App is now accessable without auth. 
 
 ---
 log
@@ -125,6 +124,12 @@ log
 6 - installed babel
 7 - removed splitflap x
 8 - rm rf node_modules, cache clean, yarn
-yarn take 9- >
 9 - reverted to 36a91438ea127bef63781250b54792ab00d092ff
 10 - delete, npm i
+
+---
+
+The Great Gig In The Sky - Pink Floyd
+
+https://youtu.be/mPGv8L3a_sY
+
