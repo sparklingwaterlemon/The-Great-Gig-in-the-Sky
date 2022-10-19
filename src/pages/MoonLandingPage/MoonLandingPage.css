@@ -27,3 +27,13 @@ canvas {
 .about-button:visited{
   color:white;
 }
+
+
+@media screen and (max-width: 400px) {
+  canvas {
+    margin-top: 30px;
+    max-width: 325px;
+    max-height: 325px;
+  }
+  
+}

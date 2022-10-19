@@ -18,11 +18,8 @@ body {
 
   /* page height - scroll length */
   height: 684vh;
-  /* max-width:800px; */
-  min-width: 600px;
   
   color: #d5d4d4;
   background-color: black;  
 }
-
 
