@@ -1,0 +1,128 @@
+/* Flex Box */
+#m-weater-card-component {
+    
+    color: #d5d4d4;
+    background-color: rgba(10,10,10,.5);
+
+    text-align: center;
+
+    font-size: 1.5rem;
+
+    margin-bottom: 15%;
+    width: 300px;
+}
+
+/* Weather Card Flex Grid */
+.m-weather-data-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, auto);
+}
+
+/* Weather Card components */
+.m-current-name {
+    font-size: 1em;
+    position: relative;
+    margin-top: 5px;
+
+    grid-column: 1 / span 1;
+    grid-row: 1/ span 1;
+}
+.m-current-time {
+    position: relative;
+    margin-top: 5px;
+
+    grid-column: 2 / span 2;
+    grid-row: 1/ span 1;
+}
+
+.m-moonrise-header {
+    font-size: 1em;
+    position: relative;
+    margin: 3px 0px 3px 0px;
+    
+    grid-column: 1 / span 1;
+    grid-row: 2/ span 1;
+}
+.m-moonrise {    
+    font-size: 1em;
+    position: relative;
+    margin: 3px 0px 3px 0px;
+    
+    grid-column: 2 / span 1;
+    grid-row: 2/ span 1;
+}
+.m-moonset-header {
+    font-size: .9em;
+    position: relative;
+    margin: 1px 0px 0px 0px;
+    
+    grid-column: 1 / span 1;
+    grid-row: 3/ span 1;
+}
+.m-moonset {    
+    font-size: .9em;
+    position: relative;
+    margin: 1px 0px 0px 0px;
+    
+    grid-column: 2 / span 1;
+    grid-row: 3/ span 1;
+}
+
+.m-current-icon {    
+    position: relative;
+    margin: 3px 0px -5px 0px;
+    
+    grid-column: 1 / span 2;
+    grid-row: 4/ span 1;
+}
+.m-current-condition{
+    position: relative;
+
+    font-style: italic;
+    padding: 0px;
+    position: relative;
+    bottom: 4px;
+}
+
+.m-current-temp{
+    font-size: 3.2em;
+    width: 190px;
+    height: 90px;
+    padding: 0px 0px 0px 20px;
+    
+    grid-column: 1 / span 1;
+    grid-row: 5/ span 2;
+}
+.m-degree {
+    font-size: .5em;
+    position: relative;
+    bottom: 26px;
+    right: 5px;
+}
+
+.m-current-max{   
+    padding: 8px 10px 0px 0px;
+     
+    grid-column: 2 / span 1;
+    grid-row: 5/ span 1;
+}
+.m-current-min{   
+    padding: 8px 10px 0px 0px;
+    
+    grid-column: 2 / span 1;
+    grid-row: 6/ span 1;
+}
+.m-maxmin-degree {
+    font-size: 1rem;
+    position: relative;
+    bottom: 6px;
+}
+.m-arrows {
+    vertical-align: 0px;
+    padding: 5px;
+}
+
+
+
+

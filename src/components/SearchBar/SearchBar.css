@@ -40,7 +40,7 @@ input:focus {
     }
     .search-input {
         height: 50px;
-        width: 320px;
+        width: 85%;
         font-size: 1.7em;
     }
     input:focus {
