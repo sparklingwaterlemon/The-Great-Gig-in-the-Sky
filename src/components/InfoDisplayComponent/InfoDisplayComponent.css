@@ -1,7 +1,7 @@
 .info-display-container{
     display: flex;
     flex-direction: row;
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
 
     position: fixed;
     width: 850px;
@@ -14,4 +14,29 @@
     left: 50%;    
 }
 
+.media-display-container {
+    position: fixed;
 
+    transform: translate(-50%);
+    left: 50%;
+
+    bottom: 15%;
+}
+
+@media screen and (max-width: 410.978px) {
+    .hide-on-mobile {
+        display: none;
+    }
+    .show-on-mobile {
+        display: initial;
+    }
+}
+
+@media screen and (min-width: 420px){
+    .hide-on-mobile {
+        display: initial;
+    }
+    .show-on-mobile {
+        display: none;
+    }
+}

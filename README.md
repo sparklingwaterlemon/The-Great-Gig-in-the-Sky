@@ -96,7 +96,6 @@ NASA sources images from 2011, illumination and position, balancing.
 ---
 IceBox
 
-
 - Page Responsiveness - make it work for different screen sizes
 - you may have noticed, what happens if our current day is less than 150? since the lunar phase takes 29.5 days, we can essentially loop it.
 - function loop it over after final new moon phase in decemeber. 
@@ -106,26 +105,26 @@ IceBox
 ---
 <h6> Further Research</h6>
 -- is the distance traveled by the up/down arrow universal?
-
 -- is there a default value or is it determined by some external factor like computer screen size?
 
 ---
-update
+<h6> Updates </h6>
 
 10/17 - Completed icebox item. Moved logged in to about page. App is now accessable without auth. 
 
 ---
-log
-10/18 - npm install yarn for render.com...
-2 - npm install..
-3 - removed package-lock.json, and node_modules. ran yarn install, and npm install
-4 - rm rf package-lock,node-modules, added scripts, ran yarn"
-5 - "did not run npm install. npm install."
-6 - installed babel
-7 - removed splitflap x
-8 - rm rf node_modules, cache clean, yarn
-9 - reverted to 36a91438ea127bef63781250b54792ab00d092ff
-10 - delete, npm i
+<h6> Work Log </h6>
+...Since Project Presentation/ Submssion on 10/17
+<br/>
+<br/>
+
+- 10/18
+Attempted to switch from Heroku to Render.com
+Notes: Needed to install different scripts and dependencies. Yarn and Babel. Attempting to learn but since I had Heroku on auto-deploy, it crashed my heroku page. Will disable auto-deploy on Heroku, create a separate branch (or maybe clone the project, set up a virtual environment) annd attempt again at a later time.
+<br />
+- 10/18
+Working on screen responsiveness design.
+iPhone14 pro screen dimensions are: 428px x 926px
 
 ---
 

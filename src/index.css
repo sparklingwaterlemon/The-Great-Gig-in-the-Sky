@@ -23,3 +23,9 @@ body {
   background-color: black;  
 }
 
+@media screen and (max-width: 770px) {
+  body {
+    background-color: orange;
+  }
+  
+}
