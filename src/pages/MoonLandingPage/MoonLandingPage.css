@@ -31,8 +31,8 @@ canvas {
 
 @media screen and (max-width: 420px) {
   canvas {
-    margin-top: 30px;
-    max-width: 325px;
-    max-height: 325px;
+    margin-top: 0px;
+    max-width: 360px;
+    max-height: 360px;
   }
 }
