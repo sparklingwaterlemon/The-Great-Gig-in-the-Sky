@@ -1,3 +1,9 @@
+10/25
+
+WEATHERAPI SUBSCRIPTION HAS ENDED - 
+WEATHER PORTION OF PAGE UNDER CONSTRUCTION
+
+
 Live Version - on Heroku
 
 https://the-great-gig-in-the-sky.herokuapp.com/
