@@ -8,7 +8,30 @@ Live Version - on Heroku
 
 https://the-great-gig-in-the-sky.herokuapp.com/
 
+<hr />
 
+# Ice Box
+
+#### (1) Redo Image Loading Logic
+- Currently, I am doing the math to load 150 previous days with the comparative index number. Then on scroll, I am loading the date -1, retrieving it from server.
+- Change so, the math loads 150 days into a new array // cache all images at once into the client side // this should get rid of lagging between images/ speed up page. Then I can use canvas.ref to access array 0(possible placeholder)-150 days and get the images from here.
+
+#### (2.1) CSS/ Page Responsiveness
+- Currently have Index.html to a page height of x. Make height specific for each page.
+- Add margin top for canvas.
+- Responsive design - work for standard 1440px and iPhone then possibly tablet version
+
+#### (2.2) Removal of background black square of moon images
+- So I can have a color gradient on scroll
+
+#### (3) Re-do Contact Form
+
+#### (4) Full CRUD/ RESTful API for Journal
+
+
+
+
+<hr />
 
 Project Home Page
 
