@@ -23,6 +23,7 @@ https://the-great-gig-in-the-sky.herokuapp.com/
 
 #### (2.2) Removal of background black square of moon images
 - So I can have a color gradient on scroll
+- https://www.remove.bg/
 
 #### (3) Re-do Contact Form
 
