@@ -1,3 +1,6 @@
+12/2
+reploying to heroku
+
 10/25
 
 WEATHERAPI SUBSCRIPTION HAS ENDED -  
