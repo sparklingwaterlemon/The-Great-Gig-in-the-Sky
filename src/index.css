@@ -17,7 +17,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   /* page height - scroll length */
-  height: 684vh;
+  /* height: 684vh; */
+  height: auto;
   
   color: #d5d4d4;
   background-color: black;  
@@ -26,7 +27,7 @@ body {
  
 @media screen and (max-width: 430px) {
   body {
-    background-color: black;
+    background-color: gray;
   }
   
 }
