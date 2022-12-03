@@ -32,7 +32,7 @@ function MoonLandingPage({setChangeDDIndex, displayDate, todayStringDate, weathe
     return MOONIMAGES[todayStringDate - index].imgRef
   };
   // How many frames do we want to display? Total Frame Count
-  const frameCount = 150;
+  const frameCount = 10;
 
 
 
