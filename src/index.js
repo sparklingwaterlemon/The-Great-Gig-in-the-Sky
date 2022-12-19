@@ -3,20 +3,21 @@ import ReactDOM from 'react-dom/client';
 
 import './index.css';
 
-import { BrowserRouter as BowserRouter } from "react-router-dom";
-
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App2 from './pages/App2/App2';
 
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App2 />,
+  }
+])
 
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BowserRouter>
-      <App2 />
-    </BowserRouter>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
