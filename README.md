@@ -1,3 +1,18 @@
+## THE GREAT GIG IN THE SKY REWORK
+
+Update on <em>Monday, 12/19 </em>
+
+- transitioning to createBrowserRouter vs BrowserRouter
+- ReactRouter resource `https://reactrouter.com/en/main/routers/create-browser-router`
+- On initial page load, page will smooth scroll down to desired location.
+- Testing nested routes (will implement for journal entries down the line)
+- Nested Route resource `https://ui.dev/react-router-nested-routes`
+
+<hr />
+<hr />
+<hr />
+<hr />
+
 12/2
 reploying to heroku
 

@@ -5,14 +5,16 @@ import './index.css';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App2 from './pages/App2/App2';
+// import TestChildOne from './pages/TestChildOne/TestChildOne';
+// import TestChildTwo from "./pages/TestChildTwo/TestChildTwo";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App2 />,
-  }
-])
+  },
+]);
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
