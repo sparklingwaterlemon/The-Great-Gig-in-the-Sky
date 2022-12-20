@@ -3,9 +3,15 @@ import "./MoonComponent.css";
 // import {useState, useEffect, useRef } from "react";
 // import { Link } from "react-router-dom";
 
+import { useRef } from "react";
+
 export default function MoonComponent(){
+    const canvasRef = useRef(null);
+
     return(
-        <span className="moon-component">TEST MOON COMPONENT</span>
+        <div className="moon-component">
+            <canvas ref={canvasRef}/>
+        </div>
     )
 };
 
