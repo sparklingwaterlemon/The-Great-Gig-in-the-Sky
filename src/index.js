@@ -4,9 +4,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import App2 from './pages/App2/App2';
-// import TestChildOne from './pages/TestChildOne/TestChildOne';
-// import TestChildTwo from "./pages/TestChildTwo/TestChildTwo";
+import App2 from './pages2/App/App';
+
 
 
 const router = createBrowserRouter([
