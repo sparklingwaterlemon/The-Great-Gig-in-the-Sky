@@ -1,13 +1,27 @@
 import "./MoonComponent.css";
-// import MOONIMAGES from "../../assets/MOONIMAGES/0000index";
-// import {useState, useEffect, useRef } from "react";
-// import { Link } from "react-router-dom";
+import { useRef, useEffect, useState } from "react";
+import MOONIMAGES from "../../assets/MOONIMAGES/0000index";
+import topImageDayNumber from "../../utilities/DayDateFunction/DayDateFunction";
 
-import { useRef } from "react";
 
 export default function MoonComponent(){
     const canvasRef = useRef(null);
 
+    console.log(topImageDayNumber) // will plug this in below
+    
+    let topImage = new Image();
+    topImage.src = MOONIMAGES[10].imgRef // plug in topImageDayNumber here
+    const [image, setImage] = useState(topImage);
+
+    useEffect(() => {
+        const canvas = canvasRef.current
+        const context = canvas.getContext('2d')
+        context.drawImage(image, 0, 0, canvas.width, canvas.height)
+    }, [image])
+
+    
+
+    
     return(
         <div className="moon-component">
             <canvas ref={canvasRef}/>
