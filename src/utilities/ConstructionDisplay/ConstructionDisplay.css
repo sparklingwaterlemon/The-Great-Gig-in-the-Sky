@@ -24,6 +24,7 @@
         black 90% 95%, 
         yellow 95% 100%
         );
+    box-shadow: 40px 20px 40px rgb(219, 216, 140);
     display: flex;
     justify-content: center;
     align-items: center;
