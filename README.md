@@ -1,5 +1,7 @@
 ## THE GREAT GIG IN THE SKY REWORK
 
+/// image low res on upload????
+
 Update on <em>Monday, 12/19 </em>
 
 - transitioning to createBrowserRouter vs BrowserRouter
