@@ -3,8 +3,8 @@ import "./TestChildOne.css";
 export default function TestChildOne(){
 
     return(
-        <div className="test-child-one">
-            Test Child One
-        </div>
+        <section id="test-child-one">
+            <h2>Test Child One</h2>
+        </section>
     )
 }

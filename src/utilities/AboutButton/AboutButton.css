@@ -1,0 +1,70 @@
+.about-button {
+    color: white;
+    background-image: radial-gradient( 
+        rgb(200, 255, 255), 
+        rgb(170, 255, 255),
+        rgb(255, 160, 203), 
+        rgb(255, 230, 203));
+    border: none;
+    border-radius: 50px;
+  
+    width: 20px;
+    padding: 10px;
+    position: fixed;
+  
+    left: 15%;
+    bottom: 2.7%;
+    font-size: 1em;
+    font-weight: 600;
+  }
+  .about-button:hover{
+    transform: scale(1.5);
+  }
+  
+  
+  .about-link{
+    position: relative;
+    right: 1px;
+    font-size: 1.3em;
+  }
+  .letter-0 {
+    text-decoration: underline;
+      text-decoration-color: #e0ffff;
+  }
+  .letter-00 {
+    text-decoration: underline;
+      text-decoration-color: #e0ffff;
+  }
+  .letter-a{
+    color: #ffad08;
+    text-decoration: underline;
+    text-decoration-color: #c8ffff;
+  }
+  .letter-b{
+    color: #ffb516;
+    text-decoration: underline;
+    text-decoration-color:#b2ffff;
+  }
+  .letter-o{
+    color: #ffc41f;
+    text-decoration: underline;
+    text-decoration-color:#a4d0d0;
+  }
+  .letter-u{
+    color: #ffc41f;
+    text-decoration: underline;
+    text-decoration-color:#81a2a2;
+  }
+  .letter-t{
+    color: #ffd631;
+    text-decoration: underline;
+    text-decoration-color:#5f7777;
+  }
+  .letter-99{
+    text-decoration: underline;
+    text-decoration-color:#232929;
+  }
+  .letter-9{
+    text-decoration: underline;
+    text-decoration-color:#000000;
+  }

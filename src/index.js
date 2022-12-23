@@ -5,7 +5,7 @@ import './index.css';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App2 from './pages2/App/App';
-
+import TestChildOne from './pages/TestChildOne/TestChildOne';
 
 
 const router = createBrowserRouter([
@@ -13,6 +13,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <App2 />,
   },
+  {
+    path: "testchildone",
+    element: <TestChildOne />
+  }
 ]);
 
 

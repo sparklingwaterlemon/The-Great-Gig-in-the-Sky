@@ -1,6 +1,5 @@
-.test-child-one{
+#test-child-one{
     background-color: lightblue;
-    width: 300px;
-    height: 300px;
-    font-size: 1.2em;
+    border: 30px solid blue;
+    height: 100vh;
 }

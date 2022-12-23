@@ -4,24 +4,87 @@ import MOONIMAGES from "../../assets/MOONIMAGES/0000index";
 import topImageDayNumber from "../../utilities/DayDateFunction/DayDateFunction";
 
 
-export default function MoonComponent(){
-    const canvasRef = useRef(null);
 
-    console.log(topImageDayNumber) // will plug this in below
+export default function MoonComponent(){
+    // // ------ SCROLLING FUNCTIONS ------
+    const [currentYLocation, setCurrentYLocation] = useState(0);
     
+    // -- updates scroll location
+    const handleScroll = () => {
+        let scrollPosition = window.scrollY;
+        setCurrentYLocation(scrollPosition);
+    };
+
+    // -- useEffect to update scroll location when scroll location changes
+    useEffect(()=>{
+        window.addEventListener("scroll", handleScroll, {passive: true});
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [currentYLocation]);
+
+
+    // // ------ FRAME CALCULATIONS  ------
+    // // ------ FUNCTIONS DETERMINING WHICH IMAGE TO "LOAD" DEPENDING ON SCROLL FRACTION  ------
+    const frameCount = 91; // -- total frame count - how many total images do we want to load
+    
+
+    // -- function to determine which index to access in MOONIMAGES depending on the argument(which is changed by scroll location)
+    const currentFrame = function(index) {
+        let neg = topImageDayNumber - index;
+        if(neg <= 0){
+            let top = topImageDayNumber + 365;
+            return MOONIMAGES[top - index].imgRef 
+        } else if(neg > 0){
+            return MOONIMAGES[topImageDayNumber - index].imgRef 
+        };
+        // this if-else statement is to calculate between years
+        // ie. if today is December 25 and the top image is 30 days in the future, ~ January 25
+        // -- once we scroll down more than 25 frames, we will be references negative index from MOONIMAGES
+        // we want to start back from last years Dec 31, the 365th index of the MOONIMAGES array
+        // returns an image for the useEffect below
+
+        // setChangeDDIndex(index) // for info box
+    };
+
+
+    // // ------ IMAGE RENDERING FUNCTIONS ------
+    // -- note: top image of Page is 30 nights into the future
     let topImage = new Image();
-    topImage.src = MOONIMAGES[10].imgRef // plug in topImageDayNumber here
+    topImage.src = MOONIMAGES[topImageDayNumber].imgRef;
     const [image, setImage] = useState(topImage);
 
+    // -- useEffect to update to the new image when we declare a new image by setImage
+    const canvasRef = useRef(null);
     useEffect(() => {
         const canvas = canvasRef.current
         const context = canvas.getContext('2d')
         context.drawImage(image, 0, 0, canvas.width, canvas.height)
-    }, [image])
+    },[image])
 
-    
+    // -- useEffect to set newImage depending on scroll Fraction
+    useEffect(() => {
+        let html = document.documentElement;
+        let maxScrollHeight = html.scrollHeight - html.clientHeight; // total Scroll Distance
+        let scrollFraction = (currentYLocation / maxScrollHeight);
+        const frameIndex = Math.floor(scrollFraction * frameCount);
 
-    
+        const updateMoon = new Image();
+        updateMoon.src = currentFrame(frameIndex);
+        updateMoon.onload = () => setImage(updateMoon);
+        
+        // // use to debug/ test incorrect frame rate/ index
+        // console.log("*************************")
+        // console.log("currentYLocation")
+        // console.log(currentYLocation)
+        // console.log("---maxscrollHeight----")
+        // console.log(maxScrollHeight)
+        // console.log("---scrollFraction----")
+        // console.log(scrollFraction)
+        // console.log("---scrollFraction * framecount----")
+        // console.log(scrollFraction * frameCount)
+        // console.log("frame Index")
+        // console.log(frameIndex)  
+    }, [currentYLocation])
+
     return(
         <div className="moon-component">
             <canvas ref={canvasRef}/>
@@ -31,118 +94,7 @@ export default function MoonComponent(){
 
 
 
-// function MoonLandingPage({setChangeDDIndex, displayDate, todayStringDate, weatherData, setWeatherData, curMoonPhase}) {
-//   // --------- Variables --------->
-//   // Scroll Variables
-//   var html = document.documentElement; // <html> <head></head> <body></body> </html>
-//   var maxScrollHeight = html.scrollHeight - html.clientHeight;
-
-//   // Initializing Intial Image to MOONIMAGES[ with today's index].imgRef
-//   let initialImage = new Image();
-//   initialImage.src = MOONIMAGES[todayStringDate].imgRef 
-
-//   // useState Variables
-//   const [scrollPosition, setScrollPosition] = useState(0); // for Scroll Position
-//   const [image, setImage] = useState(initialImage)
-  
-
-//   // CanvasRef
-//   const canvasRef = useRef(null);
-  
-//   // Frame Variables
-//   const currentFrame = function(index){
-//     setChangeDDIndex(index) // goes to App.js
-//     return MOONIMAGES[todayStringDate - index].imgRef
-//   };
-//   // How many frames do we want to display? Total Frame Count
-//   const frameCount = 10;
-
-
-
-//   // --------- Functions --------->
-//   // Handles Scroll Position Change
-//   const handleScroll = () => {
-//     const position = window.scrollY;
-//     setScrollPosition(position);
-//   };
-
-//   // useEffect
-//   // Sets New Scroll Position
-//   useEffect(() => {
-//     window.addEventListener('scroll', handleScroll, {passive: true});
-//     return () => window.removeEventListener('scroll', handleScroll);
-//   }, [scrollPosition]);
-
-//   // useEffect
-//   // Handles New Image Change - Loads
-//   useEffect(() => {
-//     let scrollFraction = (scrollPosition / maxScrollHeight); // uses scrollFraction to figure out what part of image you should be on
-//     const frameIndex = Math.floor(scrollFraction * frameCount);
-
-//     const moonImage = new Image();
-//     moonImage.src = currentFrame(frameIndex);
-//     moonImage.onload = () => setImage(moonImage);
-       
-//     // // use to debug incorrect frame rate/ index
-//     // console.log("--------")
-//     // console.log("scrollPosition")
-//     // console.log(scrollPosition)
-//     // console.log("---maxscrollHeight----")
-//     // console.log(maxScrollHeight)
-//     // console.log("---scrollFraction----")
-//     // console.log(scrollFraction)
-//     // console.log("---scrollFraction * framecount----")
-//     // console.log(scrollFraction * frameCount)
-//     // console.log("frame Index")
-//     // console.log(frameIndex)  
-//   }, [scrollPosition])
-
-  
-//   // useEffect
-//   // Draws - Renders - New Image
-//   useEffect(() => {
-//     const canvas = canvasRef.current
-//     const context = canvas.getContext('2d')
-    
-//     context.drawImage(image, 0, 0, canvas.width, canvas.height) // adjusted the size in CSS
-//   }, [image])
-
-
-//   function resetWeatherData(){
-//     setWeatherData({});
-//     console.log(weatherData);
-//   }
-
-//   // --------- return --------->
-//   return(
-//     <>
-//     <div className="canvas-container">
-//       <canvas 
-//         ref={canvasRef}
-//         width="730"
-//         height="730"
-//         className="scrolling-test"
-//       />
-//     </div>
-//     <SearchBar setWeatherData={setWeatherData} />
-//     <InfoDisplayComponent displayDate={displayDate} weatherData={weatherData} curMoonPhase={curMoonPhase}/>
-//     <button className="about-button">
-//       <Link to="/about" className="about-link"> 
-//         <span className="letter-0">&nbsp;</span>
-//         <span className="letter-00">&nbsp;</span>
-//         <span className="letter-a">&nbsp;A</span>
-//         <span className="letter-b">B</span>
-//         <span className="letter-o">O</span>
-//         <span className="letter-u">U</span>
-//         <span className="letter-t">T&nbsp;&nbsp;</span>
-//         <span className="letter-99">&nbsp;</span>
-//         <span className="letter-9">&nbsp;</span>
-//       </Link>
-//     </button>
-
 //     <button className="reset-button" onClick={resetWeatherData}> Show Moon </button>
 //     </>
 //   );
 // }
-
-// export default MoonLandingPage;

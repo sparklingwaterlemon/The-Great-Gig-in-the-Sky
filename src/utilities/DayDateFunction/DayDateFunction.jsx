@@ -5,14 +5,15 @@ function dayDateFunction(date){
     return ((Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - Date.UTC(date.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000);
 }
 
+// plugging in today's date to get currentDayNumber
 let t = new Date();
 let currentDayNumber = dayDateFunction(t);
 
-// Want top image of page on load, to be 30 days in the future
-let future = currentDayNumber + 30;
-let topImageDayNumber = 0; // variable we are going to export
 
-if(future > 365){ // if past 365, new years
+// Top Image is 30 days in the future.. scroll up to see future dates
+let future = currentDayNumber + 30;
+let topImageDayNumber = 0;
+if(future > 365){ // 365 days
     topImageDayNumber = future - 365;
 }
 
