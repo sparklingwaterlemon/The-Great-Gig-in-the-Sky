@@ -12,7 +12,7 @@ export default function ConstructionDisplay(){
                 - reworking routes
                 - reworking organization/ strucutre of code
                 <br/>
-                <a href="https://github.com/sparklingwaterlemon/The-Great-Gig-in-the-Sky" target="_blank">github</a>
+                <a href="https://github.com/sparklingwaterlemon/The-Great-Gig-in-the-Sky" target="_blank" rel="noreferrer">github</a>
             </div>
         </div>
     )
