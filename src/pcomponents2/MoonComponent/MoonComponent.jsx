@@ -86,7 +86,7 @@ export default function MoonComponent(){
     }, [currentYLocation])
 
     return(
-        <div className="moon-component">
+        <div className="moon-container">
             <canvas ref={canvasRef}/>
         </div>
     )

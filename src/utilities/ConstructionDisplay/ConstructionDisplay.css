@@ -1,0 +1,47 @@
+.c-border{
+    width: 800px;
+    height: 200px;
+    background: linear-gradient(
+        -45deg, 
+        black 0% 5%, 
+        yellow 5% 10%,
+        black 10% 15%, 
+        yellow 15% 20%,
+        black 20% 25%, 
+        yellow 25% 30%,
+        black 30% 35%,
+        yellow 35% 40%,
+        black 40% 45%, 
+        yellow 45% 50%,
+        black 50% 55%, 
+        yellow 55% 60%,
+        black 60% 65%, 
+        yellow 65% 70%,
+        black 70% 75%, 
+        yellow 75% 80%,
+        black 80% 85%, 
+        yellow 85% 90%,
+        black 90% 95%, 
+        yellow 95% 100%
+        );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.c-container{
+    width: 775px;
+    height: 175px;
+    background-color: yellow;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+}
+.c-header{
+    font-size: 3em;
+}
+.c-date{
+    font-size: 1.5em;
+}
