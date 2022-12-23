@@ -40,6 +40,15 @@
     align-items: center;
     font-style: italic;
 }
+.c-container a{
+    color: dodgerblue;
+}
+.c-container a:hover{
+    color: black;
+}
+.c-container a:visited{
+    color: dodgerblue;
+}
 .c-header{
     font-size: 3em;
 }
