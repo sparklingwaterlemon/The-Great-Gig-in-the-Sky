@@ -55,9 +55,11 @@ export default function App(){
         <section id="section-landing-page">
             <AboutButton />
             <MoonComponent frameCount={frameCount}/>
-            <div className="construction">
+
+            {/* <div className="construction">
                 <ConstructionDisplay />
-            </div>
+            </div> */}
+
         </section>
     )
 };
