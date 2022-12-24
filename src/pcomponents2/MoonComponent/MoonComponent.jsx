@@ -5,7 +5,7 @@ import topImageDayNumber from "../../utilities/DayDateFunction/DayDateFunction";
 
 
 
-export default function MoonComponent({frameCount}){
+export default function MoonComponent(){
     // // ------ SCROLLING FUNCTIONS ------
     const [currentYLocation, setCurrentYLocation] = useState(0);
     
@@ -24,6 +24,8 @@ export default function MoonComponent({frameCount}){
 
     // // ------ FRAME CALCULATIONS  ------
     // // ------ FUNCTIONS DETERMINING WHICH IMAGE TO "LOAD" DEPENDING ON SCROLL FRACTION  ------
+    const frameCount = 91; 
+
     // -- function to determine which index to access in MOONIMAGES depending on the argument(which is changed by scroll location)
     const currentFrame = function(index) {
         var neg = topImageDayNumber - index;
