@@ -16,16 +16,17 @@ export default function App(){
     // - passing it down to MoonComponent, but also using in this component for preloadImages()
     const frameCount = 91;
 
-    // on intial load - window will scroll down
+    // // INITIAL WINDOW SCROLL DOWN ON LOAD
     useEffect(()=>{
         window.scroll({
-            top: 1099.34, // maxHeight(/totalFrameCount * 30.5 (30 images above)
+            top: 1099.34, // maxHeight/totalFrameCount * 30.5 // rendering 91 images - 30 images on top are future (see utilites/DayDateFunction)
             left: 0,
             behavior: "smooth",
         })
     },[]);
 
-    // on intial load - preloading the images
+    // // IMAGE PRELOAD
+    // -- (2) preloading the images
     const preloadFrame = (frame) => {
         let preimg = new Image();
         preimg.src = MOONIMAGES[frame].imgRef
@@ -33,19 +34,15 @@ export default function App(){
             console.log("preimg.onload good")
         };
     }
-    // -- function to preoload images/ cache
+    // -- (1) calling function to preoload images/ cache
     const preloadImages = () => {
         for(let i = 1 ; i <= frameCount ; i++){
             var precheck = topImageDayNumber - i;
             if(precheck > 0){
-                // console.log(i);
                 preloadFrame(topImageDayNumber - i)
-                // console.log("topImageDayNumber - i", topImageDayNumber - i);
             } else if(precheck <= 0){
                 var preTop = topImageDayNumber + 365;
-                // console.log(i);
                 preloadFrame(preTop - i)
-                // console.log("pretop.minus.i", preTop-i)
             }
         }
     };
