@@ -9,6 +9,11 @@
     left: 50%;
     transform: translate(-50%, 0%);
 }
+.preload-container{
+    position: fixed;
+    left: 0;
+    border: 5px solid red;
+}
 h1{
     background-color: blue;
     color: orange;

@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import AboutButton from "../../utilities/AboutButton/AboutButton";
 import MoonComponent from "../../pcomponents2/MoonComponent/MoonComponent";
 import ConstructionDisplay from "../../utilities/ConstructionDisplay/ConstructionDisplay";
+import TestChildTwo from "../../pages/TestChildTwo/TestChildTwo";
 
 import topImageDayNumber from "../../utilities/DayDateFunction/DayDateFunction";
 import MOONIMAGES from "../../assets/MOONIMAGES/0000index";
@@ -24,27 +25,27 @@ export default function App(){
         })
     },[]);
 
-
     // on intial load - preloading the images
     const preloadFrame = (frame) => {
         let preimg = new Image();
         preimg.src = MOONIMAGES[frame].imgRef
-    };
-
+        preimg.onload = function() {
+            console.log("preimg.onload good")
+        };
+    }
     // -- function to preoload images/ cache
     const preloadImages = () => {
         for(let i = 1 ; i <= frameCount ; i++){
             var precheck = topImageDayNumber - i;
-
             if(precheck > 0){
-                console.log(i);
+                // console.log(i);
                 preloadFrame(topImageDayNumber - i)
-                console.log("topImageDayNumber - i", topImageDayNumber - i);
+                // console.log("topImageDayNumber - i", topImageDayNumber - i);
             } else if(precheck <= 0){
                 var preTop = topImageDayNumber + 365;
-                console.log(i);
-                preloadFrame(preTop - i);
-                console.log("pretop.minus.i", preTop-i)
+                // console.log(i);
+                preloadFrame(preTop - i)
+                // console.log("pretop.minus.i", preTop-i)
             }
         }
     };
