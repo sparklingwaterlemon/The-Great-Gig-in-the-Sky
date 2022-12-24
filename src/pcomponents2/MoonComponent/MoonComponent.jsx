@@ -29,9 +29,9 @@ export default function MoonComponent(){
 
     // -- function to determine which index to access in MOONIMAGES depending on the argument(which is changed by scroll location)
     const currentFrame = function(index) {
-        let neg = topImageDayNumber - index;
+        var neg = topImageDayNumber - index;
         if(neg <= 0){
-            let top = topImageDayNumber + 365;
+            var top = topImageDayNumber + 365;
             return MOONIMAGES[top - index].imgRef 
         } else if(neg > 0){
             return MOONIMAGES[topImageDayNumber - index].imgRef 
@@ -74,17 +74,11 @@ export default function MoonComponent(){
         updateMoon.onload = () => setImage(updateMoon);
         
         // // use to debug/ test incorrect frame rate/ index
-        // console.log("*************************")
-        // console.log("currentYLocation")
-        // console.log(currentYLocation)
-        // console.log("---maxscrollHeight----")
-        // console.log(maxScrollHeight)
-        // console.log("---scrollFraction----")
-        // console.log(scrollFraction)
-        // console.log("---scrollFraction * framecount----")
-        // console.log(scrollFraction * frameCount)
-        // console.log("frame Index")
-        // console.log(frameIndex)  
+        // console.log("************************* ---currentYLocation", currentYLocation);
+        // console.log("---maxscrollHeight----", maxScrollHeight);
+        // console.log("---scrollFraction----", scrollFraction);
+        // console.log("---scrollFraction * framecount----", scrollFraction * frameCount);
+        // console.log("frame Index", frameIndex);
     }, [currentYLocation])
 
     return(
