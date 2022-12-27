@@ -1,6 +1,27 @@
 #section-m{
     height: 4000px;
+    background-color: blue;
     /* border: 5px solid red; */
+}
+
+.m-b-container{
+    position: absolute;
+    height: 4000px;
+    width: 100%;
+    max-width: 100%;
+    
+    background-color: black;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+.m-b-image{
+    position: relative;
+    height: 85%;
+    object-fit: contain;
 }
 
 

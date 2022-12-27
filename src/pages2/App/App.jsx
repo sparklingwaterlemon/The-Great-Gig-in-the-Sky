@@ -48,17 +48,17 @@ export default function App(){
 
     return (
         <section id="section-m">
-            
+            <div className="m-b-container">
+                <img className="m-b-image" src={require("../../assets/space/m8.jpeg")} alt="background"/>
+            </div>
             <MoonComponent />
 
 
-
-
-            {/* <AboutButton /> */}
             <div className="construction">
                 <ConstructionDisplay />
             </div>
 
+            {/* <AboutButton /> */}
         </section>
     )
 };

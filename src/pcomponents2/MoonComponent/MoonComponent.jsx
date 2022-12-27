@@ -81,16 +81,7 @@ export default function MoonComponent(){
     }, [currentYLocation])
 
     return(
-        <>
-            <div className="m-b-container">
-                <img className="m-b-image" src={require("../../assets/space/m8.jpeg")} alt="background"/>
-            </div>
-            {/* <div className="m-b2-container">
-                <img className="m-b2-image" src={require("../../assets/space/m8.jpeg")} alt="background"/>
-            </div> */}
-            <canvas className="m-canvas" ref={canvasRef}/>
-
-        </>
+        <canvas className="m-canvas" ref={canvasRef}/>
     )
 };
 
