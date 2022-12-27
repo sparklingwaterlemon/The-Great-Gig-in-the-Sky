@@ -1,7 +1,7 @@
 import "./App.css";
 import { useEffect } from "react";
 
-import AboutButton from "../../utilities/AboutButton/AboutButton";
+// import AboutButton from "../../utilities/AboutButton/AboutButton";
 import MoonComponent from "../../pcomponents2/MoonComponent/MoonComponent";
 import ConstructionDisplay from "../../utilities/ConstructionDisplay/ConstructionDisplay";
 
@@ -12,10 +12,6 @@ import MOONIMAGES from "../../assets/MOONIMAGES/0000index";
 
 
 export default function App(){
-    // frameCount = how many image stills we want to render total
-    // - passing it down to MoonComponent, but also using in this component for preloadImages()
-    const frameCount = 91;
-
     // // INITIAL WINDOW SCROLL DOWN ON LOAD
     useEffect(()=>{
         window.scroll({
@@ -51,10 +47,14 @@ export default function App(){
     
 
     return (
-        <section id="section-landing-page">
-            <AboutButton />
-            <MoonComponent frameCount={frameCount}/>
+        <section id="section-m">
+            
+            <MoonComponent />
 
+
+
+
+            {/* <AboutButton /> */}
             <div className="construction">
                 <ConstructionDisplay />
             </div>

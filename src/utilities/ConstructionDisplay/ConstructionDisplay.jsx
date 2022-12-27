@@ -9,7 +9,7 @@ export default function ConstructionDisplay(){
                 <span className="c-header">UNDER re-CONSTRUCTION</span>
                 <span className="c-date">LAST MODIFIED ON <strong>{text}</strong></span>
                 feel free to scroll
-                - recent update: preload images on load
+                - recent update: background image
                 <br/>
                 <a href="https://github.com/sparklingwaterlemon/The-Great-Gig-in-the-Sky" target="_blank" rel="noreferrer">github</a>
             </div>
