@@ -1,5 +1,26 @@
 .m-b-container{
     position: absolute;
+    height: 4000px;
+    width: 100%;
+    max-width: 100%;
+    
+    background-color: black;
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: flex-end;
+    align-items: center;
+
+}
+.m-b-image{
+    position: relative;
+    height: 85%;
+    object-fit: contain;
+}
+
+/* .m-b-container{
+    position: absolute;
     height: 1200px;
     width: 100%;
     max-width: 100%;
@@ -7,7 +28,6 @@
     background-color: black;
     overflow: hidden;
 }
-
 .m-b-image{
     position: relative;
     height: 400%;
@@ -27,7 +47,7 @@
     position: relative;
     height: 230%;
     object-fit: cover;
-}
+} */
 
 
 
@@ -46,7 +66,5 @@
         0px 0px 40px black,
         0px 0px 60px black,
         0px 0px 80px black,
-        0px 0px 100px black,
-        0px 0px 500px black,
-        0px 0px 800px black;
+        0px 0px 100px black;
 }

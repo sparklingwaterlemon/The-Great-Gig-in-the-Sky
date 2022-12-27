@@ -1,15 +1,41 @@
 ## THE GREAT GIG IN THE SKY REWORK
 
-/// image low res on upload????
 
-Update on <em>Monday, 12/19 </em>
+
+Update on <em>Monday, 12/26 </em>
 
 - transitioning to createBrowserRouter vs BrowserRouter
 - ReactRouter resource `https://reactrouter.com/en/main/routers/create-browser-router`
 - On initial page load, page will smooth scroll down to desired location.
 - Testing nested routes (will implement for journal entries down the line)
 - Nested Route resource `https://ui.dev/react-router-nested-routes`
+- preload images to decrease lag
+- background images
 
+
+To-Do's:
+- Display Box is Fixed
+- but Astro Weather Box is Moving Parallaxed Effect
+- Bottom of Scroll - About Page Linke
+- `<a><div>` ?? or just a `<button>`
+
+IceBox:
+- New Background at a later time - Stars Parallax Effect
+
+
+
+
+
+-- Diary Journal Entry - Login
+- Full Crud
+- Create Journal Post
+-- Only future dates
+-- List Sorted By Date Order
+
+- Twitter Message like - display components
+left side--------right side
+all message-------full message
+(date/ title/ moonphase) ---- update message or delete
 <hr />
 <hr />
 <hr />
