@@ -13,7 +13,10 @@ Update on <em>Monday, 12/26 </em>
 - background images
 
 
+
 To-Do's:
+- Check to see if useEffect is being triggered with the background image load while doing display box..
+- Make sure scrolling down moon/ loading moon is tonight's moon
 - Display Box is Fixed
 - but Astro Weather Box is Moving Parallaxed Effect
 - Bottom of Scroll - About Page Linke
