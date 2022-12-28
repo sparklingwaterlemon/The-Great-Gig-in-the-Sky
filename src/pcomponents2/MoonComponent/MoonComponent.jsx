@@ -37,7 +37,6 @@ export default function MoonComponent(){
 
     // // ------ IMAGE RENDERING FUNCTIONS ------
     var holderImage = new Image();
-    // holderImage.src = MOONIMAGES[0].imgRef;
     const [image, setImage] = useState(holderImage);
 
     
@@ -79,7 +78,7 @@ export default function MoonComponent(){
     }, [currentYLocation]);
 
 
-    const [dummyScroll, setDummyScroll] = useState(true);
+    // const [dummyScroll, setDummyScroll] = useState(true);
 
     // -- useEffect to update to the new image when we declare a new image by setImage
     // -- canvasRef
@@ -88,25 +87,25 @@ export default function MoonComponent(){
         const canvas = canvasRef.current;
         const context = canvas.getContext('2d');
                 
-        // console.log("CANVAS--- IMAGWE", image)
+        console.log("CANVAS--- IMAGE", image)
         canvas.width = 400;
         canvas.height = 400;
         context.drawImage(image, 0, 0, canvas.width, canvas.height);
 
-        if(dummyScroll){
-            setDummyScroll(false);
-            window.scroll({
-                top: 5000,
-                left: 0,
-            });
-            console.log("Moon - Bottom Out");
-            window.scroll({
-                top: 0,
-                left: 0,
-            });
-            console.log("Moon - Top Out");
-        };
-        // eslint-disable-next-line
+        // if(dummyScroll){
+        //     setDummyScroll(false);
+        //     window.scroll({
+        //         top: 5000,
+        //         left: 0,
+        //     });
+        //     console.log("Moon - Bottom Out");
+        //     window.scroll({
+        //         top: 0,
+        //         left: 0,
+        //     });
+        //     console.log("Moon - Top Out");
+        // };
+        // // eslint-disable-next-line
     },[image]);
 
     // console.log("end of mooncomponent???")

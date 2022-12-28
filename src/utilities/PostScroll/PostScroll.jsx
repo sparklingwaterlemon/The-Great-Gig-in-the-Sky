@@ -9,20 +9,22 @@ export default function PostScroll(){
         var sft = (msh/ 91) * 30.5; // 91 is the frame count // 30.5 is the 30th frame
         var sft2 = Number(sft.toFixed(2));
         if(ds){
-            setDS(false);
-            window.scroll({
-                top: 0,
-                left: 0,
-                behavior: "smooth",
-            });
-            console.log("PostScroll--- Top Out");
-            window.scroll({
-                top: sft2,
-                left: 0,
-                behavior: "smooth",
-            });
-            console.log("PostScroll--- SMOOTH SCROLL");
-        };
+            setTimeout(()=>{
+                setDS(false);
+                window.scroll({
+                    top: 0,
+                    left: 0,
+                    behavior: "smooth",
+                });
+                console.log("PostScroll--- Top Out");
+                window.scroll({
+                    top: sft2,
+                    left: 0,
+                    behavior: "smooth",
+                });
+                console.log("PostScroll--- SMOOTH SCROLL");
+            }, 250);
+        }
         // eslint-disable-next-line
     },[]);
 }
