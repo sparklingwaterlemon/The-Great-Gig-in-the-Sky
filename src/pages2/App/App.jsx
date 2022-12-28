@@ -15,10 +15,6 @@ export default function App(){
      
     function testScrollAGAIN(){
         window.scroll({
-            top: 5000,
-            left: 0,
-        });
-        window.scroll({
             top: 0,
             left: 0,
         });
