@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import MoonComponent from "../../pcomponents2/MoonComponent/MoonComponent";
 import ConstructionDisplay from "../../utilities/ConstructionDisplay/ConstructionDisplay";
@@ -9,11 +9,16 @@ import PreloadImages from "../../utilities/PreLoadImages/PreLoadImages";
 
 
 export default function App(){
-    PreloadImages();   
-    
+    PreloadImages();
+     
+
     useEffect(()=>{
+        var h = document.documentElement;
+        var msh = h.scrollHeight - h.clientHeight;
+        var sft = (msh/ 91) * 30.5; // 91 is the frame count // 30.5 is the 30th frame
+        var sft2 = Number(sft.toFixed(2));
         window.scroll({
-            top: 1435,
+            top: sft2,
             left: 0,
             behavior: "smooth",
         });

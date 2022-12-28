@@ -46,8 +46,6 @@ export default function MoonComponent(){
         let maxScrollHeight = html.scrollHeight - html.clientHeight; // total Scroll Distance
         let scrollFraction = (currentYLocation / maxScrollHeight);
         const frameIndex = Math.floor(scrollFraction * frameCount);
-        // console.log("maxScrollHeight", maxScrollHeight)
-        // console.log("frameIndex", frameIndex)
 
         const updateMoon = new Image();
         updateMoon.src = currentFrame(frameIndex);
@@ -74,33 +72,8 @@ export default function MoonComponent(){
         canvas.width = 400;
         canvas.height = 400;
         context.drawImage(image, 0, 0, canvas.width, canvas.height)
-        
-        // scrolls down to page, and back up, and in APP.jsx -> scrolls down to page
-        // dummyScroll to fix bug - onload may load TopImage Last
-        setDummyScroll(false);
-        if(dummyScroll){
-            window.scroll({
-                top: 1435,
-                left: 0,
-            });
-            window.scroll({
-                top: 0,
-                left: 0,
-            })
-        };
-        // eslint-disable-next-line
     },[image])
-  
-    // // // INITIAL WINDOW SCROLL DOWN ON LOAD
-    // useEffect(()=>{
-    //     window.scroll({
-    //         top: 1435, // maxScrollHeight/totalFrameCount * 30.5 // rendering 91 images - 30 images on top are future (see utilites/DayDateFunction)
-    //         left: 0,
-    //         // behavior: "smooth",
-    //     })
-    //     console.log("FREAKED IT")
-    // },[]);
-   
+
     
     return(
         <canvas className="m-canvas" ref={canvasRef}/>
