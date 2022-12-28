@@ -61,7 +61,7 @@ export default function MoonComponent(){
     }, [currentYLocation]);
 
 
-    const [dummyScroll, setDummyScroll] = useState(true);
+    // const [dummyScroll, setDummyScroll] = useState(true);
 
     // -- useEffect to update to the new image when we declare a new image by setImage
     // -- canvasRef
@@ -75,20 +75,20 @@ export default function MoonComponent(){
         canvas.height = 400;
         context.drawImage(image, 0, 0, canvas.width, canvas.height);
 
-        if(dummyScroll){
-            setDummyScroll(false);
-            window.scroll({
-                top: 5000,
-                left: 0,
-            });
-            console.log("TESTINGGG");
-            window.scroll({
-                top: 0,
-                left: 0,
-            });
-            console.log("RESTINGGG");
-        };
-        // eslint-disable-next-line
+        // if(dummyScroll){
+        //     setDummyScroll(false);
+        //     window.scroll({
+        //         top: 5000,
+        //         left: 0,
+        //     });
+        //     console.log("TESTINGGG");
+        //     window.scroll({
+        //         top: 0,
+        //         left: 0,
+        //     });
+        //     console.log("RESTINGGG");
+        // };
+        // // eslint-disable-next-line
     },[image]);
 
     return(
