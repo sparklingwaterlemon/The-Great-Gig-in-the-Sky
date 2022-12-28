@@ -2,7 +2,7 @@
 
 
 
-Update on <em>Monday, 12/26 </em>
+Updated on <em>12/27 </em>
 
 - transitioning to createBrowserRouter vs BrowserRouter
 - ReactRouter resource `https://reactrouter.com/en/main/routers/create-browser-router`
@@ -14,12 +14,20 @@ Update on <em>Monday, 12/26 </em>
 - FIXED -- Check to see if useEffect is being triggered with the background image load while doing display box..
 - FIXED -- Make sure scrolling down moon/ loading moon is tonight's moon
 
-README:
-- useEffect for how scroll locations will update image
-- useEffect for preloading images
-- useEffect for preloading scroll / how bug was fixed
-- moonimage format
+
+Future README:
+- useEffect how Parallax works
+- moonimage format => index to date // calculate todaysCurrentDateFunction
 - algo for between year calculations
+
+- useEffect for how scroll locations will update image
+- useEffect for preloading images to decrease load time between images
+- useEffect scroll to certain location // todays image
+
+- there was a bug where it will load topimage as the last image load after scrolling down to location.
+- bug system steps -> images are all preloaded -> scrolls down page to wanted location -> useEffect triggers reloading top image? // topImage is rerendered and redisplayed as main canvas
+- created a preloading scroll and postloading scroll === useEffect for preloading scroll / how bug was fixed
+
 
 
 
