@@ -13,6 +13,18 @@ import PreloadImages from "../../utilities/PreLoadImages/PreLoadImages";
 export default function App(){
     PreloadImages();
      
+    function testScrollAGAIN(){
+        window.scroll({
+            top: 5000,
+            left: 0,
+        });
+        window.scroll({
+            top: 0,
+            left: 0,
+        });
+        console.log("tESTING?")
+    };
+    testScrollAGAIN();
 
     useEffect(()=>{
         var h = document.documentElement;
@@ -24,6 +36,7 @@ export default function App(){
             left: 0,
             behavior: "smooth",
         });
+        console.log("RESTINGGG");
     },[]);
 
     return (

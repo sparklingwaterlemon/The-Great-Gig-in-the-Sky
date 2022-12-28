@@ -72,8 +72,6 @@ export default function MoonComponent(){
         context.drawImage(image, 0, 0, canvas.width, canvas.height);
     },[image]);
 
-    console.log(image);
-
     return(
         <canvas className="m-canvas" ref={canvasRef}/>
     )
