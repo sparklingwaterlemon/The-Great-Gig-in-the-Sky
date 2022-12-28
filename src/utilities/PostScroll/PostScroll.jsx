@@ -23,7 +23,7 @@ export default function PostScroll(){
                     behavior: "smooth",
                 });
                 console.log("PostScroll--- SMOOTH SCROLL");
-            }, 250);
+            }, 2000);
         }
         // eslint-disable-next-line
     },[]);
