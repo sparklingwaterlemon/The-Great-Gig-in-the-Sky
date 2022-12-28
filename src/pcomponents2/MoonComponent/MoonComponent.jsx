@@ -52,11 +52,11 @@ export default function MoonComponent(){
         updateMoon.onload = () => setImage(updateMoon);
         
         // // use to debug/ test incorrect frame rate/ index
-        // console.log("************************* ---currentYLocation", currentYLocation);
+        console.log("************************* ---currentYLocation", currentYLocation);
         // console.log("---maxscrollHeight----", maxScrollHeight);
-        // console.log("---scrollFraction----", scrollFraction);
+        console.log("---scrollFraction----", scrollFraction);
         // console.log("---scrollFraction * framecount----", scrollFraction * frameCount);
-        // console.log("frame Index", frameIndex);
+        console.log("frame Index", frameIndex);
     }, [currentYLocation]);
 
 
