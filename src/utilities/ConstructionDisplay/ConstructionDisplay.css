@@ -1,3 +1,8 @@
+.c-container button{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+}
 .c-border{
     width: 800px;
     height: 200px;
