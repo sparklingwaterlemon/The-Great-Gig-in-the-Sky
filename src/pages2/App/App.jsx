@@ -1,5 +1,6 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import MOONIMAGES from "../../assets/MOONIMAGES/0000index";
 
 import MoonComponent from "../../pcomponents2/MoonComponent/MoonComponent";
 import ConstructionDisplay from "../../utilities/ConstructionDisplay/ConstructionDisplay";
@@ -27,7 +28,7 @@ export default function App(){
     return (
         <section id="section-m">
             <div className="m-b-container">
-                <img className="m-b-image" src={require("../../assets/space/m8.jpeg")} alt="background"/>
+                <img className="m-b-image" src={MOONIMAGES[0].imgRef} alt="background"/>
             </div>
             <MoonComponent />
 

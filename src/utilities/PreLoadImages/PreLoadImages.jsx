@@ -7,6 +7,7 @@ const preloadFrame = (frame, frameIterator) => {
     let preimg = new Image();
     preimg.src = MOONIMAGES[frame].imgRef;
     // preimg.onload = function() {
+    //     console.log("iterator", frameIterator);
     // };
     // console.log("preimg", preimg)
 
@@ -27,11 +28,11 @@ const preloadFrame = (frame, frameIterator) => {
 // -- (1) calling function to preoload images/ cache
 export default function PreloadImages(){
     for (let i = 0; i <= 91; i++) { // 91 is the frameCount, can be found in MoonComponent..
-        // kept frameCount in MoonComponent for a useEffect (located in MoonComponent) - missing dependency error
+        // precheck = 0 will preload wallpaper
         var precheck = topImageDayNumber - i;
-        if (precheck > 0) {
+        if (precheck >= 0) {
             preloadFrame(topImageDayNumber - i, i);
-        } else if (precheck <= 0) {
+        } else if (precheck < 0) {
             var preTop = topImageDayNumber + 365;
             preloadFrame(preTop - i, i);
         }

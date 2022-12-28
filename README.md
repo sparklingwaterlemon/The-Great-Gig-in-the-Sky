@@ -34,7 +34,7 @@ Future README:
 
 
 To-Do's:
-
+- preload wallpaper as well..?
 - Display Box is Fixed
 - but Astro Weather Box is Moving Parallaxed Effect
 - Bottom of Scroll - About Page Linke
