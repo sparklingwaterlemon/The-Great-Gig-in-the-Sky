@@ -10,11 +10,16 @@ export default function ConstructionDisplay(){
         var sft = (msh/ 91) * 30.5; // 91 is the frame count // 30.5 is the 30th frame
         var sft2 = Number(sft.toFixed(2));
         window.scroll({
+            top: 0,
+            left: 0,
+        });
+        console.log("C-RESTINGGG");
+        window.scroll({
             top: sft2,
             left: 0,
             behavior: "smooth",
         });
-        console.log("RESTINGGG");
+        console.log("C-TESTINGGG");
     };
 
 

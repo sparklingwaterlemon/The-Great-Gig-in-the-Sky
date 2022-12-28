@@ -6,7 +6,7 @@ import MOONIMAGES from "../../assets/MOONIMAGES/0000index";
 import MoonComponent from "../../pcomponents2/MoonComponent/MoonComponent";
 import ConstructionDisplay from "../../utilities/ConstructionDisplay/ConstructionDisplay";
 import PreloadImages from "../../utilities/PreLoadImages/PreLoadImages";
-// import PostScroll from "../../utilities/PostScroll/PostScroll";
+import PostScroll from "../../utilities/PostScroll/PostScroll";
 // import AboutButton from "../../utilities/AboutButton/AboutButton";
 
 
@@ -14,7 +14,7 @@ import PreloadImages from "../../utilities/PreLoadImages/PreLoadImages";
 
 export default function App(){
     PreloadImages();
-    console.log("app after preloadImages()")
+    console.log("App JSX - post preloadImages()")
      
     // function testScrollAGAIN(){
     //     window.scroll({
@@ -53,7 +53,7 @@ export default function App(){
             
             {/* <AboutButton /> */}
         </section>
-        {/* <PostScroll /> */}
+        <PostScroll />
         </>
     )
 };

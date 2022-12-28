@@ -52,18 +52,23 @@ export default function MoonComponent(){
         updateMoon.src = currentFrame(frameIndex);
         updateMoon.onload = () => setImage(updateMoon);
 
-        if(frameIndex === 0){
-            var h = document.documentElement;
-            var msh = h.scrollHeight - h.clientHeight;
-            var sft = (msh/ 91) * 30.5; // 91 is the frame count // 30.5 is the 30th frame
-            var sft2 = Number(sft.toFixed(2));
-            window.scroll({
-                top: sft2,
-                left: 0,
-                behavior: "smooth",
-            });
-        console.log("POST SCROLL");
-        }
+        // if(frameIndex === 0){
+        //     var h = document.documentElement;
+        //     var msh = h.scrollHeight - h.clientHeight;
+        //     var sft = (msh/ 91) * 30.5; // 91 is the frame count // 30.5 is the 30th frame
+        //     var sft2 = Number(sft.toFixed(2));
+        //     window.scroll({
+        //         top: 200,
+        //         left: 0,
+        //     });
+        //     console.log("MOON-Resting");
+        //     window.scroll({
+        //         top: sft2,
+        //         left: 0,
+        //         behavior: "smooth",
+        //     });
+        //     console.log("MOON-Testing");
+        // }
         
         // // // use to debug/ test incorrect frame rate/ index
         // console.log("************************* ---currentYLocation", currentYLocation);
@@ -74,7 +79,7 @@ export default function MoonComponent(){
     }, [currentYLocation]);
 
 
-    // const [dummyScroll, setDummyScroll] = useState(true);
+    const [dummyScroll, setDummyScroll] = useState(true);
 
     // -- useEffect to update to the new image when we declare a new image by setImage
     // -- canvasRef
@@ -88,23 +93,23 @@ export default function MoonComponent(){
         canvas.height = 400;
         context.drawImage(image, 0, 0, canvas.width, canvas.height);
 
-        // if(dummyScroll){
-        //     setDummyScroll(false);
-        //     window.scroll({
-        //         top: 5000,
-        //         left: 0,
-        //     });
-        //     console.log("TESTINGGG");
-        //     window.scroll({
-        //         top: 0,
-        //         left: 0,
-        //     });
-        //     console.log("RESTINGGG");
-        // };
-        // // eslint-disable-next-line
+        if(dummyScroll){
+            setDummyScroll(false);
+            window.scroll({
+                top: 5000,
+                left: 0,
+            });
+            console.log("Moon - Bottom Out");
+            window.scroll({
+                top: 0,
+                left: 0,
+            });
+            console.log("Moon - Top Out");
+        };
+        // eslint-disable-next-line
     },[image]);
 
-    console.log("end of mooncomponent???")
+    // console.log("end of mooncomponent???")
 
     return(
         <canvas className="m-canvas" ref={canvasRef}/>
