@@ -18,4 +18,3 @@ if(future > 365){ // 365 days
 }
 
 export default topImageDayNumber;
-

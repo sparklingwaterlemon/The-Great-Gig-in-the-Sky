@@ -9,7 +9,7 @@
 // };
 
 const MOONIMAGES = [
-    {'imgRef': require('./0100.jpg'), 'position': 'Place Holder' },
+    {'imgRef': require('./0000.jpg'), 'position': 'Place Holder' },
     {'imgRef': require('./0101.jpg'), 'position': 'Waxing Gibbous' },
     {'imgRef': require('./0102.jpg'), 'position': 'Waxing Gibbous' },
     {'imgRef': require('./0103.jpg'), 'position': 'Waxing Gibbous' },
