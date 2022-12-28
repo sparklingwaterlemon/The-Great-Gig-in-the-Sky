@@ -37,7 +37,7 @@ export default function MoonComponent(){
 
     // // ------ IMAGE RENDERING FUNCTIONS ------
     var holderImage = new Image();
-    holderImage.src = MOONIMAGES[0].imgRef;
+    // holderImage.src = MOONIMAGES[0].imgRef;
     const [image, setImage] = useState(holderImage);
 
     
