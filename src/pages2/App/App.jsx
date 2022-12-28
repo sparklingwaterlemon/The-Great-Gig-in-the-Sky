@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import MOONIMAGES from "../../assets/MOONIMAGES/0000index";
 
 
@@ -8,19 +8,21 @@ import ConstructionDisplay from "../../utilities/ConstructionDisplay/Constructio
 import PreloadImages from "../../utilities/PreLoadImages/PreLoadImages";
 // import AboutButton from "../../utilities/AboutButton/AboutButton";
 
+import { useEffect } from "react";
+
 
 
 export default function App(){
     PreloadImages();
      
-    function testScrollAGAIN(){
-        window.scroll({
-            top: 0,
-            left: 0,
-        });
-        console.log("tESTING?")
-    };
-    testScrollAGAIN();
+    // function testScrollAGAIN(){
+    //     window.scroll({
+    //         top: 0,
+    //         left: 0,
+    //     });
+    //     console.log("tESTING?")
+    // };
+    // testScrollAGAIN();
 
     useEffect(()=>{
         var h = document.documentElement;

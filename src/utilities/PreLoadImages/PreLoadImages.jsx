@@ -13,16 +13,16 @@ const preloadFrame = (frame, frameIterator) => {
 
     // // --- PRELOAD SCROLL ---
     // // scroll down to bottom, scroll back up
-    if(frameIterator === 91){
-        window.scroll({
-            top: 5000,
-            left: 0,
-        });
-        window.scroll({
-            top: 0,
-            left: 0,
-        });
-    }
+    // if(frameIterator === 91){
+    //     window.scroll({
+    //         top: 5000,
+    //         left: 0,
+    //     });
+    //     window.scroll({
+    //         top: 0,
+    //         left: 0,
+    //     });
+    // }
 };
 
 // -- (1) calling function to preoload images/ cache

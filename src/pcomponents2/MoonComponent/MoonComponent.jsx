@@ -40,6 +40,7 @@ export default function MoonComponent(){
     holderImage.src = MOONIMAGES[0].imgRef;
     const [image, setImage] = useState(holderImage);
 
+    
     // -- useEffect to set newImage depending on scroll Fraction
     useEffect(() => {
         let html = document.documentElement;
@@ -51,14 +52,16 @@ export default function MoonComponent(){
         updateMoon.src = currentFrame(frameIndex);
         updateMoon.onload = () => setImage(updateMoon);
         
-        // // use to debug/ test incorrect frame rate/ index
-        console.log("************************* ---currentYLocation", currentYLocation);
-        console.log("---maxscrollHeight----", maxScrollHeight);
-        console.log("---scrollFraction----", scrollFraction);
-        console.log("---scrollFraction * framecount----", scrollFraction * frameCount);
-        console.log("frame Index", frameIndex);
+        // // // use to debug/ test incorrect frame rate/ index
+        // console.log("************************* ---currentYLocation", currentYLocation);
+        // console.log("---maxscrollHeight----", maxScrollHeight);
+        // console.log("---scrollFraction----", scrollFraction);
+        // console.log("---scrollFraction * framecount----", scrollFraction * frameCount);
+        // console.log("frame Index", frameIndex);
     }, [currentYLocation]);
 
+
+    const [dummyScroll, setDummyScroll] = useState(true);
 
     // -- useEffect to update to the new image when we declare a new image by setImage
     // -- canvasRef
@@ -71,6 +74,21 @@ export default function MoonComponent(){
         canvas.width = 400;
         canvas.height = 400;
         context.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+        if(dummyScroll){
+            setDummyScroll(false);
+            window.scroll({
+                top: 5000,
+                left: 0,
+            });
+            console.log("TESTINGGG");
+            window.scroll({
+                top: 0,
+                left: 0,
+            });
+            console.log("RESTINGGG");
+        };
+        // eslint-disable-next-line
     },[image]);
 
     return(
