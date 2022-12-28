@@ -13,6 +13,7 @@ Updated on <em>12/27 </em>
 - background images
 - FIXED -- Check to see if useEffect is being triggered with the background image load while doing display box..
 - FIXED -- Make sure scrolling down moon/ loading moon is tonight's moon
+- FIXED -- preload wallpaper as well..?
 
 
 Future README:
@@ -34,7 +35,7 @@ Future README:
 
 
 To-Do's:
-- preload wallpaper as well..?
+
 - Display Box is Fixed
 - but Astro Weather Box is Moving Parallaxed Effect
 - Bottom of Scroll - About Page Linke
