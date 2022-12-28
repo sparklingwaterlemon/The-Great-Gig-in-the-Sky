@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 import MoonComponent from "../../pcomponents2/MoonComponent/MoonComponent";
 import ConstructionDisplay from "../../utilities/ConstructionDisplay/ConstructionDisplay";
