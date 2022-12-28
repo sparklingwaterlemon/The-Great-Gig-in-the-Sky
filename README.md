@@ -23,6 +23,7 @@ Future README:
 - useEffect for how scroll locations will update image
 - useEffect for preloading images to decrease load time between images
 - useEffect scroll to certain location // todays image
+- talk about error on different desktop display size and algo for that
 
 - there was a bug where it will load topimage as the last image load after scrolling down to location.
 - bug system steps -> images are all preloaded -> scrolls down page to wanted location -> useEffect triggers reloading top image? // topImage is rerendered and redisplayed as main canvas
