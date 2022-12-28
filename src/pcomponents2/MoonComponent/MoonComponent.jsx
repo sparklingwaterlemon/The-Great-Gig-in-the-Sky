@@ -49,7 +49,6 @@ export default function MoonComponent(){
 
         const updateMoon = new Image();
         updateMoon.src = currentFrame(frameIndex);
-        // console.log("updateMoon", updateMoon);
         updateMoon.onload = () => setImage(updateMoon);
         
         // // use to debug/ test incorrect frame rate/ index
@@ -58,23 +57,23 @@ export default function MoonComponent(){
         // console.log("---scrollFraction----", scrollFraction);
         // console.log("---scrollFraction * framecount----", scrollFraction * frameCount);
         // console.log("frame Index", frameIndex);
-    }, [currentYLocation])
+    }, [currentYLocation]);
 
-    const [dummyScroll, setDummyScroll] = useState(true)
 
     // -- useEffect to update to the new image when we declare a new image by setImage
+    // -- canvasRef
     const canvasRef = useRef(null);
-
     useEffect(() => {
-        const canvas = canvasRef.current
-        const context = canvas.getContext('2d')
+        const canvas = canvasRef.current;
+        const context = canvas.getContext('2d');
                 
         canvas.width = 400;
         canvas.height = 400;
-        context.drawImage(image, 0, 0, canvas.width, canvas.height)
-    },[image])
+        context.drawImage(image, 0, 0, canvas.width, canvas.height);
+    },[image]);
 
     
+
     return(
         <canvas className="m-canvas" ref={canvasRef}/>
     )

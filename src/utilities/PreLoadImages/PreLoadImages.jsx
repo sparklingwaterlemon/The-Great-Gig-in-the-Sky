@@ -5,7 +5,7 @@ import MOONIMAGES from "../../assets/MOONIMAGES/0000index";
 // -- (2) preloading the images
 const preloadFrame = (frame, frameIterator) => {
     let preimg = new Image();
-    preimg.src = MOONIMAGES[frame].imgRef
+    preimg.src = MOONIMAGES[frame].imgRef;
     // preimg.onload = function() {
     // };
     // console.log("preimg", preimg)
@@ -30,10 +30,10 @@ export default function PreloadImages(){
         // kept frameCount in MoonComponent for a useEffect (located in MoonComponent) - missing dependency error
         var precheck = topImageDayNumber - i;
         if (precheck > 0) {
-            preloadFrame(topImageDayNumber - i, i)
+            preloadFrame(topImageDayNumber - i, i);
         } else if (precheck <= 0) {
             var preTop = topImageDayNumber + 365;
-            preloadFrame(preTop - i, i)
+            preloadFrame(preTop - i, i);
         }
     }
 };
