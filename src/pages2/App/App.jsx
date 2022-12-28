@@ -6,6 +6,7 @@ import MOONIMAGES from "../../assets/MOONIMAGES/0000index";
 import MoonComponent from "../../pcomponents2/MoonComponent/MoonComponent";
 import ConstructionDisplay from "../../utilities/ConstructionDisplay/ConstructionDisplay";
 import PreloadImages from "../../utilities/PreLoadImages/PreLoadImages";
+// import PostScroll from "../../utilities/PostScroll/PostScroll";
 // import AboutButton from "../../utilities/AboutButton/AboutButton";
 
 
@@ -13,6 +14,7 @@ import PreloadImages from "../../utilities/PreLoadImages/PreLoadImages";
 
 export default function App(){
     PreloadImages();
+    console.log("app after preloadImages()")
      
     // function testScrollAGAIN(){
     //     window.scroll({
@@ -37,6 +39,7 @@ export default function App(){
     // },[]);
 
     return (
+        <>
         <section id="section-m">
             <div className="m-b-container">
                 <img className="m-b-image" src={MOONIMAGES[0].imgRef} alt="background"/>
@@ -47,7 +50,10 @@ export default function App(){
                 <ConstructionDisplay />
             </div>
 
+            
             {/* <AboutButton /> */}
         </section>
+        {/* <PostScroll /> */}
+        </>
     )
 };

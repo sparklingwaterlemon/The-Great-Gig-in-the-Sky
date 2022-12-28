@@ -51,13 +51,26 @@ export default function MoonComponent(){
         const updateMoon = new Image();
         updateMoon.src = currentFrame(frameIndex);
         updateMoon.onload = () => setImage(updateMoon);
+
+        if(frameIndex === 0){
+            var h = document.documentElement;
+            var msh = h.scrollHeight - h.clientHeight;
+            var sft = (msh/ 91) * 30.5; // 91 is the frame count // 30.5 is the 30th frame
+            var sft2 = Number(sft.toFixed(2));
+            window.scroll({
+                top: sft2,
+                left: 0,
+                behavior: "smooth",
+            });
+        console.log("POST SCROLL");
+        }
         
         // // // use to debug/ test incorrect frame rate/ index
         // console.log("************************* ---currentYLocation", currentYLocation);
         // console.log("---maxscrollHeight----", maxScrollHeight);
         // console.log("---scrollFraction----", scrollFraction);
         // console.log("---scrollFraction * framecount----", scrollFraction * frameCount);
-        // console.log("frame Index", frameIndex);
+        console.log("frame Index", frameIndex);
     }, [currentYLocation]);
 
 
@@ -70,7 +83,7 @@ export default function MoonComponent(){
         const canvas = canvasRef.current;
         const context = canvas.getContext('2d');
                 
-        console.log("CANVAS--- IMAGWE", image)
+        // console.log("CANVAS--- IMAGWE", image)
         canvas.width = 400;
         canvas.height = 400;
         context.drawImage(image, 0, 0, canvas.width, canvas.height);
@@ -90,6 +103,8 @@ export default function MoonComponent(){
         // };
         // // eslint-disable-next-line
     },[image]);
+
+    console.log("end of mooncomponent???")
 
     return(
         <canvas className="m-canvas" ref={canvasRef}/>

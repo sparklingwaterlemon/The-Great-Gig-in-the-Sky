@@ -9,11 +9,13 @@ const preloadFrame = (frame, frameIterator) => {
     // preimg.onload = function() {
     //     console.log("iterator", frameIterator);
     // };
+    console.log("iterator", frameIterator);
     // console.log("preimg", preimg)
 
     // --- PRELOAD SCROLL ---
     // scroll down to bottom, scroll back up
     if(frameIterator === 91){
+        console.log("PRESCROLL")
         window.scroll({
             top: 5000,
             left: 0,
