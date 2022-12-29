@@ -72,6 +72,19 @@ export default function MoonComponent(){
         context.drawImage(image, 0, 0, canvas.width, canvas.height);
     },[image]);
 
+    useEffect(()=>{
+        window.scroll({
+            top: 0,
+            left: 0,
+        });
+        console.log("MC--- Top Out");
+        window.scroll({
+            top: 1408.49,
+            left: 0,
+        });
+        console.log("MC--- Centered Out");
+    },[]);
+
 
     return(
         <canvas className="m-canvas" ref={canvasRef}/>

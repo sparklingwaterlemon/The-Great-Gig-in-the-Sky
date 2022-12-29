@@ -44,6 +44,7 @@ export default function PostScroll(){
         scrollFrameRateRef.current = Number((mshRef.current / 91).toFixed(2));
         var sfr = scrollFrameRateRef.current;
         scrollCenterFrameRef.current = sfr * 30.5;
+        console.log( scrollCenterFrameRef.current );
         intializePostScrollTest();
         intializePostScroll();
     },[]);

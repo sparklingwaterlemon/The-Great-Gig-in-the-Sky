@@ -16,6 +16,7 @@ export default function App(){
     PreloadImages();
     console.log("App JSX - post preloadImages()")
 
+
     return (
         <>
         <section id="section-m">
