@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export default function PostScroll(){
-    const [ ds, setDS] = useState(true);
+    const [ds, setDS] = useState(true);
 
     useEffect(()=>{
         var h = document.documentElement;
@@ -23,7 +23,7 @@ export default function PostScroll(){
                     behavior: "smooth",
                 });
                 console.log("PostScroll--- SMOOTH SCROLL");
-            }, 2000);
+            }, 1000);
         }
         // eslint-disable-next-line
     },[]);

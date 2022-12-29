@@ -1,0 +1,19 @@
+.m-b-container{
+    position: absolute;
+    height: 5000px;
+    max-width: 100%;
+    
+    background-color: black;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.m-b-image{
+    position: relative;
+    height: 4400px;
+    object-fit: contain;
+}

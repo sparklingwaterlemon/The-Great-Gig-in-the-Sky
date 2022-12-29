@@ -24,15 +24,18 @@ export default function ConstructionDisplay(){
 
 
     return(
-        <div className="c-border">
-            <div className="c-container">
-                <button onClick={scrollDown}/>
-                <span className="c-header">UNDER re-CONSTRUCTION</span>
-                <span className="c-date">LAST MODIFIED ON <strong>{text}</strong></span>
-                feel free to scroll
-                - recent update: background image
-                <br/>
-                <a href="https://github.com/sparklingwaterlemon/The-Great-Gig-in-the-Sky" target="_blank" rel="noreferrer">github</a>
+
+        <div className="construction">
+            <div className="c-border">
+                <div className="c-container">
+                    <button onClick={scrollDown}/>
+                    <span className="c-header">UNDER re-CONSTRUCTION</span>
+                    <span className="c-date">LAST MODIFIED ON <strong>{text}</strong></span>
+                    feel free to scroll
+                    - recent update: background image
+                    <br/>
+                    <a href="https://github.com/sparklingwaterlemon/The-Great-Gig-in-the-Sky" target="_blank" rel="noreferrer">github</a>
+                </div>
             </div>
         </div>
     )

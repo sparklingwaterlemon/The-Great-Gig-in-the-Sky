@@ -1,3 +1,10 @@
+.construction{
+    position: absolute;
+    top: 1850px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 2;
+}
 .c-container button{
     height: 50px;
     width: 50px;
