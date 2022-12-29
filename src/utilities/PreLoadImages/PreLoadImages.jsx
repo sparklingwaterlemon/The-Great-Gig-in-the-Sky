@@ -19,12 +19,12 @@ const preloadFrame = (frame, frameIterator) => {
             top: 0,
             left: 0,
         });
-        console.log("PreScroll --- top out")
+        console.log("PreScroll --- Top Out")
         window.scroll({
             top: 5000,
             left: 0,
         });
-        console.log("PreScroll --- bottom out")
+        console.log("PreScroll --- Bottom Out")
     }
 };
 

@@ -7,32 +7,33 @@ export default function PostScroll(){
     const scrollCenterFrameRef = useRef(0);
 
 
-    const intializePostScrollTest = () =>{
+    const intializePostScrollOne = () =>{
+        window.scroll({
+            top: 0,
+            left: 0,
+        });
+        console.log("PostScrollOne --- Top Out");
         window.scroll({
             top: mshRef.current,
             left: 0,
         });
-        console.log("Post Set --- Bottom Out");
-        window.scroll({
-            top: scrollCenterFrameRef.current,
-            left: 0,
-        });
-        console.log("Post Set --- Centered Out");
+        console.log("PostScrollOne --- Bottom Out");
+        intializePostScrollTwo();
     };
 
-    const intializePostScroll = () =>{
+    const intializePostScrollTwo = () =>{
         setTimeout(()=>{
             window.scroll({
                 top: 0,
                 left: 0,
             });
-            console.log("PostScroll--- Top Out");
+            console.log("PostScrollTwo--- Top Out");
             window.scroll({
                 top: scrollCenterFrameRef.current,
                 left: 0,
                 behavior: "smooth"
             });
-            console.log("PostScroll--- Centered Out");
+            console.log("PostScrollTwo--- Centered Out");
         }, 3000);
     };
 
@@ -42,8 +43,6 @@ export default function PostScroll(){
         scrollFrameRateRef.current = Number((mshRef.current / 91).toFixed(2));
         var sfr = scrollFrameRateRef.current;
         scrollCenterFrameRef.current = sfr * 30.5;
-        console.log( scrollCenterFrameRef.current );
-        intializePostScrollTest();
-        intializePostScroll();
+        intializePostScrollOne();
     },[]);
 };

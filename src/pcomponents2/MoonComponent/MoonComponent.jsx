@@ -38,13 +38,15 @@ export default function MoonComponent(){
     // // ------ IMAGE RENDERING FUNCTIONS ------
     var holderImage = new Image();
     const [image, setImage] = useState(holderImage);
+    const maxScrollHeightRef = useRef(0);
 
     
     // -- useEffect to set newImage depending on scroll Fraction
     useEffect(() => {
-        let html = document.documentElement;
-        let maxScrollHeight = html.scrollHeight - html.clientHeight; // total Scroll Distance
-        let scrollFraction = (currentYLocation / maxScrollHeight);
+        var html = document.documentElement;
+        maxScrollHeightRef.current = html.scrollHeight - html.clientHeight; // total Scroll Distance
+        var msh = maxScrollHeightRef.current;
+        var scrollFraction = (currentYLocation / msh);
         const frameIndex = Math.floor(scrollFraction * frameCount);
 
         const updateMoon = new Image();
@@ -72,18 +74,39 @@ export default function MoonComponent(){
         context.drawImage(image, 0, 0, canvas.width, canvas.height);
     },[image]);
 
-    useEffect(()=>{
-        window.scroll({
-            top: 0,
-            left: 0,
-        });
-        console.log("MC --- Top Out");
-        window.scroll({
-            top: 1408.49,
-            left: 0,
-        });
-        console.log("MC --- Centered Out");
-    },[]);
+    // const [onlyOnce, setOnlyOnce] = useState(true);
+    // useEffect(()=>{
+    //     setOnlyOnce(false);
+    //     if(onlyOnce){
+    //         window.scroll({
+    //             top: 0,
+    //             left: 0,
+    //         });
+    //         console.log("MC --- Top Out");
+    //         window.scroll({
+    //             top: maxScrollHeightRef.current,
+    //             left: 0,
+    //         });
+    //         console.log("MC --- Bottom Out");
+    //     };
+    // },[]);
+
+    // useEffect(()=>{
+
+
+    //         window.scroll({
+    //             top: 0,
+    //             left: 0,
+    //         });
+    //         console.log("MC --- Top Out");
+    //         window.scroll({
+    //             top: maxScrollHeightRef.current,
+    //             left: 0,
+    //         });
+    //         console.log("MC --- Bottom Out");
+
+    // },[]);
+
 
 
     return(
