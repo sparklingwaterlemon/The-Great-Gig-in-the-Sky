@@ -66,8 +66,7 @@ export default function MoonComponent(){
     useEffect(() => {
         const canvas = canvasRef.current;
         const context = canvas.getContext('2d');
-                
-        // console.log("CANVAS--- IMAGE", image)
+    
         canvas.width = 400;
         canvas.height = 400;
         context.drawImage(image, 0, 0, canvas.width, canvas.height);
