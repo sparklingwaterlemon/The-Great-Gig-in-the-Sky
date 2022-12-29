@@ -1,6 +1,5 @@
 import "./App.css";
 // import { useEffect } from "react";
-import MOONIMAGES from "../../assets/MOONIMAGES/0000index";
 
 
 import PreloadImages from "../../utilities/PreLoadImages/PreLoadImages";
