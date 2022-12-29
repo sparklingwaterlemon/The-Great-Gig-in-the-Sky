@@ -1,9 +1,25 @@
-## THE GREAT GIG IN THE SKY REWORK
+## THE GREAT GIG IN THE SKY - REWORK
+
+
+### Links:
+Live Link
+https://the-great-gig-in-the-sky.herokuapp.com/
+
+Trello Board / Schedule
+https://trello.com/b/k0eXcd3V/moon-raker
+
+The Great Gig In The Sky - Pink Floyd
+https://youtu.be/mPGv8L3a_sY
 
 
 
+<br/>
 
-Updated on <em>12/27 </em>
+#### Updated on <em>12/28 </em>
+
+- WeatherAPI free subscription has ended
+- Find/ use a free weather/astro data API
+<br/>
 
 - transitioning to createBrowserRouter vs BrowserRouter
 - ReactRouter resource `https://reactrouter.com/en/main/routers/create-browser-router`
@@ -21,6 +37,7 @@ Future README:
 - useEffect how Parallax works
 - moonimage format => index to date // calculate todaysCurrentDateFunction
 - algo for between year calculations
+- logic on page set up how to load 91 images
 
 - useEffect for how scroll locations will update image
 - useEffect for preloading images to decrease load time between images
@@ -34,25 +51,20 @@ Future README:
 
 
 
-
-To-Do's:
+Notes / To-Do's:
 - Display Box is Fixed
-- but Astro Weather Box is Moving Parallaxed Effect
-- Bottom of Scroll - About Page Linke
-- `<a><div>` ?? or just a `<button>`
+- Bottom of Scroll - About Page Link
+- `<a><div>` ?? or just a `<button>` // probably just a `<Link>` will be fine..
 
 IceBox:
 - New Background at a later time - Stars Parallax Effect
 
-
-
-
-
--- Diary Journal Entry - Login
+Notes:
+Diary Journal Entry - Login:
 - Full Crud
 - Create Journal Post
--- Only future dates
--- List Sorted By Date Order
+- Only future dates
+- List Sorted By Date Order
 
 - Twitter Message like - display components
 left side--------right side
@@ -63,70 +75,34 @@ all message-------full message
 <hr />
 <hr />
 
-12/2
-reploying to heroku
-
-10/25
-
-WEATHERAPI SUBSCRIPTION HAS ENDED -  
-WEATHER PORTION OF PAGE UNDER CONSTRUCTION
 
 
-Live Version - on Heroku
-
-https://the-great-gig-in-the-sky.herokuapp.com/
-
-<hr />
-
-# Ice Box
-
-#### (1) Redo Image Loading Logic
-- Currently, I am doing the math to load 150 previous days with the comparative index number. Then on scroll, I am loading the date -1, retrieving it from server.
-- Change so, the math loads 150 days into a new array // cache all images at once into the client side // this should get rid of lagging between images/ speed up page. Then I can use canvas.ref to access array 0(possible placeholder)-150 days and get the images from here.
-
-#### (2.1) CSS/ Page Responsiveness
-- Currently have Index.html to a page height of x. Make height specific for each page.
-- Add margin top for canvas.
-- Responsive design - work for standard 1440px and iPhone then possibly tablet version
-
-#### (2.2) Removal of background black square of moon images
-- So I can have a color gradient on scroll
-- https://www.remove.bg/
-
-#### (3) Re-do Contact Form
-
-#### (4) Full CRUD/ RESTful API for Journal
+<hr/>
+<hr/>
+<hr/>
+<hr/>
 
 
 
 
-<hr />
-
-Project Home Page
-
-https://user-images.githubusercontent.com/105463926/196267167-625efdaf-1480-478b-9059-069186dcd587.mp4
 
 
 
-
-Trello Link - Project Timeline  
-https://trello.com/b/k0eXcd3V/aau-moon-phase
-
-Wireframe v2
-![wireframe2](https://user-images.githubusercontent.com/105463926/196267192-e087e057-8999-4471-ba62-79ea2bafb18b.png)
-
+<!-- Wireframe v2
+![wireframe2](https://user-images.githubusercontent.com/105463926/196267192-e087e057-8999-4471-ba62-79ea2bafb18b.png) -->
+<!-- 
 Wireframe v1
-![wireframe1](https://user-images.githubusercontent.com/105463926/196267246-b6a8c468-5141-4ad3-acb1-0b9f681be99b.png)
+![wireframe1](https://user-images.githubusercontent.com/105463926/196267246-b6a8c468-5141-4ad3-acb1-0b9f681be99b.png) -->
 
+##### Previous ReadMe
 
----
 MongoDB | Express | React | Node.js | API 
 
 Key Features:
 - Parallax - Scrolling Animation (Apple Product Page) 
 - WeatherAPI - Used to bring in Weather Data and Moon Data
 
----
+
 <h3> Scroll Animation </h3>
 <h5>The idea </h5>
 
@@ -225,8 +201,3 @@ Notes: Needed to install different scripts and dependencies. Yarn and Babel. Att
 Completed a screen responsiveness design.
 
 ---
-
-The Great Gig In The Sky - Pink Floyd
-
-https://youtu.be/mPGv8L3a_sY
-

@@ -74,23 +74,7 @@ export default function MoonComponent(){
         context.drawImage(image, 0, 0, canvas.width, canvas.height);
     },[image]);
 
-    // const [onlyOnce, setOnlyOnce] = useState(true);
-    // useEffect(()=>{
-    //     setOnlyOnce(false);
-    //     if(onlyOnce){
-    //         window.scroll({
-    //             top: 0,
-    //             left: 0,
-    //         });
-    //         console.log("MC --- Top Out");
-    //         window.scroll({
-    //             top: maxScrollHeightRef.current,
-    //             left: 0,
-    //         });
-    //         console.log("MC --- Bottom Out");
-    //     };
-    // },[]);
-
+    // another prescroll for heroku....
     useEffect(()=>{
             window.scroll({
                 top: 0,
