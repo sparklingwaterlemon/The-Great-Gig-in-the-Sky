@@ -91,21 +91,18 @@ export default function MoonComponent(){
     //     };
     // },[]);
 
-    // useEffect(()=>{
-
-
-    //         window.scroll({
-    //             top: 0,
-    //             left: 0,
-    //         });
-    //         console.log("MC --- Top Out");
-    //         window.scroll({
-    //             top: maxScrollHeightRef.current,
-    //             left: 0,
-    //         });
-    //         console.log("MC --- Bottom Out");
-
-    // },[]);
+    useEffect(()=>{
+            window.scroll({
+                top: 0,
+                left: 0,
+            });
+            console.log("MC --- Top Out");
+            window.scroll({
+                top: maxScrollHeightRef.current,
+                left: 0,
+            });
+            console.log("MC --- Bottom Out");
+    },[]);
 
 
 
