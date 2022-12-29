@@ -14,7 +14,6 @@ import PostScroll from "../../utilities/PostScroll/PostScroll";
 
 export default function App(){
     PreloadImages();
-    console.log("App JSX - post preloadImages()")
 
 
     return (

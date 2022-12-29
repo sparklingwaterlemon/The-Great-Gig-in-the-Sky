@@ -8,18 +8,16 @@ export default function PostScroll(){
 
 
     const intializePostScrollTest = () =>{
-        setTimeout(()=>{
-            window.scroll({
-                top: mshRef.current,
-                left: 0,
-            });
-            console.log("Post Set --- Bottom Out");
-            window.scroll({
-                top: 0,
-                left: 0,
-            });
-            console.log("Post Set --- Top Out");
-        }, 500);
+        window.scroll({
+            top: mshRef.current,
+            left: 0,
+        });
+        console.log("Post Set --- Bottom Out");
+        window.scroll({
+            top: scrollCenterFrameRef.current,
+            left: 0,
+        });
+        console.log("Post Set --- Centered Out");
     };
 
     const intializePostScroll = () =>{

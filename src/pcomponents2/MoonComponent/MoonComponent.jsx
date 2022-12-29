@@ -77,12 +77,12 @@ export default function MoonComponent(){
             top: 0,
             left: 0,
         });
-        console.log("MC--- Top Out");
+        console.log("MC --- Top Out");
         window.scroll({
             top: 1408.49,
             left: 0,
         });
-        console.log("MC--- Centered Out");
+        console.log("MC --- Centered Out");
     },[]);
 
 
