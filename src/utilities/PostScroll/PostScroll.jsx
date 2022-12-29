@@ -8,16 +8,18 @@ export default function PostScroll(){
 
 
     const intializePostScrollTest = () =>{
-        window.scroll({
-            top: mshRef.current,
-            left: 0,
-        });
-        console.log("Post Set --- Bottom Out");
-        window.scroll({
-            top: 0,
-            left: 0,
-        });
-        console.log("Post Set --- Top Out");
+        setTimeout(()=>{
+            window.scroll({
+                top: mshRef.current,
+                left: 0,
+            });
+            console.log("Post Set --- Bottom Out");
+            window.scroll({
+                top: 0,
+                left: 0,
+            });
+            console.log("Post Set --- Top Out");
+        }, 500);
     };
 
     const intializePostScroll = () =>{
@@ -33,7 +35,7 @@ export default function PostScroll(){
                 behavior: "smooth"
             });
             console.log("PostScroll--- Centered Out");
-        }, 1000);
+        }, 2000);
     };
 
     useEffect(()=>{
