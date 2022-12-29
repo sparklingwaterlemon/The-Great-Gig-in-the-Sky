@@ -35,7 +35,7 @@ export default function PostScroll(){
                 behavior: "smooth"
             });
             console.log("PostScroll--- Centered Out");
-        }, 2000);
+        }, 3000);
     };
 
     useEffect(()=>{
