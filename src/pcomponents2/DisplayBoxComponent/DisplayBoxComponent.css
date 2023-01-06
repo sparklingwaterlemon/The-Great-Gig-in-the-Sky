@@ -1,4 +1,4 @@
-.info-container{
+.display-box-container{
     position: fixed;
     bottom: 5%;
     left: 50%;
@@ -7,10 +7,7 @@
     height: 200px;
     outline: 5px solid red;
 }
-h1 {
-    color: orange;
-}
-.b-top{
+.display-button{
     position: absolute;
     width: 50px;
     height: 50px;

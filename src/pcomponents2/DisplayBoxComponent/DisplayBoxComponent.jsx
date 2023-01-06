@@ -1,19 +1,20 @@
 import "./DisplayBoxComponent.css";
-import TestChildOne from "../../pages/TestChildOne/TestChildOne";
 import TestChildTwo from "../../pages/TestChildTwo/TestChildTwo";
+
+import InfoBox from "../InfoBox/InfoBox";
 
 import { useState } from "react";
 
 
-export default function DisplayBoxComponent(){
+export default function DisplayBoxComponent({indexForDisplay}){
     const [testAB, setTestAB] = useState(false);
    
 
     return(
 
-        <div className="info-container">
-            <button className="b-top" onClick={() => setTestAB(!testAB)} />
-            {testAB ? <TestChildTwo /> : <TestChildOne />}
+        <div className="display-box-container">
+            <button className="display-button" onClick={() => setTestAB(!testAB)} />
+            {testAB ? <TestChildTwo /> : <InfoBox indexForDisplay={indexForDisplay}/>}
         </div>
     )
 }

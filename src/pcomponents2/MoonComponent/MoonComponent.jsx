@@ -4,7 +4,7 @@ import MOONIMAGES from "../../assets/MOONIMAGES/0000index";
 import topImageDayNumber from "../../utilities/DayDateFunction/DayDateFunction";
 
 
-export default function MoonComponent(){
+export default function MoonComponent({setIndexForDisplay}){
     // // ------ SCROLLING FUNCTIONS ------
     const [currentYLocation, setCurrentYLocation] = useState(null);
     // -- updates scroll location
@@ -28,11 +28,13 @@ export default function MoonComponent(){
         if(neg <= 0){
             var top = topImageDayNumber + 365; // if between years
             var tmi = top - index
-            console.log("tmi", tmi);
+            // console.log("tmi", tmi);
+            setIndexForDisplay(tmi);
             return MOONIMAGES[tmi].imgRef 
         } else if(neg > 0){
             var tdmi = topImageDayNumber - index;
-            console.log("tdmi", tdmi);
+            // console.log("tdmi", tdmi);
+            setIndexForDisplay(tdmi);
             return MOONIMAGES[tdmi].imgRef 
         };
         // setChangeDDIndex(index) // for info box
