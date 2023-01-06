@@ -31,8 +31,7 @@ export default function ConstructionDisplay(){
                     <button onClick={scrollDown}/>
                     <span className="c-header">UNDER re-CONSTRUCTION</span>
                     <span className="c-date">LAST MODIFIED ON <strong>{text}</strong></span>
-                    feel free to scroll
-                    - recent update: background image
+                    feel free to scroll - recent update : testing display container
                     <br/>
                     <a href="https://github.com/sparklingwaterlemon/The-Great-Gig-in-the-Sky" target="_blank" rel="noreferrer">github</a>
                 </div>
