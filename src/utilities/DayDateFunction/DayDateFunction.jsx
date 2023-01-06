@@ -10,11 +10,16 @@ let t = new Date();
 let currentDayNumber = dayDateFunction(t);
 
 
+
 // Top Image is 30 days in the future.. scroll up to see future dates
 let future = currentDayNumber + 30;
+
 let topImageDayNumber = 0;
-if(future > 365){ // 365 days
+
+if(future > 365){ // 365 days if on the cusp between years
     topImageDayNumber = future - 365;
+} else {
+    topImageDayNumber = future
 }
 
 export default topImageDayNumber;

@@ -57,6 +57,7 @@ Notes / To-Do's:
 - `<a><div>` ?? or just a `<button>` // probably just a `<Link>` will be fine..
 
 IceBox:
+- At alert.. screen loading 2.5 seconds than autoscroll down
 - New Background at a later time - Stars Parallax Effect
 
 Notes:

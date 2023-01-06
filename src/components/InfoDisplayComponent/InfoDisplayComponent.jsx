@@ -20,5 +20,3 @@ export default function InfoDisplayComponent({displayDate, weatherData, curMoonP
     )
 }
 
-
-// 

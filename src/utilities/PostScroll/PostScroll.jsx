@@ -2,24 +2,10 @@ import { useEffect, useRef } from "react";
 
 export default function PostScroll(){
 
-    const mshRef = useRef(0);
+    const mshRef = useRef(0); //maxScrollHeight
     const scrollFrameRateRef = useRef(0);
     const scrollCenterFrameRef = useRef(0);
 
-
-    const intializePostScrollOne = () =>{
-        window.scroll({
-            top: 0,
-            left: 0,
-        });
-        console.log("PostScrollOne --- Top Out");
-        window.scroll({
-            top: mshRef.current,
-            left: 0,
-        });
-        console.log("PostScrollOne --- Bottom Out");
-        intializePostScrollTwo();
-    };
 
     const intializePostScrollTwo = () =>{
         setTimeout(()=>{
@@ -34,7 +20,7 @@ export default function PostScroll(){
                 behavior: "smooth"
             });
             console.log("PostScrollTwo--- Centered Out");
-        }, 3000);
+        }, 2600);
     };
 
     useEffect(()=>{
@@ -43,6 +29,19 @@ export default function PostScroll(){
         scrollFrameRateRef.current = Number((mshRef.current / 91).toFixed(2));
         var sfr = scrollFrameRateRef.current;
         scrollCenterFrameRef.current = sfr * 30.5;
-        intializePostScrollOne();
+        
+        // Post Scroll One
+        window.scroll({
+            top: 0,
+            left: 0,
+        });
+        console.log("PostScrollOne --- Top Out");
+        window.scroll({
+            top: mshRef.current,
+            left: 0,
+        });
+        console.log("PostScrollOne --- Bottom Out");
+        intializePostScrollTwo();
+    
     },[]);
 };

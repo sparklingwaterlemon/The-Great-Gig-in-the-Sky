@@ -24,12 +24,16 @@ export default function MoonComponent(){
     const frameCount = 91; 
     // -- function to determine which index to access in MOONIMAGES depending on the argument(which is changed by scroll location)
     const currentFrame = function(index) {
-        var neg = topImageDayNumber - index;
+        var neg = topImageDayNumber - index; // ie. top image day number in january and we scroll to last year.. we will get a negative index value
         if(neg <= 0){
             var top = topImageDayNumber + 365; // if between years
-            return MOONIMAGES[top - index].imgRef 
+            var tmi = top - index
+            console.log("tmi", tmi);
+            return MOONIMAGES[tmi].imgRef 
         } else if(neg > 0){
-            return MOONIMAGES[topImageDayNumber - index].imgRef 
+            var tdmi = topImageDayNumber - index;
+            console.log("tdmi", tdmi);
+            return MOONIMAGES[tdmi].imgRef 
         };
         // setChangeDDIndex(index) // for info box
     };

@@ -1,0 +1,12 @@
+.info-container{
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 400px;
+    height: 200px;
+    border: 10px solid red;
+}
+h1 {
+    color: orange;
+}

@@ -1,5 +1,13 @@
 #test-child-one{
-    background-color: lightblue;
-    border: 30px solid blue;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
+    background-color: lightcyan;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 2em;
+    color: blue;
 }
