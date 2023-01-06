@@ -5,8 +5,15 @@
     transform: translate(-50%);
     width: 400px;
     height: 200px;
-    border: 10px solid red;
+    outline: 5px solid red;
 }
 h1 {
     color: orange;
+}
+.b-top{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    right: -25px;
 }

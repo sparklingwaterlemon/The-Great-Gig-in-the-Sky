@@ -10,12 +10,11 @@ export default function DisplayBoxComponent(){
    
 
     return(
-        <>
+
+        <div className="info-container">
             <button className="b-top" onClick={() => setTestAB(!testAB)} />
-            <div className="info-container">
-                {testAB ? <TestChildTwo /> : <TestChildOne />}
-            </div>
-        </>
+            {testAB ? <TestChildTwo /> : <TestChildOne />}
+        </div>
     )
 }
 

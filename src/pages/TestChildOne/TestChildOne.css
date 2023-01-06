@@ -1,6 +1,6 @@
 #test-child-one{
-    height: 100%;
-    width: 100%;
+    height: inherit;
+    width: inherit;
     background-color: lightcyan;
 
     display: flex;
