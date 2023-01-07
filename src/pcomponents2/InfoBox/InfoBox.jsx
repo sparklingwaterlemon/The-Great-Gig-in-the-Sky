@@ -20,7 +20,7 @@ export default function InfoBox({indexForDisplay}){
         <div className="info-box-container">
             {dateFromDay(indexForDisplay)}
             <br/>
-            {MOONIMAGES[indexForDisplay] ? "na" : MOONIMAGES[indexForDisplay].position}
+            {MOONIMAGES[indexForDisplay] ? "na" : MOONIMAGES[indexForDisplay]}
         </div>
     )
 }
