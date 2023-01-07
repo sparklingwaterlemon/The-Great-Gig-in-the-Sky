@@ -22,22 +22,18 @@ export default function MoonComponent({setIndexForDisplay}){
     // // ------ FRAME CALCULATIONS  ------
     // // ------ FUNCTIONS DETERMINING WHICH IMAGE TO "LOAD" DEPENDING ON SCROLL FRACTION  ------
     const frameCount = 91; 
-    // -- function to determine which index to access in MOONIMAGES depending on the argument(which is changed by scroll location)
+    // -- function to determine which index to access in MOONIMAGES depending on the argument(which is changed by scroll location)  
     const currentFrame = function(index) {
         var neg = topImageDayNumber - index; // ie. top image day number in january and we scroll to last year.. we will get a negative index value
+        let tag = 0;
         if(neg <= 0){
             var top = topImageDayNumber + 365; // if between years
-            var tmi = top - index
-            // console.log("tmi", tmi);
-            setIndexForDisplay(tmi);
-            return MOONIMAGES[tmi].imgRef 
+            tag = top - index
         } else if(neg > 0){
-            var tdmi = topImageDayNumber - index;
-            // console.log("tdmi", tdmi);
-            setIndexForDisplay(tdmi);
-            return MOONIMAGES[tdmi].imgRef 
+            tag = topImageDayNumber - index;
         };
-        // setChangeDDIndex(index) // for info box
+        setIndexForDisplay(tag);
+        return MOONIMAGES[tag].imgRef;
     };
 
 
@@ -64,7 +60,9 @@ export default function MoonComponent({setIndexForDisplay}){
         // console.log("---maxscrollHeight----", maxScrollHeight);
         // console.log("---scrollFraction----", scrollFraction);
         // console.log("---scrollFraction * framecount----", scrollFraction * frameCount);
-        // console.log("frame Index", frameIndex);
+        // console.log("---frameIndex---", frameIndex);
+
+        // eslint-disable-next-line
     }, [currentYLocation]);
 
 

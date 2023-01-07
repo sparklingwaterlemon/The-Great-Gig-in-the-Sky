@@ -21,5 +21,5 @@ if(future > 365){ // 365 days if on the cusp between years
 } else {
     topImageDayNumber = future
 }
-
+console.log("topImageDayNumber.", topImageDayNumber)
 export default topImageDayNumber;
