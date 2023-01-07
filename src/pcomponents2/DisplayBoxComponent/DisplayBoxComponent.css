@@ -6,6 +6,7 @@
     width: 400px;
     height: 200px;
     outline: 5px solid red;
+    z-index: 2;
 }
 .display-button{
     position: absolute;

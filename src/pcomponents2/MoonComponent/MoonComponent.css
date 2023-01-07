@@ -1,6 +1,6 @@
 .m-canvas{
     position: fixed;
-    z-index: 2;
+    z-index: 1;
     top: 3%;
     left: 50%;
     transform: translate(-50%);
