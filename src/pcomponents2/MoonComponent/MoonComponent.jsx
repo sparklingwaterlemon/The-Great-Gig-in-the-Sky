@@ -4,7 +4,7 @@ import MOONIMAGES from "../../assets/MOONIMAGES/0000index";
 import topImageDayNumber from "../../utilities/DayDateFunction/DayDateFunction";
 
 
-export default function MoonComponent({setIndexForDisplay}){
+export default function MoonComponent({setIndexForDisplay, setInfoMoonPhase}){
     // // ------ SCROLLING FUNCTIONS ------
     const [currentYLocation, setCurrentYLocation] = useState(null);
     // -- updates scroll location
@@ -32,8 +32,15 @@ export default function MoonComponent({setIndexForDisplay}){
         } else if(neg > 0){
             tag = topImageDayNumber - index;
         };
-        setIndexForDisplay(tag);
+        infoUpdateForInfoBox(tag);
         return MOONIMAGES[tag].imgRef;
+    };
+
+    // passing variable to calculate moonphase/ current image date to DisplayBoxComponent -> InfoBox
+    const infoUpdateForInfoBox=(tag)=>{
+        setIndexForDisplay(tag);
+        let postring = MOONIMAGES[tag].position;
+        setInfoMoonPhase(postring);
     };
 
 

@@ -6,7 +6,7 @@ import InfoBox from "../InfoBox/InfoBox";
 import { useState } from "react";
 
 
-export default function DisplayBoxComponent({indexForDisplay}){
+export default function DisplayBoxComponent({indexForDisplay, infoMoonPhase}){
     const [testAB, setTestAB] = useState(false);
    
 
@@ -14,7 +14,7 @@ export default function DisplayBoxComponent({indexForDisplay}){
 
         <div className="display-box-container">
             <button className="display-button" onClick={() => setTestAB(!testAB)} />
-            {testAB ? <TestChildTwo /> : <InfoBox indexForDisplay={indexForDisplay}/>}
+            {testAB ? <TestChildTwo /> : <InfoBox indexForDisplay={indexForDisplay} infoMoonPhase={infoMoonPhase}/>}
         </div>
     )
 }

@@ -1,8 +1,7 @@
 import "./InfoBox.css";
-import MOONIMAGES from "../../assets/MOONIMAGES/0000index";
 import topImageDayNumber from "../../utilities/DayDateFunction/DayDateFunction";
 
-export default function InfoBox({indexForDisplay}){
+export default function InfoBox({indexForDisplay, infoMoonPhase}){  
 
     const dateFromDay = (xday) => {
         var yyyycusp = topImageDayNumber - 92 + 365 // between years..
@@ -20,7 +19,8 @@ export default function InfoBox({indexForDisplay}){
         <div className="info-box-container">
             {dateFromDay(indexForDisplay)}
             <br/>
-            {MOONIMAGES[indexForDisplay] ? "na" : MOONIMAGES[indexForDisplay]}
+            {infoMoonPhase}
+            
         </div>
     )
 }
