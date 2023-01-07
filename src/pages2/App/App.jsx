@@ -6,7 +6,7 @@ import MoonComponent from "../../pcomponents2/MoonComponent/MoonComponent";
 import BackgroundComponent from "../../pcomponents2/BackgroundComponent/BackgroundComponent";
 import DisplayBoxComponent from "../../pcomponents2/DisplayBoxComponent/DisplayBoxComponent";
 
-// import ConstructionDisplay from "../../utilities/ConstructionDisplay/ConstructionDisplay";
+import ConstructionDisplay from "../../utilities/ConstructionDisplay/ConstructionDisplay";
 // import AboutButton from "../../utilities/AboutButton/AboutButton";
 import PostScroll from "../../utilities/PostScroll/PostScroll";
 
@@ -18,6 +18,7 @@ export default function App(){
         PreloadImages();
     },[]);
 
+    // setting in MoonComponent, passing down to InfoBox thru DisplayBoxComponent
     const [indexForDisplay, setIndexForDisplay] = useState();
     const [infoMoonPhase, setInfoMoonPhase] = useState("na");
 
@@ -31,7 +32,7 @@ export default function App(){
             <BackgroundComponent />
             <DisplayBoxComponent indexForDisplay={indexForDisplay} infoMoonPhase={infoMoonPhase}/>
 
-            {/* <ConstructionDisplay /> */}
+            <ConstructionDisplay />
             {/* <AboutButton /> */}
         </section>
         
