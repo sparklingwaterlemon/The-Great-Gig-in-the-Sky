@@ -27,6 +27,10 @@ https://youtu.be/mPGv8L3a_sY
 - if entry contains numbers, zip - if more numbers than 5, incorrect
 - does OpenWeather have a built in error?
 
+- `https://openweathermap.org/api/one-call-3`
+- `https://stackoverflow.com/questions/847185/convert-a-unix-timestamp-to-time-in-javascript`
+
+
 - WeatherAPI free subscription has ended
 - Find/ use a free weather/astro data API
 <br/>
