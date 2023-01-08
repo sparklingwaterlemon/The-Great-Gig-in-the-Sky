@@ -19,6 +19,14 @@ https://youtu.be/mPGv8L3a_sY
 
 - Deleting Old Files as I go. If I want to look at previous version of Project, look at commit before 1/7/23
 
+- OpenWeather
+- Create Search Component
+- Test OpenWeatherAPI by zip 
+- then test OpenweatherAPI by city
+- create a filter, useregex, if entry contains alpha -> city
+- if entry contains numbers, zip - if more numbers than 5, incorrect
+- does OpenWeather have a built in error?
+
 - WeatherAPI free subscription has ended
 - Find/ use a free weather/astro data API
 <br/>

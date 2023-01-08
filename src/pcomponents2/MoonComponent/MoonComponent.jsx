@@ -85,22 +85,7 @@ export default function MoonComponent({setIndexForDisplay, setInfoMoonPhase}){
         context.drawImage(image, 0, 0, canvas.width, canvas.height);
     },[image]);
 
-    // // another prescroll for heroku....
-    // useEffect(()=>{
-    //         window.scroll({
-    //             top: 0,
-    //             left: 0,
-    //         });
-    //         console.log("MC --- Top Out");
-    //         window.scroll({
-    //             top: maxScrollHeightRef.current,
-    //             left: 0,
-    //         });
-    //         console.log("MC --- Bottom Out");
-    // },[]);
-
-
-
+    
     return(
         <canvas className="m-canvas" ref={canvasRef}/>
     )

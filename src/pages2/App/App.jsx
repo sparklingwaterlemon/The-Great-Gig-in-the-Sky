@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 
-import PreloadImagesFunc from "../../utilities/PreLoadImagesFunc/PreLoadImagesFunc";
+import PreLoadImagesFunc from "../../utilities/PreLoadImagesFunc/PreLoadImagesFunc";
 import MoonComponent from "../../pcomponents2/MoonComponent/MoonComponent";
 import BackgroundComponent from "../../pcomponents2/BackgroundComponent/BackgroundComponent";
 import DisplayBoxComponent from "../../pcomponents2/DisplayBoxComponent/DisplayBoxComponent";
@@ -22,7 +22,7 @@ export default function App(){
 
     return (
         <>
-        <PreloadImagesFunc />
+        <PreLoadImagesFunc />
             <section id="section-m">
                 <MoonComponent setIndexForDisplay={setIndexForDisplay} setInfoMoonPhase={setInfoMoonPhase}/>
                 <BackgroundComponent />

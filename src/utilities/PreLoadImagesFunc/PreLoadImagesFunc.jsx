@@ -6,10 +6,9 @@ import { useEffect } from "react";
 
 
 
-export default function PreloadImagesFunc(){
+export default function PreLoadImagesFunc(){
     useEffect(()=>{
-        console.log("PreloadImagesFunc");
-
+        // console.log("PreLoadImagesFunc");
         // -- (2) preloading the images
         const preloadFrame = (frame, frameIterator) => {
             let preimg = new Image();
