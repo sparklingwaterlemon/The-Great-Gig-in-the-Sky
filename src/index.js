@@ -4,14 +4,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import App2 from './pages2/App/App';
+import LandingPage from './pages2/LandingPage/LandingPage';
 import TestChildOne from './pcomponents2/TestChildComponents/TestChildOne/TestChildOne';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App2 />,
+    element: <LandingPage />,
   },
   {
     path: "testchildone",

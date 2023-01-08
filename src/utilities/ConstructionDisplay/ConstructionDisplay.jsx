@@ -13,13 +13,13 @@ export default function ConstructionDisplay(){
             top: 0,
             left: 0,
         });
-        console.log("C-RESTINGGG");
+        console.log("button - top out");
         window.scroll({
             top: sft2,
             left: 0,
             behavior: "smooth",
         });
-        console.log("C-TESTINGGG");
+        console.log("button - bottom out");
     };
 
 
@@ -31,7 +31,7 @@ export default function ConstructionDisplay(){
                     <button onClick={scrollDown}/>
                     <span className="c-header">UNDER re-CONSTRUCTION</span>
                     <span className="c-date">LAST MODIFIED ON <strong>{text}</strong></span>
-                    feel free to scroll - recent update: date and moonphase updates with moon..
+                    feel free to scroll - recent update: optimized onload scroll
                     <br/>
                     <a href="https://github.com/sparklingwaterlemon/The-Great-Gig-in-the-Sky" target="_blank" rel="noreferrer">github</a>
                 </div>

@@ -1,20 +1,17 @@
 import "./DisplayBoxComponent.css";
 import TestChildTwo from "../TestChildComponents/TestChildTwo/TestChildTwo";
-
-import InfoBox from "../InfoBox/InfoBox";
+import DateAndMoonPhase from "../DateAndMoonPhase/DateAndMoonPhase";
 
 import { useState } from "react";
 
 
-export default function DisplayBoxComponent({indexForDisplay, infoMoonPhase}){
+export default function DisplayBoxComponent({indexForDate, currMoonPhase}){
     const [testAB, setTestAB] = useState(false);
-   
 
     return(
-
         <div className="display-box-container">
             <button className="display-button" onClick={() => setTestAB(!testAB)} />
-            {testAB ? <TestChildTwo /> : <InfoBox indexForDisplay={indexForDisplay} infoMoonPhase={infoMoonPhase}/>}
+            {testAB ? <TestChildTwo /> : <DateAndMoonPhase indexForDate={indexForDate} currMoonPhase={currMoonPhase}/>}
         </div>
     )
 }
