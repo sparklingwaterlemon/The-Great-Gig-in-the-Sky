@@ -15,7 +15,9 @@ https://youtu.be/mPGv8L3a_sY
 
 <br/>
 
-#### Updated on <em>12/28 </em>
+#### Updated on <em>1/7 </em>
+
+- Deleting Old Files as I go. If I want to look at previous version of Project, look at commit before 1/7/23
 
 - WeatherAPI free subscription has ended
 - Find/ use a free weather/astro data API

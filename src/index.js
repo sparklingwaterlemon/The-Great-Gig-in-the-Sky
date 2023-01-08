@@ -5,7 +5,7 @@ import './index.css';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App2 from './pages2/App/App';
-import TestChildOne from './pages/TestChildOne/TestChildOne';
+import TestChildOne from './pcomponents2/TestChildComponents/TestChildOne/TestChildOne';
 
 
 const router = createBrowserRouter([

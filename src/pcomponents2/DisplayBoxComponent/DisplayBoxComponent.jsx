@@ -1,5 +1,5 @@
 import "./DisplayBoxComponent.css";
-import TestChildTwo from "../../pages/TestChildTwo/TestChildTwo";
+import TestChildTwo from "../TestChildComponents/TestChildTwo/TestChildTwo";
 
 import InfoBox from "../InfoBox/InfoBox";
 

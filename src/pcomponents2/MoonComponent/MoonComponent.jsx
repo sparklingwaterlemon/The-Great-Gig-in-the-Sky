@@ -1,7 +1,7 @@
 import "./MoonComponent.css";
 import { useRef, useEffect, useState } from "react";
 import MOONIMAGES from "../../assets/MOONIMAGES/0000index";
-import topImageDayNumber from "../../utilities/DayDateFunction/DayDateFunction";
+import topImageDayNumber from "../../utilities/DayDateFunc/DayDateFunction";
 
 
 export default function MoonComponent({setIndexForDisplay, setInfoMoonPhase}){
@@ -85,19 +85,19 @@ export default function MoonComponent({setIndexForDisplay, setInfoMoonPhase}){
         context.drawImage(image, 0, 0, canvas.width, canvas.height);
     },[image]);
 
-    // another prescroll for heroku....
-    useEffect(()=>{
-            window.scroll({
-                top: 0,
-                left: 0,
-            });
-            console.log("MC --- Top Out");
-            window.scroll({
-                top: maxScrollHeightRef.current,
-                left: 0,
-            });
-            console.log("MC --- Bottom Out");
-    },[]);
+    // // another prescroll for heroku....
+    // useEffect(()=>{
+    //         window.scroll({
+    //             top: 0,
+    //             left: 0,
+    //         });
+    //         console.log("MC --- Top Out");
+    //         window.scroll({
+    //             top: maxScrollHeightRef.current,
+    //             left: 0,
+    //         });
+    //         console.log("MC --- Bottom Out");
+    // },[]);
 
 
 

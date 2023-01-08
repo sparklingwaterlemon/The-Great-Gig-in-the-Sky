@@ -1,5 +1,5 @@
 import "./InfoBox.css";
-import topImageDayNumber from "../../utilities/DayDateFunction/DayDateFunction";
+import topImageDayNumber from "../../utilities/DayDateFunc/DayDateFunction";
 
 export default function InfoBox({indexForDisplay, infoMoonPhase}){  
 

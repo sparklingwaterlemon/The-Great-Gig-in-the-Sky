@@ -1,4 +1,4 @@
-import sendRequest from '../send-request';
+import sendRequest from '../z.send-request';
 
 const BASE_URL = '/api/users';
 
