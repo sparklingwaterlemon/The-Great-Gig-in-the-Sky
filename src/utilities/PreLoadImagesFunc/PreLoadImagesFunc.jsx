@@ -1,4 +1,4 @@
-import topImageDayNumber from "../DayDateFunc/DayDateFunction";
+import topImageDayNumber from "../DayDateFunc/DayDateFunc";
 import MOONIMAGES from "../../assets/MOONIMAGES/0000index";
 
 import { useEffect } from "react";

@@ -30,7 +30,7 @@ export default function SpikingScrollFunc(){
 
     useEffect(()=>{
         console.log("SpikingScrollFunc")
-        
+
         var h = document.documentElement;
         mshRef.current = h.scrollHeight - h.clientHeight;
         // how many pixels are each frame separated by? at what rate/ distance
@@ -43,12 +43,13 @@ export default function SpikingScrollFunc(){
             top: mshRef.current,
             left: 0,
         });
-        console.log("SpikingScrollFunc --- Bottom Out");
+        console.log("Spike1 --- Bottom Out");
         window.scroll({
             top: 0,
             left: 0,
         });
-        console.log("SpikingScrollFunc --- Top Out");
+        console.log("Spike1 --- Top Out");
+        console.log("preintialize spike2");
         intializeSpikeScrollTwo();
     },[]);
 };

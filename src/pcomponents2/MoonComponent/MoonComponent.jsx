@@ -1,7 +1,7 @@
 import "./MoonComponent.css";
 import { useRef, useEffect, useState } from "react";
 import MOONIMAGES from "../../assets/MOONIMAGES/0000index";
-import topImageDayNumber from "../../utilities/DayDateFunc/DayDateFunction";
+import topImageDayNumber from "../../utilities/DayDateFunc/DayDateFunc";
 
 
 export default function MoonComponent({setIndexForDisplay, setInfoMoonPhase}){
