@@ -1,3 +1,22 @@
-#section-m{
+#section-moon{
     height: 5000px;
+    /* background-color: black; */
+    background-color: gray;
+    display: flex;
+}
+.leftside-moon{
+    border: 10px solid orange;
+    height: inherit;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    justify-content: center;
+}
+.rightside-info{
+    border: 10px solid lightpink;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    justify-content: flex-start;
 }

@@ -80,8 +80,8 @@ export default function MoonComponent({setIndexForDate, setCurrMoonPhase}){
         const canvas = canvasRef.current;
         const context = canvas.getContext('2d');
     
-        canvas.width = 400;
-        canvas.height = 400;
+        canvas.width = 500;
+        canvas.height = 500;
         context.drawImage(image, 0, 0, canvas.width, canvas.height);
     },[image]);
 

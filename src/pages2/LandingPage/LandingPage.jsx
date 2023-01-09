@@ -3,9 +3,9 @@ import { useState } from "react";
 
 import PreLoadImagesFunc from "../../utilities/PreLoadImagesFunc/PreLoadImagesFunc";
 import MoonComponent from "../../pcomponents2/MoonComponent/MoonComponent";
-import BackgroundComponent from "../../pcomponents2/BackgroundComponent/BackgroundComponent";
+// import BackgroundComponent from "../../pcomponents2/BackgroundComponent/BackgroundComponent";
 import DisplayBoxComponent from "../../pcomponents2/DisplayBoxComponent/DisplayBoxComponent";
-import ConstructionDisplay from "../../utilities/ConstructionDisplay/ConstructionDisplay";
+// import ConstructionDisplay from "../../utilities/ConstructionDisplay/ConstructionDisplay";
 // import AboutButton from "../../utilities/AboutButton/AboutButton";
 import SettingScrollFunc from "../../utilities/SettingScrollFunc/SettingScrollFunc";
 import SpikingScrollFunc from "../../utilities/SpikingScrollFunc/SpikingScrollFunc";
@@ -23,14 +23,18 @@ export default function LandingPage(){
     return (
         <>
         <PreLoadImagesFunc />
-            <section id="section-m">
-                <MoonComponent setIndexForDate={setIndexForDate} setCurrMoonPhase={setCurrMoonPhase}/>
-                <BackgroundComponent />
-                <DisplayBoxComponent indexForDate={indexForDate} currMoonPhase={currMoonPhase}/>
-                <ConstructionDisplay />
+            <section id="section-moon">
+                {/* <BackgroundComponent /> */}
+                    <div className="leftside-moon">
+                        <MoonComponent setIndexForDate={setIndexForDate} setCurrMoonPhase={setCurrMoonPhase}/>
+                    </div>
+                    <div className="rightside-info">
+                        <DisplayBoxComponent indexForDate={indexForDate} currMoonPhase={currMoonPhase}/>
+                    </div>
+                {/* <ConstructionDisplay /> */}
                 {/* <AboutButton /> */}
-                <SettingScrollFunc />
             </section>
+        <SettingScrollFunc />
         <SpikingScrollFunc />
         </>
     )

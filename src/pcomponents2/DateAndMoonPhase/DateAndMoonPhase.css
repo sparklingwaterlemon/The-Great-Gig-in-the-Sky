@@ -3,9 +3,8 @@
     width: inherit;
     background: lightgoldenrodyellow;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    padding-left: 50px;
     color: olivedrab;
     font-size: 2em;
 }

@@ -1,10 +1,12 @@
 .display-box-container{
     position: fixed;
-    bottom: 5%;
-    left: 50%;
-    transform: translate(-50%);
-    width: 400px;
-    height: 200px;
+    width: 330px;
+    height: 150px;
+
+    top: 40%;
+    transform: translateY(-40%);
+    margin-left: 10%;
+
     outline: 5px solid red;
     z-index: 2;
 }
