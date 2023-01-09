@@ -5,8 +5,8 @@
 
     top: 40%;
     transform: translateY(-40%);
-    margin-left: 10%;
-
+    
+    /* margin-left: 10%; */
     outline: 5px solid red;
     z-index: 2;
 }
