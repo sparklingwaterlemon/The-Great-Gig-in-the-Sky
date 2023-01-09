@@ -1,0 +1,14 @@
+.search-container{
+    position: fixed;
+    border: 5px solid lightgreen;
+
+    bottom: 3%;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+.search-container input{
+    width: 200px;
+    height: 40px;
+    text-align: center;
+}
