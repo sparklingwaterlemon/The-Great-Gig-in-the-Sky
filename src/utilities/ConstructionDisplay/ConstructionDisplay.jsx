@@ -25,15 +25,20 @@ export default function ConstructionDisplay(){
 
     return(
 
-        <div className="construction">
-            <div className="c-border">
-                <div className="c-container">
-                    <button onClick={scrollDown}/>
+        <div className="construction-container">
+            <div className="caution-border">
+                <div className="c-signpost">
+                    
                     <span className="c-header">UNDER re-CONSTRUCTION</span>
-                    <span className="c-date">LAST MODIFIED ON <strong>{text}</strong></span>
-                    feel free to scroll - recent update: optimized onload scroll
+                    <span className="c-update">LAST MODIFIED ON {text}</span>
+                    last update: input form for zipcode, -> fetching lat and long coordinates
+                    <br/>for this api, lat and long coordinates needed to get data
+                    <br/>waiting for API key to be activated.. 
                     <br/>
-                    <a href="https://github.com/sparklingwaterlemon/The-Great-Gig-in-the-Sky" target="_blank" rel="noreferrer">github</a>
+                    <div className="c-links">
+                        <a href="https://github.com/sparklingwaterlemon/The-Great-Gig-in-the-Sky" target="_blank" rel="noreferrer">github</a>
+                        <button onClick={scrollDown}>Refresh Scroll</button>
+                    </div>
                 </div>
             </div>
         </div>
