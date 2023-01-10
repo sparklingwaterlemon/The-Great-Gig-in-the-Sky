@@ -31,9 +31,9 @@ export default function ConstructionDisplay(){
                     
                     <span className="c-header">UNDER re-CONSTRUCTION</span>
                     <span className="c-update">LAST MODIFIED ON {text}</span>
-                    last update: input form for zipcode, -> fetching lat and long coordinates
-                    <br/>for this api, lat and long coordinates needed to get data
-                    <br/>waiting for API key to be activated.. 
+                    last update: fetched lon and lat coordinates from GeoAPI 
+                    <br/> next: use fetched lon and lat data to use OpenWeatherAPI to fetch and render 
+                    <br/> weather/astro data in one command chain
                     <br/>
                     <div className="c-links">
                         <a href="https://github.com/sparklingwaterlemon/The-Great-Gig-in-the-Sky" target="_blank" rel="noreferrer">github</a>

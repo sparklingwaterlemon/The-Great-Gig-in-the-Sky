@@ -6,7 +6,7 @@ import PreLoadImagesFunc from "../../utilities/PreLoadImagesFunc/PreLoadImagesFu
 import MoonComponent from "../../pcomponents2/MoonComponent/MoonComponent";
 import DisplayBoxComponent from "../../pcomponents2/DisplayBoxComponent/DisplayBoxComponent";
 import SearchBarComponent from "../../pcomponents2/SearchBarComponent/SearchBarComponent";
-// import ConstructionDisplay from "../../utilities/ConstructionDisplay/ConstructionDisplay";
+import ConstructionDisplay from "../../utilities/ConstructionDisplay/ConstructionDisplay";
 // import AboutButton from "../../utilities/AboutButton/AboutButton";
 import SettingScrollFunc from "../../utilities/SettingScrollFunc/SettingScrollFunc";
 import SpikingScrollFunc from "../../utilities/SpikingScrollFunc/SpikingScrollFunc";
@@ -34,7 +34,7 @@ export default function LandingPage(){
                         <DisplayBoxComponent indexForDate={indexForDate} currMoonPhase={currMoonPhase}/>
                         <SearchBarComponent />
                     </div>
-                {/* <ConstructionDisplay /> */}
+                <ConstructionDisplay />
                 {/* <AboutButton /> */}
             </section>
         <SettingScrollFunc />
