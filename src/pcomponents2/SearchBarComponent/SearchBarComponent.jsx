@@ -7,7 +7,7 @@ export default function SearchBarComponent(){
     const lat = 0;
     const lon = 0;
 
-    const COORDINATES=`http://api.openweathermap.org/geo/1.0/zip?zip=${zipcode}&appid=${process.env.REACT_APP_OWM}`;
+    const COORDINATES=`https://api.openweathermap.org/geo/1.0/zip?zip=${zipcode}&appid=${process.env.REACT_APP_OWM}`;
     const OPENWEATHERMAP=`https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_OWM}`;
 
     const test2 = () =>{
