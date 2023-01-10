@@ -19,6 +19,7 @@ export default function LandingPage(){
     // setting in MoonComponent, passing down to InfoBox thru DisplayBoxComponent
     const [indexForDate, setIndexForDate] = useState();
     const [currMoonPhase, setCurrMoonPhase] = useState("na");
+    const [openWeatherData, setOpenWeatherData] = useState({});
 
 
     return (

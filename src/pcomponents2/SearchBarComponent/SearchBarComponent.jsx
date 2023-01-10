@@ -4,16 +4,20 @@ import { useState, useEffect } from "react";
 export default function SearchBarComponent(){
     const [zipcode, setZipcode] = useState("");
     const [geoData, setGeoData] = useState({});
+    const lat = 0;
+    const lon = 0;
 
-    const COORDINATES=`http://api.openweathermap.org/geo/1.0/zip?zip=${zipcode}&appid=${process.env.REACT_APP_OWM}`
-
+    const COORDINATES=`http://api.openweathermap.org/geo/1.0/zip?zip=${zipcode}&appid=${process.env.REACT_APP_OWM}`;
+    const OPENWEATHERMAP=`https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_OWM}`;
 
     const test2 = () =>{
         console.log("test2");
     }
 
     useEffect(()=>{
-        test2();
+        console.log("geoData", geoData);
+        console.log("lat", geoData.lat)
+        console.log("lon", geoData.lon)
     },[geoData]);
 
     const fetchCoordinatesByZip = async(zip) => {
