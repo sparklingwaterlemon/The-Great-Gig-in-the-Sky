@@ -1,21 +1,29 @@
 import "./SearchBarCSS.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function SearchBarComponent(){
     const [zipcode, setZipcode] = useState("");
+    const [geoData, setGeoData] = useState({});
 
     const COORDINATES=`http://api.openweathermap.org/geo/1.0/zip?zip=${zipcode}&appid=${process.env.REACT_APP_OWM}`
+
+
+    const test2 = () =>{
+        console.log("test2");
+    }
+
+    useEffect(()=>{
+        test2();
+    },[geoData]);
 
     const fetchCoordinatesByZip = async(zip) => {
         try{
             await fetch(COORDINATES)
             .then(res => res.json())
-            .then((data) => {
-                console.log(data)
-            });
+            .then(data => setGeoData(data))
         } catch(error){
-            console.log("error", error);
-        }
+            console.log("error fetching data", error);
+        };
     };
 
     const handleFormInput = (evt) =>{
@@ -26,7 +34,6 @@ export default function SearchBarComponent(){
     const handleFormSubmit = (evt) =>{
         evt.preventDefault();
         fetchCoordinatesByZip(zipcode);
-        console.log("last");
         setZipcode("");
     };
 
@@ -39,4 +46,4 @@ export default function SearchBarComponent(){
             </form>
         </div>
     )
-}
+};
